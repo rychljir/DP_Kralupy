@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 
     var locations = [[Double]]()
     var descriptions = [String]()
+    var slideTypes = [[String]]()
 
     
     @IBOutlet weak var mapView: MKMapView!
@@ -90,11 +91,17 @@ class ViewController: UIViewController {
                     }
                 }
                 
-                if let desc = task["description"].value{
+                if let desc = task["questionslide"]["description"].value{
                     descriptions.append(desc)
                 }
-                
-                
+                var q = [String]()
+                if let questions = task["questionslide"]["questions"]["question"].all{
+    
+                    for question in questions{
+                        q.append(question.attributes["type"]!)
+                    }
+                }
+                slideTypes.append(q)
             }
         }
     }

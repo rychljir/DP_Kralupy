@@ -1,40 +1,40 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <questionset maxTries="1">
     <task name="task01">
-	<location>
-		<latitude>50.0767542</latitude>
-		<longitude>14.4201933</longitude>
-	</location>
-	<questionslide name="task01a" layout="v_quest_img">
-		<description>
-			Jaký typ badatelské činnosti se podle Vás uvnitř odehrává?
-		</description>    
-	        <questions>
-	            <question type="singlechoice">
-	                <variant valid="false">Románský sloh</variant>
-	                <variant valid="false">Gotika</variant>
-	                <variant valid="false">Renesance</variant>
-	                <variant valid="true">Baroko</variant>
-	                <variant valid="false">Moderní architektura</variant>
-	            </question>
-	        </questions>
+        <location>
+            <latitude>50.0767542</latitude>
+            <longitude>14.4201933</longitude>
+        </location>
+        <questionslide name="task01a" layout="v_quest_img">
+            <description>
+                Jaký typ badatelské činnosti se podle Vás uvnitř odehrává?
+            </description>
+            <questions>
+                <question type="singlechoice">
+                    <variant valid="false">Románský sloh</variant>
+                    <variant valid="false">Gotika</variant>
+                    <variant valid="false">Renesance</variant>
+                    <variant valid="true">Baroko</variant>
+                    <variant valid="false">Moderní architektura</variant>
+                </question>
+            </questions>
         </questionslide>
-
+        
     </task>
     <task name="task02">
-	<location>
-		<latitude>50.0745853</latitude>
-		<longitude>14.4195711</longitude>
-	</location>
-	<questionslide name="task02a" layout="v_quest_img" >
-		<description>
-			Jaký typ badatelské činnosti se podle Vás uvnitř odehrává?
-		</description>    
-	        <questions>
-	            <question type="fillAnswer">
-	                <variant valid="true">Baroko</variant>
-	            </question>
-	        </questions>
+        <location>
+            <latitude>50.0745853</latitude>
+            <longitude>14.4195711</longitude>
+        </location>
+        <questionslide name="task02a" layout="v_quest_img">
+            <description>
+                Jaký typ badatelské činnosti se podle Vás uvnitř odehrává?
+            </description>
+            <questions>
+                <question type="fillAnswer">
+                    <variant valid="true">Baroko</variant>
+                </question>
+            </questions>
         </questionslide>
     </task>
     
