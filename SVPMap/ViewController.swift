@@ -14,12 +14,11 @@ import AEXML
 class ViewController: UIViewController {
     var locationManager:CLLocationManager!
     var myLocations: [CLLocation] = []
-  
-
+    
+    
     var locations = [[Double]]()
-    var descriptions = [String]()
-    var slideTypes = [[String]]()
-
+    var tasks = [Task]()
+    
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var debugLabel: UILabel!
@@ -33,14 +32,14 @@ class ViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         //show permission dialog
         locationManager.requestAlwaysAuthorization()
-
+        
         
         //Setup our Map View
         mapView.delegate = self
         mapView.showsUserLocation = true
         
         addPins()
-
+        
         let homeLocation = CLLocation(latitude: 37.6213, longitude: -122.3790)
         let regionRadius: CLLocationDistance = 200
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(homeLocation.coordinate,regionRadius * 2.0, regionRadius * 2.0)
@@ -51,22 +50,28 @@ class ViewController: UIViewController {
     
     func addPins(){
         do{
-            let xmlPath = Bundle.main.path(forResource: "questions", ofType: "xml")
+            let xmlPath = Bundle.main.path(forResource: "questions2", ofType: "xml")
             let data = try? Data(contentsOf: URL(fileURLWithPath: xmlPath!))
             let opt = AEXMLOptions()
-        
             let xmlDoc = try AEXMLDocument(xml: data!, options: opt)
-            parseXML(xmlDocument: xmlDoc)
+            let parser = QuestionParser(xmlDocument: xmlDoc)
+            tasks = parser.getTasks()
+            
+            var loc = [Double(50.0767542),Double(14.4201933)]
+            locations.append(loc)
+            loc = [Double(50.0745853),Double(14.4195711)]
+            locations.append(loc)
+            
+            for i in 1 ... locations.count{
+                let myAnnotation: MKPointAnnotation = MKPointAnnotation()
+                myAnnotation.coordinate = CLLocationCoordinate2DMake(locations[i-1][0], locations[i-1][1])
+                myAnnotation.title = "Task\(i)"
+                mapView.addAnnotation(myAnnotation)
+            }
         } catch {
             print("\(error)")
         }
         
-        for i in 1 ... locations.count{
-            let myAnnotation: MKPointAnnotation = MKPointAnnotation()
-            myAnnotation.coordinate = CLLocationCoordinate2DMake(locations[i-1][0], locations[i-1][1])
-            myAnnotation.title = "Task\(i)"
-            mapView.addAnnotation(myAnnotation)
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -80,31 +85,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func parseXML(xmlDocument xmlDoc: AEXMLDocument){
-        if let tasks = xmlDoc.root.children[0].all{
-            for task in tasks{
-                if let latitude = task["location"]["latitude"].value{
-                    if let longitude = task["location"]["longitude"].value{
-                        let location = [Double(latitude),Double(longitude)]
-                        locations.append(location as! [Double])
-                        print(latitude + " ; " + longitude)
-                    }
-                }
-                
-                if let desc = task["questionslide"]["description"].value{
-                    descriptions.append(desc)
-                }
-                var q = [String]()
-                if let questions = task["questionslide"]["questions"]["question"].all{
     
-                    for question in questions{
-                        q.append(question.attributes["type"]!)
-                    }
-                }
-                slideTypes.append(q)
-            }
-        }
-    }
 }
 
 extension ViewController: CLLocationManagerDelegate{
@@ -148,8 +129,8 @@ extension ViewController: MKMapViewDelegate{
             performSegue(withIdentifier: "Task1", sender: nil)        }
         if view.annotation?.title! == "Task2"{
             performSegue(withIdentifier: "Task2", sender: nil)         }
-            }
-
+    }
+    
 }
 
 

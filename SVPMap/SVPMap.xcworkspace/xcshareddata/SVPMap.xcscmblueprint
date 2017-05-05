@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++66927F9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "592ED6ECFCD4D1C13609F0EC9CC0AF682A13D70D+++CDD63AB" : 9223372036854775807,
+    "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++288A799" : 9223372036854775807,
+    "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++66927F9" : 9223372036854775807,
+    "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++0266758" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5929BD17-5005-412A-A945-6D2688744AA9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "592ED6ECFCD4D1C13609F0EC9CC0AF682A13D70D+++CDD63AB" : "ios_core\/",
+    "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++288A799" : "SVPMap\/SVPMap\/",
+    "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++66927F9" : "DP_Kralupy\/",
+    "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++0266758" : "SVPMap\/SVPMap\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SVPMap",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SVPMap\/SVPMap.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rychljir\/DP_kralupy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++0266758"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rychljir\/DP_Kralupy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++288A799"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rychljir\/DP_Kralupy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "02610F69B0E3A1C212971FB83C43D415CCA7F42C+++66927F9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rychljir\/ios_core.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "592ED6ECFCD4D1C13609F0EC9CC0AF682A13D70D+++CDD63AB"
+    }
+  ]
+}

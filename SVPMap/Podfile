@@ -1,6 +1,8 @@
-project '/Users/scientica/Documents/rychljir/SVPMap/SVPMap/SVPMap.xcodeproj'
+project '/Users/scientica/Documents/rychljir/DP_Kralupy/SVPMap.xcodeproj'
 
 use_frameworks!
+
+platform :ios, '9.3'
 
 target 'SVPMap' do
     pod 'AEXML'

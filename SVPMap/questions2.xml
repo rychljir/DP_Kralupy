@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questionset maxTries="1">
+    <task name="intro">
+        <questionslide name="intro_01" layout="v_quest_img">
+            <description><![CDATA[
+                <p>Tato mobilní naučná stezka byla realizována jako vítězný návrh v soutěži středoškolských studentů „Poznávejme Středočeský kraj“.</p>
+                <p>Návrh stezky zpracovali studenti <b>Dvořákova gymnázia a SOŠE</b> v Kralupech nad Vltavou.<br /><img src="intro_gymnazium"/></p>
+                <p>Zhotovení aplikace zajistila <b>Scientica Agency s.r.o.</b><br /><img src="intro_scientica"/></p>
+                <p>Aplikace byla financována z finančních prostředků <b>Středočeského kraje</b>.<br /><img src="intro_stredocesky_kraj"/></p><p>Na následující stranu se dostanete přetažením <strong>zprava-doleva</strong>.</p>]]></description>
+        </questionslide>
+        <questionslide name="intro_02" layout="v_quest_img">
+            <description><![CDATA[
+                <h2>Vítejte...</h2>
+                <p>... na začátku mobilní stezky „Z Kralup za Antonínem Dvořákem“. Aplikace Vás bude provázet nejzajímavějšími místy v Kralupech, a zavede Vás do rodiště nejslavnějšího českého skladatele Antonína Dvořáka v Nelahozevsi. Delší varianta měří asi 9 km, kratší 6 km. Pokud Vám to bude málo, můžete odsud po projití naší trasy již sami pokračovat do barokního areálu Veltrusy.</p>
+                <p>Co vše vám zpříjemní cestu?</p>
+                <ul>
+                <li>offline mapa s vyznačením vaší polohy, plánovanou trasou a zastaveními</li>
+                <li>informace i fotografie k zajímavým místům</li>
+                <li>otázky a úkoly ke každému stanovišti, úspěšnost bude na konci vyhodnocena</li>
+                <li>panáček znázorňující výšku vody na daném místě při povodních roku 2002</li>
+                <li>informační menu s mnoha funkcemi: např. zobrazení restaurací při cestě, jízdního řádu vlaků v cíli</li>
+                <li>statistiky o ušlé trase, včetně odhadu, jak dlouho ještě projití stezky potrvá (zohledňuje čas zastavení) při kratší a delší variantě</li>                
+                </ul>
+                <p>A k tomu několik překvapení, která objevíte během cesty...</p>
+                ]]></description>
+        </questionslide>
+        <questionslide name="intro_03" layout="v_quest_img">
+            <description><![CDATA[<h2>O Kralupech obecně</h2>
+                <p>"Kralupy nejsou krásné město<br />a nikdy nebyly..."</p>
+                <p>...tvrdil jeden z našich největších básníků Jaroslav Seifert. Toto město sice nepatří mezi turisty vyhledávaná místa, ale i přesto tu lze najít mnohé zajímavosti. Obrovský rozvoj průmyslu změnil kdysi malou vesničku v pulsující okresní město. Osud se s ním však nemazlil: Ze všech českých měst zažily Kralupy během druhé světové války nejničivější bombardování. Rafinerie sice dává lidem práci, ale daní za to je nepříliš hezký pohled na obří průmyslový komplex. A v nedávné minulosti bylo město postiženo katastrofálními povodněmi. Zdálo by se, že Seifert, i když Kralupy velice miloval a rád se sem vracel, měl pravdu. My Vám ale chceme dokázat, že ne tak docela. V blízkém okolí totiž najdeme i řadu přírodních zajímavostí. Pojďte se s námi projít, ukážeme Vám, že Kralupy mají i svá pěkná místa. A putování po nich nás dovede do nedaleké Nelahozevsi, kde se narodil další významný Čech, Antonín Dvořák. Tak tedy vzhůru na cestu plnou poznání!</p>]]></description>
+        </questionslide>
+        <questionslide name="StartFragment" type="custom" />
+    </task>
+    <task name="help">
+        <questionslide name="StartFragment" type="custom" />
+    </task>
+    <task name="task01">
+        <location>
+            <latitude>50.0767542</latitude>
+            <longitude>14.4201933</longitude>
+        </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task01a" title="" layout="v_quest_img">
+            <header>Kralupské nádraží</header>
+            <description><![CDATA[Ještě v roce 1850 byly Kralupy malou osadou s 27 domky. Obrovský rozvoj města přinesla železnice, v té době hlavní dopravní prostředek.  Nejprve došlo k propojení s Prahou, poté i s Kladnem, díky čemuž se z Kladna do Kralup začalo vozit uhlí. To se zde překládalo na lodě plující po Vltavě a Kralupy se staly dopravním uzlem. Záhy tu vznikla loděnice i první chemická továrna a počet obyvatel rychle rostl. Z malé vesničky je dnes středně velké město s 18 tisíci obyvateli a železnice je pro něj stále velmi důležitá. Zastavují tu rychlíky spojující Prahu s Ústí nad Labem, mezinárodní vlaky směřující do Německa tudy jen projíždí.]]></description>
+        </questionslide>
+        <questionslide name="task01b_map" type="custom"/>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task01c" layout="custom1">
+	        <questions>
+                <question type="sort" shuffle="true">
+                    <description><![CDATA[Seřaďte druhy vlaků, které můžete využít v České republice, od nejpomalejších (nejčastěji zastavujících) po nejrychlejší:]]></description>
+                    <variant>Osobní vlak</variant>
+					<variant>Spěšný vlak</variant>
+					<variant>Rychlík</variant>
+					<variant>Express</variant>
+					<variant>EuroCity</variant>
+                </question>
+            </questions>
+        </questionslide>
+    </task>
+    <task name="task02">
+        <location>
+            <latitude>50.0767542</latitude>
+            <longitude>14.4201933</longitude>
+        </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task02a" title="namesti" layout="v_quest_img">
+            <header>Technopark</header>
+            <description><![CDATA[Nacházíte se před moderní budovou, která slouží jako nový technologický park Vysoké školy chemicko-technologické. Dnes se tu usadil špičkový chemický výzkum zaměřený na stavební materiály, který se do tohoto průmyslového města hodí. Ale ještě před pár lety to vypadalo úplně jinak. Již od roku 1867 tu fungovaly velké mlýny, které vydržely až do velké vody v roce 2002. Po zničení povodněmi už se výroba neobnovila a budova chátrala. Až v letech 2013-14 došlo k přestavbě na moderní technologické centrum, které vidíte před sebou. Jedná se o jedno z nejmodernějších výzkumných technologických center v naší zemi.]]></description>
+        </questionslide>
+        <questionslide name="task02b" title="namesti" layout="v_quest_img">
+            <description><![CDATA[Podívejte se, jak Kralupské mlýny na tomto místě vypadaly z pohledu od nedaleké školy, a jak probíhala rekonstrukce:]]></description>
+        </questionslide>
+        <questionslide name="Task02TimeLine1" type="custom" />
+        <questionslide name="Task02TimeLine2" type="custom" />
+        <questionslide name="Task02TimeLine3" type="custom" />
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task02c" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Jaký typ badatelské činnosti se podle Vás uvnitř odehrává?]]></description>
+	                <variant valid="true">zjišťují se chemické a fyzikální vlastnosti různých látek</variant>
+	                <variant valid="false">provádí se pokusy na zvířatech</variant>
+	                <variant valid="false">testují se zbraně pro armádu</variant>
+	                <variant valid="false">provádí se ekonomické analýzy</variant>
+	                <variant valid="false">vyvíjí se špičkový počítačový software</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+    <task name="task03">
+        <location>
+            <latitude>50.0767542</latitude>
+            <longitude>14.4201933</longitude>
+        </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task03a" title="" layout="v_quest_img">
+            <header>Jodlův dům</header>
+            <description><![CDATA[Ve většině jiných českých měst bychom si takového domečku asi ani nevšimli. Ale protože Kralupy nemají typické historické centrum, tak právě zde stojíte před nejstarším obytným domem ve městě!  Je to bývalý statek, na kterém několik staletí hospodařil rod Jodlů. V roce 1791 se tu narodil Jan Křestitel Jodl Kralupský (obr.), který se poté stal významným českým lingvistou působícím v době národního obrození, kdy se čeština vzpamatovávala z úpadku (úředním jazykem byla němčina).]]></description>
+            <images>task03_jodl</images>
+        </questionslide>
+        <questionslide name="task03a2" title="" layout="v_quest_img">
+            <description>Jodl plynně mluvil všemi slovanskými jazyky, ale češtinu miloval. Přispíval do obrozeneckých časopisů a napsal několik jazykovědných knih. Dlouho působil v Praze, ale závěr života strávil opět v tomto domku, kde i zemřel. Nyní budovu a přilehlý pozemek využívá místní Sokol, který je koupil od Jodlových potomků v roce 1920.</description>
+        </questionslide>
+        <questionslide name="task03a3" title="" layout="v_quest_img">
+            <description>A takhle vypadala titulní strana jednoho z Jodlových děl, vydaného v roce 1866:</description>
+            <images>task03_jodlova_kniha</images>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task03b" layout="v_quest_img" >
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Štít domu vznikl až v roce 1932, ale byl postaven v duchu významného architektonického stylu. Poznáte podle vzhledu průčelí, o jaký sloh se jedná?]]></description>
+	                <variant valid="false">Románský sloh</variant>
+	                <variant valid="false">Gotika</variant>
+	                <variant valid="false">Renesance</variant>
+	                <variant valid="true">Baroko</variant>
+	                <variant valid="false">Moderní architektura</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task03c" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Označte jazyk, který není slovanský:]]></description>
+	                <variant valid="false">slovenština</variant>
+	                <variant valid="true">maďarština</variant>
+	                <variant valid="false">polština</variant>
+	                <variant valid="false">chorvatština</variant>
+	                <variant valid="false">ruština</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task04">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task04a" title="" layout="v_quest_img">
+            <header>Kostel</header>
+            <description><![CDATA[Nacházíte se u kostela Nanebevzetí Panny Marie a sv. Václava, který vypadá jako poměrně starý, protože se jeho stavitelé snažili o napodobení gotického stylu. Postaven byl ale až na konci 19. století, k vysvěcení došlo v roce 1898. Díky tomu se Kralupy mohly stát městem. Na konci druhé světové války kostel jako jedna z mála staveb přežil bombardování města spojeneckými letadly. V té době sloužily jeho útroby jako márnice. Na tomto místě si můžeme povšimnout zajímavého kontrastu architektury. Zatímco kostel na západě je pseudogotický, severním směrem vidíme socialistickou architekturu obchodního centra a na východě pak moderní architekturu nedávno postavené budovy městského úřadu. Která stavba se vám líbí nejvíc?]]></description>
+        </questionslide>
+        <questionslide name="ARInfoFragment" type="custom" />
+        <questionslide name="task04b" title="" layout="v_quest_img">
+            <header>Kostel</header>
+            <description><![CDATA[Dojděte ke kostelu a na jeho západní stěně si prohlédněte ještě pamětní desku, na které je vytesán verš od slavného básníka Jaroslava Seiferta zasvěcený obětem bombardování Kralup. Jaroslav Seifert je na kralupském hřbitově také pohřben....]]></description>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task04c" layout="v_quest_img">
+            <header>Kostel</header>
+	        <questions>
+	            <question type="intervalquestion" validate="true">
+	                <description><![CDATA[Odhadněte výšku této kostelní věže v metrech:]]></description>
+	                <variant valid="true">63;50;80;20;100;1</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task05">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task05a" title="" layout="v_quest_img">
+            <header>Památník padlým</header>
+            <description><![CDATA[Během druhé světové války se Kralupy staly nejvíce postižených českým městem – jen při leteckém bombardování 22. března 1945 tu zemřelo 145 lidí. Další místní lidé ale umírali průběžně během války - nejen druhé, ale i té první světové. A pro všechny byl postaven památník, který si tu můžete prohlédnout.]]></description>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task05b" layout="v_quest_img">
+            <header>Památník padlým</header>
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Na památníku si můžete přečíst, že je tu uložena prsť z bojišť. Víte, co je to prsť?]]></description>
+	                <variant valid="false">zbytky těl padlých vojáků </variant>
+	                <variant valid="false">zbytky použitých zbraní</variant>
+	                <variant valid="true">povrchová zemina</variant>
+	                <variant valid="false">náboje do zbraní použité v bitvě</variant>
+	                <variant valid="false">uříznuté prsty neposlušných vojáků</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task06">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task06a" title="" layout="v_quest_img">
+            <header>Židovská synagoga</header>
+            <description><![CDATA[Vidíte dům, který sem příliš nezapadá, neboť není postaven kolmo k ulici, a tím vybočuje z řady ostatních? Nejde totiž o obyčejný dům, ale o bývalou židovskou synagogu, které jsou tradičně stavěny směrem k východu, odkud židé očekávají příchod Mesiáše. Stavba vznikla jako víceúčelová a modlitebnu měla v prvním patře, což je nezvyklé, protože obvykle bývají modlitebny židů pod úrovní vchodu. V přízemí se nacházel byt rabína a židovské třídy. Synagoga byla postavena v roce 1873 a sloužila do roku 1941, kdy ji nacisté zavřeli. Židé byli deportováni do koncentračních táborů, což dnes připomíná pamětní deska obětem holokaustu na budově. Původní účel už se budově nevrátil a dnes tu najdeme cukrárnu a modlitebnu husitské církve.]]></description>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task06_symbol_01" layout="v_quest_img">
+            <images>task06_symbol01</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="false">křesťan</variant>
+	                <variant valid="false">muslim</variant>
+	                <variant valid="true">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+        <questionslide name="task06_symbol_02" layout="v_quest_img">
+            <images>task06_symbol02</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="true">křesťan</variant>
+	                <variant valid="false">muslim</variant>
+	                <variant valid="false">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+        <questionslide name="task06_symbol_03" layout="v_quest_img">
+            <images>task06_symbol03</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="false">křesťan</variant>
+	                <variant valid="false">muslim</variant>
+	                <variant valid="true">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+        <questionslide name="task06_symbol_04" layout="v_quest_img">
+            <images>task06_symbol04</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="false">křesťan</variant>
+	                <variant valid="true">muslim</variant>
+	                <variant valid="false">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+        <questionslide name="task06_symbol_05" layout="v_quest_img">
+            <images>task06_symbol05</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="true">křesťan</variant>
+	                <variant valid="false">muslim</variant>
+	                <variant valid="false">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+        <questionslide name="task06_symbol_06" layout="v_quest_img">
+            <images>task06_symbol06</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="true">křesťan</variant>
+	                <variant valid="false">muslim</variant>
+	                <variant valid="false">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+        <questionslide name="task06_symbol_07" layout="v_quest_img">
+            <images>task06_symbol07</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="false">křesťan</variant>
+	                <variant valid="true">muslim</variant>
+	                <variant valid="false">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+        <questionslide name="task06_symbol_08" layout="v_quest_img">
+            <images>task06_symbol08</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="false">křesťan</variant>
+	                <variant valid="false">muslim</variant>
+	                <variant valid="true">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+        <questionslide name="task06_symbol_09" layout="v_quest_img">
+            <images>task06_symbol09</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="false">křesťan</variant>
+	                <variant valid="true">muslim</variant>
+	                <variant valid="false">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+        <questionslide name="task06_symbol_10" layout="v_quest_img">
+            <images>task06_symbol10</images>
+            <questions>
+                <question type="singlechoice" shuffle="false" validate="true">
+	                <variant valid="true">křesťan</variant>
+	                <variant valid="false">muslim</variant>
+	                <variant valid="false">žid</variant>
+	            </question>
+            </questions>
+        </questionslide>
+    </task>
+     <task name="task07">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+       <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task07a" title="" layout="v_quest_img">
+            <header>Dvořákovo náměstí</header>
+            <description><![CDATA[Nacházíme se na náměstíčku, které vzniklo kolem roku 1930. V té době zde bylo otevřeno gymnázium, které dostalo jméno po v té době již dávno zesnulém skladateli Antonínu Dvořákovi. Typ školy se poté několikrát změnil, ale dnes tu opět sídlí Dvořákovo gymnázium. Budova je ukázkou tehdejšího prvorepublikového stylu – funkcionalismu. Gymnázium bylo tehdy chloubou města. Radní proto nechali celé náměstí před školou zkrášlit, bylo sem například umístěno sousoší „Čtvero ročních období“. Každé období znázorňuje jedna z žen, každá hledí na jinou světovou stranu. Na podstavci sousoší byla původně umístěna meteorologická stanice zaznamenávající počasí, ale ta tu dnes již není… o tom se můžete dočíst více ze zdejší informační tabule.]]></description>
+        </questionslide>
+        <questionslide name="task07b" title="" layout="v_quest_img">
+            <description><![CDATA[Prohlédněte si na dobovém snímku, jak náměstí se školou a sousoším vypadalo v prvorepublikové době:]]></description>
+            <images>task07_old</images>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task07c" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Zjistěte ze zdejší informační tabule, jaká událost způsobila konec meteorologického pozorování?]]></description>
+	                <variant valid="false">příchod nacistů (1939)</variant>
+	                <variant valid="true">bombardování města  (1945)</variant>
+	                <variant valid="false">nástup komunismu (1948)</variant>
+	                <variant valid="false">Sametová revoluce (1989)</variant>
+	                <variant valid="false">stoleté povodně (2002)</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task08">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task08a" title="" layout="v_quest_img">
+            <header>Muzeum</header>
+            <description><![CDATA[Nacházíte se u městského muzea. Jeho stálé výstavy ukazují, na co může být město nejvíce hrdé. Třeba na archeologické nálezy na Kralupsku. V expozici nazvané Pravěké dílny si můžete vyzkoušet různé pravěké činnosti (práce na tkalcovském stavu, drcení obilí, vrtání otvoru do kamenné sekerky). Na to navazuje část věnovaná historii města a jeho okolí; zachycuje vývoj Kralup od 13. století až po 60. léta 20. století.]]></description>
+        </questionslide>
+        <questionslide name="task08a2" title="" layout="v_quest_img">
+            <description><![CDATA[Prohlédnout si můžete i síň slavného básníka Jaroslava Seiferta s fotografiemi z jeho života. Seifert totiž do Kralup jezdil v dětství za babičkou na prázdniny, město si velmi oblíbil, vracel se sem celý život a dnes je na zdejším hřbitově pochován. Dále zde probíhají krátkodobé výstavy, vernisáže a koncerty. Otevřeno je každý den kromě pondělí.]]></description>
+            <images>task08_seifert</images>
+        </questionslide>
+        <questionslide name="task08b" title="" layout="v_quest_img">
+            <description><![CDATA[Máte-li připojení na internet, můžete se podívat, jaké výstavy v muzeu právě probíhají: <a href="http://muzeumkralupy.cz/vystavy/">AKTUÁLNÍ NABÍDKA MUZEA</a>]]></description>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task08c" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Jak se jmenuje mezinárodní ocenění, které Jaroslav Seifert za své dílo získal?]]></description>
+	                <variant valid="true">Nobelova cena</variant>
+	                <variant valid="false">Darwinova cena</variant>
+	                <variant valid="false">Oscar</variant>
+	                <variant valid="false">Zlatý globus</variant>
+	                <variant valid="false">Ceny Grammy</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task09">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task09a" title="" layout="v_quest_img" timelimit="60">
+            <header>Hostibejk</header>
+	        <description><![CDATA[Nacházíte se na jednom z nejkrásnějších míst v Kralupech, na vrchu Hostibejk. Zde se chvíli zdržíte. Vaším úkolem bude najít následující objekty. O každém se něco dozvíte a zase na vás čeká nějaká otázka, nebo úkol...]]></description>
+        </questionslide>
+        <questionslide name="Task09rozcestnik" type="custom" />
+    </task>
+    <task name="task09a">
+        <location>
+            <latitude>50.0767542</latitude>
+            <longitude>14.4201933</longitude>
+        </location>
+        <questionslide name="task09a_a" title="" layout="v_quest_img">
+            <header>Pískovcové útvary</header>
+            <description><![CDATA[Prohlédněte si pečlivě strukturu asi 12 metrů vysoké skály. Běžný člověk asi dokáže jen rozpoznat, že skála je z pískovce.  Geologovi se však rozzáří oči. Všimněte si, že hornina v dolní části skály má jinou strukturu, než v horní části. Mezi nimi je poměrně ostrá hranice. Zatímco menší dolní část skály představují jezerní (tedy sladkovodní) usazeniny, větší horní část skály pak tvoří usazeniny mořské. Dolní část vznikla v době karbonu (před 300 miliony lety), horní část je z křídy (cca 100 milionů let zpět). Tak výrazný styk křídy a karbonu je poměrně vzácný, a lokalita je proto chráněná. Obě horniny vznikly usazením sedimentů po dobu několika milionů let. To, co běžnému člověku připadá jako celá věčnost, je přitom pro geology poměrně rychlý proces...]]></description>
+        </questionslide>
+        <questionslide name="task09a_b" title="" layout="v_quest_img">
+            <description><![CDATA[Podívejte se, jaké moře se tu nacházelo před sto miliony lety, tedy v křídě:]]></description>
+            <images>task09a_krida</images>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task09a_c" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Stáří zdejších pískovců je 100 až 300 milionů let. Víte, jak stará je naše Země jakožto planeta?]]></description>
+	                <variant valid="false">450 milionů let</variant>
+	                <variant valid="true">4,5 miliardy let</variant>
+	                <variant valid="false">45 miliard let</variant>
+	                <variant valid="false">450 miliard let</variant>
+	                <variant valid="false">4,5 bilionu let</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+    <task name="task09b">
+        <location>
+            <latitude>50.0767542</latitude>
+            <longitude>14.4201933</longitude>
+        </location>
+        <questionslide name="task09b_a" title="" layout="v_quest_img">
+            <header>Altánek</header>
+            <description><![CDATA[Z tohoto místa je skvělý výhled. Podívejte se směrem přes řeku a na horizontu uvidíte obrovský průmyslový komplex. Možná nic pěkného, ale zato je to velice důležité místo. Jde o rafinerii, která zpracovává ropu z ropovodu Družba. Rafinerie vznikla v 60. letech 20. století, ale už před druhou světovou válkou tu stála petrolejárna, kterou pak zničilo bombardování. Rafinerie tak byla prakticky obnovena. Z ropy se tu dnes vyrábí benzín, nafta, topný olej či kerosin, které se pak vozí do větší část republiky. Ročně se tu zpracují tři miliony tun ropy, je to druhá největší rafinerie v Česku. Větší najdeme už jen v Litvínově.]]></description>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task09b_b" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Víte, k čemu slouží kerosin? Je to palivo pro...]]></description>
+	                <variant valid="false">elektrárny</variant>
+	                <variant valid="true">letadla</variant>
+	                <variant valid="false">lodě</variant>
+	                <variant valid="false">vlaky</variant>
+	                <variant valid="false">kamiony</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task09b_c" title="" layout="v_quest_img">
+            <description><![CDATA[Kerosin se používá jako palivo do letadel a z Kralup se po železnici dopravuje na letiště v Ruzyni vzdálené odtud jen pár desítek kilometrů. Kromě rafinerie se v průmyslovém areálu nachází společnost SYNTHOS Kralupy, a.s., která z ropy vyrábí syntetický kaučuk a polystyrénové plasty, tedy umělé hmoty do stavebnictví, gumárenství či obuvnictví. Dříve se společnost jmenovala KAUČUK, a.s., na SYNTHOS Kralupy,a.s., se firma přejmenovala po roce 2007, kdy ji koupil polský majitel.]]></description>
+        </questionslide>
+        <questionslide name="task09b_d" title="" layout="v_quest_img">
+            <description><![CDATA[Jak vypadá zpracování ropy v rafinerii:]]></description>
+            <images>task09b_ropa</images>
+        </questionslide>
+        <questionslide name="task09b_e" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="multichoice" shuffle="true" validate="true">
+	                <description><![CDATA[Označte, co vše se dá vyjádřit slovem „kaučuk“]]></description>
+	                <variant valid="true">Základní surovina pro výrobu gum (pryže) na gumování tužek</variant>
+	                <variant valid="true">Látka, která může být jak přírodní, tak i uměle vyrobená</variant>
+	                <variant valid="true">Látka, která se vyznačuje velkou pružností</variant>
+	                <variant valid="true">Jedna z nejpoužívanějších umělých hmot na Zemi</variant>
+	                <variant valid="true">Tekutá látka získávaná ze stromu - kaučukovníku </variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task09b_f" title="" layout="v_quest_img">
+            <description><![CDATA[Takto se získává kaučuk přírodní cestou z kaučukovníku:]]></description>
+            <images>task09b_kaucuk</images>
+        </questionslide>
+    </task>
+    <task name="task09c">
+        <location>
+            <latitude>50.0767542</latitude>
+            <longitude>14.4201933</longitude>
+        </location>
+        <questionslide name="task09c_a" title="" layout="v_quest_img">
+            <header>Bunkr</header>
+            <description><![CDATA[Nacházíte se u bunkru z druhé světové války. Zatímco většinu bunkrů na českém území postavila naše armády, tento byl naopak německý. Sloužil jako protiletecký – měl bránit tehdejší petrolejárnu v Kralupech před bombardováním. To nakonec přišlo až na konci války, 22. března 1945, a tehdy již zbytky rozložené německé armády nedokázaly klást odpor americkému náletu. První svržená bomba způsobila výbuch paliva v petrolejárně, město zahalil hustý černý dým, kvůli němuž pak piloti letadel shazovali bomby naslepo. Kvůli tomu bombardování zničilo tehdy nejen petrolejárnu, ale i větší část Kralup jako takových. Většina budov byla poškozena a zemřelo 145 civilistů a stovka německých vojáků. Přitom petrolejárna byla v té době už dávno nefunkční… nálet tak dnes historici hodnotí jako zbytečný.]]></description>
+        </questionslide>
+        <!-- questionslide name="task09c_b" title="" layout="v_quest_img">
+            <description><![CDATA[Prohlédněte si obrázky z bombardování města v roce 1945.]]></description>
+        </questionslide -->
+        <questionslide name="Task09cOpenGal" type="custom" />
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task09c_c" title="" layout="v_quest_img">
+	        <questions>
+	           <question type="intervalquestion" shuffle="false" validate="true">
+	                <description>Zde stojící bunkr byl postaven v roce, kdy začala druhá světová válka. Určete, který to byl rok:</description>
+	                <variant valid="true">1939;x;x;1930;1945;1</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+    <task name="task09d">
+        <location>
+            <latitude>50.0767542</latitude>
+            <longitude>14.4201933</longitude>
+        </location>
+        <questionslide name="task09d_a" title="" layout="v_quest_img">
+            <header>Památník padlým</header>
+            <description><![CDATA[Na tomto místě vidíme připomínku smutné události. Byl krásný květnový den roku 1945, válka už byla u konce, němečtí vojáci byli na útěku. Skupinka šesti mladých mužů si proto vyrazila zpříjemnit den na Hostibejk. Provokativní výstřel z malé pistole na projíždějící kolonu německých vojáků se jim ale stal osudným. Němci se za nimi vydali, brzy je objevili ukrývající se v tomto bunkru, a všechny je postříleli. Staly se z nich poslední oběti druhé světové války v tomto městě. Zdejší informační tabule vypráví jejich smutný příběh podobněji, a také popisuje průběh druhé světové války v této oblasti.]]></description>
+        </questionslide>
+        <questionslide name="task09d_b" title="" layout="v_quest_img">
+            <description><![CDATA[Podívejte se, jak vypadala uniforma německých vojáků:]]></description>
+            <images>task09d_uniforma</images>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task09d_c" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="numberquestion" shuffle="true" validate="true">
+	                <description><![CDATA[Zjistěte z blízké infotabule, kolik minut trval nálet na Kralupy v březnu 1945? Odpověď napište po kliknutí na tenkou linku.]]></description>
+	                <variant valid="true">72;x;x</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+    <task name="task09Gal">
+        <location>
+            <latitude>50.0767542</latitude>
+            <longitude>14.4201933</longitude>
+        </location>
+        <questionslide name="Task09Gal01" type="custom" />
+        <questionslide name="Task09Gal02" type="custom" />
+        <questionslide name="Task09Gal03" type="custom" />
+        <questionslide name="Task09Gal04" type="custom" />
+        <questionslide name="Task09Gal05" type="custom" />
+        <questionslide name="Task09Gal06" type="custom" />
+        <questionslide name="Task09Gal07" type="custom" />
+        <questionslide name="Task09Gal08" type="custom" />
+        <questionslide name="Task09Gal09" type="custom" />
+        <questionslide name="Task09Gal10" type="custom" />
+        <questionslide name="Task09Gal11" type="custom" />
+        <questionslide name="Task09Gal12" type="custom" />
+    </task>
+     <task name="task10">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task10a" title="" layout="v_quest_img">
+            <header>Cukrovar</header>
+	        <description>V roce 1869 byl v Kralupech postaven velký cukrovar. Po přivedení železnice a vybudování přístavu na řece to byl první výrobní podnik v tehdejší vesnici. Od té doby se rychle začal zvyšovat počet obyvatel, lidé sem přicházeli za prací. Cukrovar fungoval téměř sto let. V 60. letech 20. století byl uzavřen, srovnán se zemí a na jeho místě vzniklo panelové sídliště, které bylo pojmenováno Cukrovar.  Později přibyl i sportovní areál. Jedna budova cukrovaru se ale zachovala, a u té právě stojíme. Šlo o původní administrativní budovu a i dnes jsou v ní kanceláře.</description>
+        </questionslide>
+        <questionslide name="task10b" title="" layout="v_quest_img">
+	        <description>Podívejte se, jak to se místo, na kterém stojíte, proměnilo od začátku 20. století do současnosti...</description>
+        </questionslide>
+        <!-- questionslide name="Task10TimeLine1" type="custom" /-->
+        <questionslide name="Task10TimeLine2" type="custom" />
+        <questionslide name="Task10TimeLine3" type="custom" />
+        <questionslide name="Task10TimeLine4" type="custom" />
+        <questionslide name="Task10TimeLine5" type="custom" />
+        <questionslide name="Task10TimeLine6" type="custom" />
+        <questionslide name="Task10TimeLine7" type="custom" />
+        <!-- questionslide name="Task10TimeLine8" type="custom" /-->
+        <!-- questionslide name="Task10TimeLine9" type="custom" /-->
+        <!-- questionslide name="Task10TimeLine10" type="custom" /-->
+        <questionslide name="Task10TimeLine11" type="custom" />
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task10c" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Vznik cukrovaru souvisí s průmyslovou revolucí v 19. století – přechodem od ruční výroby k velkým továrnám využívajícím parní stroje a dopravy po železnici. Víte, v jaké zemi průmyslová revoluce začala?]]></description>
+	                <variant valid="false">Německo</variant>
+	                <variant valid="false">Japonsko</variant>
+	                <variant valid="true">Anglie</variant>
+	                <variant valid="false">USA</variant>
+	                <variant valid="false">Rusko</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task11">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task11a" title="" layout="v_quest_img">
+            <header>Dvořákova stezka</header>
+	        <description>Nyní půjdete Dvořákovou stezkou po levém břehu Vltavy. Antonín Dvořák tudy chodíval jako malý kluk z rodné Nelahozevsi ke svým příbuzným do Kralup. Po levé straně vás bude doprovázet železniční koridor, který má vyražených několik tunelů v Lobečské skále. Po pravé straně se vine nejdelší česká řeka - Vltava.  Tímto místem, nacházejícím se jen 20 km před ústím do Labe, protéká voda ze třetiny území Česka. Běžné čtyřčlenné rodině by množství vody, které tu proteče za sekundu (průměrně 150 m3), stačilo na více než rok. Řeka byla dříve hodně důležitá pro lodní dopravu, vozilo se po ní uhlí vytěžené na Kladensku. Dnes tu nákladní lodě potkáte výjimečně, zato občas zahlédnete parník pro turisty nebo motorový člun. Náklady se nyní mnohem více vozí po silnících a železnicích.</description>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task11b" layout="v_quest_img">
+	        <questions>
+	            <question type="togglebuttonsgrid" shuffle="true" validate="true">
+	                <description><![CDATA[Dokážete uhádnout, jaké ryby se v tomto místě v současnosti vyskytují a které nikoliv?]]></description>
+	                <options>ano;ne</options>
+	                <variant valid="true">kapr;0</variant>
+	                <variant valid="true">štika;0</variant>
+	                <variant valid="true">tuňák;1</variant>
+	                <variant valid="true">losos;1</variant>
+	                <variant valid="true">sumec;0</variant>
+	                <variant valid="true">okoun;0</variant>
+	                <variant valid="true">treska;1</variant>
+	                <variant valid="true">plotice;0</variant>
+	                <variant valid="true">makrela;1</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task11c" layout="v_quest_img">
+            <description>Odhadněte parametry Vltavy v tomto místě, jak je široká? Jak myslíte, že bude hluboká?</description>
+	        <questions>
+	            <question type="intervalquestion" shuffle="false" validate="true">
+	                <description>Šířka v metrech: </description>
+	                <variant valid="true">120;100;150;10;200;10</variant>
+	            </question>
+	             <question type="intervalquestion" shuffle="false" validate="true">
+	                <description>Maximální hloubka v metrech: </description>
+	                <variant valid="true">4;2.5;5;.5;7;.5</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task12">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task12a" title="" layout="v_quest_img">
+            <header>Zvětralé pískovce</header>
+	        <description>Míjíte nádherné skály, které nám mohou připomínat krasové jevy našich jeskyní. Ve skutečnosti je to ale zvětralý pískovec z období karbonu. Tyto tvary způsobila tzv. selektivní eroze, kdy některé části horniny podléhají povětrnostním vlivům, zatímco jiné části odolávají. Tuto krásu pomáhají paradoxně udržovat i občasné povodně na Vltavě, neboť urychlují erozi skály. Zdejší horniny jsou starší než ty, které jsme před chvílí viděli na Hostibejku. Mají asi 300 milionů let – a vznikly v době, kdy se naše území nacházelo poblíž rovníku. Tato hornina je sediment, tedy usazený materiál na dně tehdejšího tropického jezera…  Pojďme se podívat, jak to v takovém tropickém jezeře vypadalo...</description>
+        </questionslide>
+        <questionslide name="task12b" title="" layout="v_video_bgimg">
+            <video>task12_more</video>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task12c" layout="custom1">
+	        <questions>
+                <question type="sort" shuffle="true">
+                    <description><![CDATA[Dokážete seřadit následující organismy podle toho, kdy se poprvé na Zemi vyvinuly?]]></description>
+                    <variant>bakterie</variant>
+					<variant>trilobiti</variant>
+					<variant>ryby</variant>
+					<variant>žáby</variant>
+					<variant>dinosauři</variant>
+					<variant>myši</variant>
+					<variant>člověk</variant>
+                </question>
+            </questions>
+        </questionslide>
+    </task>
+     <task name="task13">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task13a" title="" layout="v_quest_img">
+            <header>Rodný dům Antonína Dvořáka</header>
+	        <description>Nyní stojíte před domem, kde se narodil nejslavnější český hudební skladatel, který patřil mezi špičky i ve světovém měřítku. Dvořákovu nejslavnější skladbu – Novosvětskou – pustili dokonce američtí astronauti, když přistáli jako první lidé na Měsíci. V tomto době žil Dvořák do svých 12 let, později odešel kvůli studiu hudby do Zlonic u Kladna a poté do Prahy, kde vytvořil svá nejslavnější díla. Prostory uvnitř domu jsou nyní sestaveny tak, aby vypadaly jako v době, kdy tu malý Dvořák bydlel.  Expozici můžete navštívit vždy od středy do neděle a o víkendech jen každý druhý víkend, vždy od 9:30 do 12:00 a od 13:00 do 17:00.</description>
+        </questionslide>
+        <questionslide name="task13a2" title="" layout="v_quest_img">
+	        <description>Podobizna Antonína Dvořáka:</description>
+	        <images>task13_dvorak</images>
+        </questionslide>
+        <questionslide name="Task13play" type="custom" />
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task13c" layout="v_quest_img">
+	        <questions>
+	            <question type="numberquestion" shuffle="false" validate="true">
+	                <description>Zjistěte z pamětní desky na domě, ve kterém roce se Dvořák narodil. Napište pouze rok.</description>
+	                <variant valid="true">1841;x;x</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task14">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task14a" title="" layout="v_quest_img">
+            <header>Zámek Nelahozeves</header>
+	        <description>Právě stojíte před jednou z našich nejkrásnějších renesančních staveb! Zámek Nelahozeves nechal postavit Florián Gryspek z Gryspachu roku 1553, ale již v roce 1623 byl prodán rodu Lobkowiczů, kteří jej vlastní dodnes. Stavba je inspirována tehdejším italským stavebním stylem, jehož znakem je například kamenný most vedoucí přes umělý příkop. Dnes se uvnitř zámku můžete podívat na expozici znázorňující život šlechtické rodiny Lobkowiczů a také si prohlédnout obrazy slavných mistrů, jako je například Jan Brueghel starší, Peter Paul Rubens nebo Panini.  Zámek je pro veřejnost otevřen od dubna do října každý den kromě pondělí, v zimě jen v neděli.</description>
+        </questionslide>
+        <questionslide name="task14b" title="" layout="v_quest_img">
+	        <description>Podívejte se na to, jak zámek vypadal z druhého břehu řeky v roce 1841, když se narodil Antonín Dvořák</description>
+	        <images>task14_1841</images>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task14c" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Cestou k zámku jste si mohli všimnout maleb na zdi severní strany zámku, které znázorňují biblické a antické motivy. I z této strany je zeď namalovaná, i když ne tak zdobeně. Jak se tyto malby na fasádě zámku nazývají?]]></description>
+	                <variant valid="false">grafitti</variant>
+	                <variant valid="false">freska</variant>
+	                <variant valid="true">sgrafita</variant>
+	                <variant valid="false">mozaika</variant>
+	                <variant valid="false">tapeta</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task15">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task15a" title="" layout="v_quest_img">
+            <header>Bývalý Unilever</header>
+	        <description>Nacházíte se u velkého průmyslového objektu; uhádli byste, co se v něm vyrábí? Už v roce 1932 se tu začaly produkovat jedlé tuky a mýdla. Později přibyly i kosmetické přípravky a časem také majonézy a hořčice. V roce 2009 pracovalo v tomto podniku, který vlastnila firma Unilever, 634 lidí. Těm bylo v tu dobu oznámeno uzavření továrny v důsledku ekonomické krize a přesunutí výroby do Polska.  Areál poté koupil výrobce vlhčených ubrousků, ale ten tu žádnou výrobu neobnovil. V roce 2013 změnil areál majitele znovu a dnes je tu aspoň menší výroba rostlinných olejů. Zbytek objektů se využívá jako sklad nebo kanceláře.</description>
+        </questionslide>
+        <questionslide name="task15b" title="" layout="v_quest_img">
+	        <description>Podívejte se na známé značky, které se tu ještě kolem roku 2009 vyráběly:</description>
+	        <images>task15_znacky</images>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task15c" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[V obchodech můžete potkat různé druhy olejů, víte jaký druh se nejvíce vyrábí v České republice?]]></description>
+	                <variant valid="false">slunečnicový</variant>
+	                <variant valid="false">sojový</variant>
+	                <variant valid="true">řepkový</variant>
+	                <variant valid="false">palmový</variant>
+	                <variant valid="false">olivový</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task16">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task16a" title="" layout="v_quest_img">
+            <header>Vodní elektrárna Miřejovice</header>
+	        <description>V těchto místech stával dříve dřevěný most. V rámci prací na dolní Vltavě zde byl v letech 1900-1904 postaven jez, na jehož pilířích je ocelový most o délce 288 m, na němž stojíte. Po 1. světové válce byl tento komplex doplněn o vodní elektrárnu, kterou vidíte po levé straně. Od 70. let 20. století se bývalá vorová propust využívá jako slalomová dráha, tu můžete vidět po pravé straně. V roce 2012 zde proběhly kvalifikační závody na LOH v Londýně.</description>
+        </questionslide>
+        <questionslide name="task16b" title="" layout="v_quest_img">
+	        <description>Pokud chcete ještě ve výletu pokračovat, můžete se nyní vydat přes most a dojít do Veltrus, kde najdete nádherný barokní zámek s parkem.</description>
+	        <images>task16_veltrusy</images>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task16c" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="intervalquestion" shuffle="false" validate="true">
+	                <description>Roční spotřeba elektřiny na osobu v domácnosti ve Středočeském kraji činí 2000 kWh, elektrárna Miřejovice vyrobí za rok 14 000 MWh; kolik obyvatel tedy dokáže zásobovat elektřinou? (1MWh = 1000 kWh)</description>
+	                <variant valid="true">70000;x;x;20000;110000;5000</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task17">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
+        <questionslide name="task17a" title="" layout="v_quest_img">
+            <header>Nelahozeves</header>
+	        <description>Jsme na konci stezky, na nádraží v Nelahozevsi, které sice není moc zajímavé, ale jen 700 metrů odsud vzdušnou čarou, pokud pohlédnete směrem od Vltavy na nedaleký zalesněný svah, se nachází mimořádně důležité místo pro Českou republiku. V polích za lesem bylo vybudováno centrální skladiště ropy, které skladuje ve 12 zásobnících celkem asi milion tun ropy. Takové zásoby by vydržely celému Česku na 50 dní, pokud by byl zastaven přívod ropy z okolních států. Skladiště je postaveno na trase ropovodu a v blízkosti rafinerie v Kralupech nad Vltavou, která ropu zpracovává na pohonné hmoty. Máte-li čas a chuť, můžete se jít na skladiště podívat, ale tam už naše stezka nevede...</description>
+        </questionslide>
+        <questionslide name="task17b" title="" layout="v_quest_img">
+	        <description>Takhle nyní vypadá úložiště ropy pro celé Česko, nacházející se 700 metrů západně odsud.</description>
+	        <images>task17_ropa</images>
+        </questionslide>
+        <questionslide name="LockBeforeTaskFragment" type="custom" />
+        <questionslide name="task17c" title="" layout="v_quest_img">
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Víte, ze kterého státu dovážíme do Česka v současnosti největší množství ropy?]]></description>
+	                <variant valid="false">Norsko</variant>
+	                <variant valid="false">Saudská Arábie</variant>
+	                <variant valid="true">Rusko</variant>
+	                <variant valid="false">Čína</variant>
+	                <variant valid="false">USA</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="Task17StartStatFragment" type="custom" />
+    </task>
+     <task name="vyhodnoceniPreview">
+        <questionslide name="vyhodnoceniPreviewStartStatFragment" type="custom" />
+    </task>
+     <task name="task18">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="task18a" title="stola" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Jak se jmenuje středověká štola, která zde má své ústí]]></description>
+	                <variant valid="true">sv. Jiří</variant>
+	                <variant valid="false">sv. Martina</variant>
+	                <variant valid="false">Osel</variant>
+	                <variant valid="false">sv. Barbora</variant>
+	                <variant valid="false">Kutnohorská</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task18b" layout="v_quest_img">
+            <header></header>
+            <description>Ve štole se ve středověku těžilo stříbro. Jaká je průměrná šířka chodeb v centimetrech? Vyčtěte to ze zdejší tabule a napište hodnoty v číslech</description>
+	        <questions>
+	            <question type="numberquestion" shuffle="true" validate="true">
+	                <description><![CDATA[Minimální výška chodeb (cm):]]></description>
+	                <variant valid="false">70;x;x</variant>
+	            </question>
+	            <question type="numberquestion" shuffle="true" validate="true">
+	                <description><![CDATA[Běžná šířka chodeb (cm):]]></description>
+	                <variant valid="false">70;x;x</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task19">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="task19a" title="" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="fillText" shuffle="true" validate="true">
+	                <description><![CDATA[Jak se jmenuje celosvětový seznam světového kulturního a přírodního dědictví, který má na starosti OSN? Napište jeho zkratku:]]></description>
+	                <variant valid="true">UNESCO</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task19b" layout="v_quest_img">
+            <description><![CDATA[Celé město Kutná Hora je zapsáno na seznam světového dědictví UNESCO. Památek UNESCO máme mnohem víc, celkem 12, pokuste se aspoň některé z nich rozpoznat. Na následující stránce přiřaďte jména památek UNESCO k fotografiím.]]></description>
+        </questionslide>
+        <questionslide name="task19bInteraction" title="" type="custom" />
+    </task>
+     <task name="task20">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="task20a" title="" layout="v_quest_img">
+            <header></header>
+            <description><![CDATA[Odsud můžete vidět krásně jezuitskou kolej i chrám svaté Barbory. Pod tímto chrámem byl kopán důl Osel, který postupně dosáhl svislé hloubky až 450 metrů pod zemí a ve své době byl díky tomu nejhlubší na světě.<br /><br />Na následující stránce zkuste odhadnout, jak hluboko důl Osel sahal, klikněte na místo na obrázku, které podle vás odpovídá hloubce 450 metrů...]]></description>
+        </questionslide>
+        <questionslide name="task20aInteraction" title="" type="custom" />
+        <questionslide name="task20b" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="numberquestion" shuffle="true" validate="true">
+	                <description><![CDATA[Jak se asi horníkům pracovalo v těchto hloubkách? Jaká tu asi panovala teplota? Odhadněte, jaké teploty mohli v této hloubce horníci přibližně očekávat. Průměrná teplota horniny 20 metrů pod zemí se pohybuje kolem 10 °C. Dále geologicky platí, že teploty s hloubkou stoupají asi o 1 °C na 33 metrů hloubky. Spočítejte, jaká by teoreticky měla být na dně dolu Osel teplota (zaokrouhlete na celé stupně).]]></description>
+	                <variant valid="false">23;x;x</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task21">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="task21a" title="" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="fillText" shuffle="true" validate="true">
+	                <description><![CDATA[Na tomto náměstí můžete vidět dům, jehož fasádu zdobí fresky s vyobrazenými panovníky, kteří ve Vlašském dvoře sídlili ve 14. a 15. století, kdy byla Kutná Hora významnější než Praha. Podívejte se na fasádu a zjistěte, jak se tento dům jmenuje:]]></description>
+	                <variant valid="false">U tří králů</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task21b" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="multichoice" shuffle="true" validate="true">
+	                <description><![CDATA[Zároveň jsou na náměstí k vidění památky na slavné osobnosti české historie. Vyberte na které?]]></description>
+	                <variant valid="false">Karel IV.</variant>
+	                <variant valid="false">Václav Havel</variant>
+	                <variant valid="true">Karel Havlíček Borovský</variant>
+	                <variant valid="true">František Palacký</variant>
+	                <variant valid="true">Tomáš Garrigue Masaryk</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task22">
+         <location>
+             <latitude>50.0767542</latitude>
+             <longitude>14.4201933</longitude>
+         </location>
+        <questionslide name="task22a" title="" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Nacházíte se v místě, které bylo ve své době jedním z těžišť moci českého státu. Bylo tu příležitostné sídlo tehdejších panovníků a konaly se tu různé schůzky mocných. Kromě toho měl ale Vlašský dvůr jednu zásadní funkci:]]></description>
+	                <variant valid="false">úložiště korunovačních klenotů</variant>
+	                <variant valid="false">klíčové poutní místo věřících</variant>
+	                <variant valid="true">hlavní mincovna českého státu</variant>
+	                <variant valid="false">pohřebiště všech slavných českých osobností</variant>
+	                <variant valid="false">cvičila se tu armáda</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task22b" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Razily se tu stříbrné pražské groše. Byly čistě ze stříbra a měly díky tomu velkou hodnotu – běžný dělník si na jeden groš vydělával celý den. Groš vážil 3 až 4 gramy. Už tehdy se na něm objevoval jeden český symbol, který najdeme dodnes na všech českých mincích. Víte jaký?]]></description>
+	                <variant valid="false">svatý Václav</variant>
+	                <variant valid="true">český lev</variant>
+	                <variant valid="false">Hradčany</variant>
+	                <variant valid="false">královská koruna</variant>
+	                <variant valid="false">lípa</variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task23">
+        <questionslide name="task23a" title="" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Jazykový test - nerozumím]]></description>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task23b" title="" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[Jazykový test - nerozumím]]></description>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+     <task name="task0x">
+        <questionslide name="task0xa" title="" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[]]></description>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	            </question>
+	        </questions>
+        </questionslide>
+        <questionslide name="task0xb" layout="v_quest_img">
+            <header></header>
+	        <questions>
+	            <question type="singlechoice" shuffle="true" validate="true">
+	                <description><![CDATA[]]></description>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	                <variant valid="false"></variant>
+	            </question>
+	        </questions>
+        </questionslide>
+    </task>
+</questionset>

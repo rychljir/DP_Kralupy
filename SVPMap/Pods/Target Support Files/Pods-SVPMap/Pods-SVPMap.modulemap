@@ -1,0 +1,6 @@
+framework module Pods_SVPMap {
+  umbrella header "Pods-SVPMap-umbrella.h"
+
+  export *
+  module * { export * }
+}
