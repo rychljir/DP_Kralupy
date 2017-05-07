@@ -16,7 +16,7 @@ class Task2ViewController: UIViewController {
     
     @IBAction func evaluate(_ sender: AnyObject) {
         let selectedValue = textField.text
-        print("Answer: \(selectedValue)")
+        print("Answer: \(String(describing: selectedValue))")
         if selectedValue == "Swift" || selectedValue == "swift"{
             evalText.text = "SPRAVNE!"
         }else{

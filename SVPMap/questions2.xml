@@ -61,8 +61,8 @@
     </task>
     <task name="task02">
         <location>
-            <latitude>50.0767542</latitude>
-            <longitude>14.4201933</longitude>
+            <latitude>50.0767552</latitude>
+            <longitude>14.4211933</longitude>
         </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task02a" title="namesti" layout="v_quest_img">
@@ -91,8 +91,8 @@
     </task>
     <task name="task03">
         <location>
-            <latitude>50.0767542</latitude>
-            <longitude>14.4201933</longitude>
+            <latitude>50.0767562</latitude>
+            <longitude>14.4221933</longitude>
         </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task03a" title="" layout="v_quest_img">
@@ -135,8 +135,8 @@
     </task>
      <task name="task04">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767572</latitude>
+             <longitude>14.4231933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task04a" title="" layout="v_quest_img">
@@ -161,8 +161,8 @@
     </task>
      <task name="task05">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767582</latitude>
+             <longitude>14.4241933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task05a" title="" layout="v_quest_img">
@@ -186,8 +186,8 @@
     </task>
      <task name="task06">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767592</latitude>
+             <longitude>14.4251933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task06a" title="" layout="v_quest_img">
@@ -298,8 +298,8 @@
     </task>
      <task name="task07">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767602</latitude>
+             <longitude>14.4261933</longitude>
          </location>
        <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task07a" title="" layout="v_quest_img">
@@ -326,8 +326,8 @@
     </task>
      <task name="task08">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767612</latitude>
+             <longitude>14.4271933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task08a" title="" layout="v_quest_img">
@@ -357,8 +357,8 @@
     </task>
      <task name="task09">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767622</latitude>
+             <longitude>14.4281933</longitude>
          </location>
          <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task09a" title="" layout="v_quest_img" timelimit="60">
@@ -369,8 +369,8 @@
     </task>
     <task name="task09a">
         <location>
-            <latitude>50.0767542</latitude>
-            <longitude>14.4201933</longitude>
+            <latitude>50.0767632</latitude>
+            <longitude>14.4291933</longitude>
         </location>
         <questionslide name="task09a_a" title="" layout="v_quest_img">
             <header>Pískovcové útvary</header>
@@ -396,8 +396,8 @@
     </task>
     <task name="task09b">
         <location>
-            <latitude>50.0767542</latitude>
-            <longitude>14.4201933</longitude>
+            <latitude>50.0767642</latitude>
+            <longitude>14.4301933</longitude>
         </location>
         <questionslide name="task09b_a" title="" layout="v_quest_img">
             <header>Altánek</header>
@@ -442,8 +442,8 @@
     </task>
     <task name="task09c">
         <location>
-            <latitude>50.0767542</latitude>
-            <longitude>14.4201933</longitude>
+            <latitude>50.0767652</latitude>
+            <longitude>14.4311933</longitude>
         </location>
         <questionslide name="task09c_a" title="" layout="v_quest_img">
             <header>Bunkr</header>
@@ -465,8 +465,8 @@
     </task>
     <task name="task09d">
         <location>
-            <latitude>50.0767542</latitude>
-            <longitude>14.4201933</longitude>
+            <latitude>50.0767662</latitude>
+            <longitude>14.4321933</longitude>
         </location>
         <questionslide name="task09d_a" title="" layout="v_quest_img">
             <header>Památník padlým</header>
@@ -488,8 +488,8 @@
     </task>
     <task name="task09Gal">
         <location>
-            <latitude>50.0767542</latitude>
-            <longitude>14.4201933</longitude>
+            <latitude>50.0767672</latitude>
+            <longitude>14.4331933</longitude>
         </location>
         <questionslide name="Task09Gal01" type="custom" />
         <questionslide name="Task09Gal02" type="custom" />
@@ -506,8 +506,8 @@
     </task>
      <task name="task10">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767682</latitude>
+             <longitude>14.4341933</longitude>
          </location>
          <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task10a" title="" layout="v_quest_img">
@@ -544,8 +544,8 @@
     </task>
      <task name="task11">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767692</latitude>
+             <longitude>14.4351933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task11a" title="" layout="v_quest_img">
@@ -586,8 +586,8 @@
     </task>
      <task name="task12">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767702</latitude>
+             <longitude>14.4361933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task12a" title="" layout="v_quest_img">
@@ -615,8 +615,8 @@
     </task>
      <task name="task13">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767712</latitude>
+             <longitude>14.4371933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task13a" title="" layout="v_quest_img">
@@ -640,8 +640,8 @@
     </task>
      <task name="task14">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767722</latitude>
+             <longitude>14.4381933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task14a" title="" layout="v_quest_img">
@@ -668,8 +668,8 @@
     </task>
      <task name="task15">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767732</latitude>
+             <longitude>14.4391933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task15a" title="" layout="v_quest_img">
@@ -696,8 +696,8 @@
     </task>
      <task name="task16">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767742</latitude>
+             <longitude>14.4401933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task16a" title="" layout="v_quest_img">
@@ -720,8 +720,8 @@
     </task>
      <task name="task17">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767752</latitude>
+             <longitude>14.4411933</longitude>
          </location>
         <questionslide name="firstScreen" title="" layout="h_quest_quest" />
         <questionslide name="task17a" title="" layout="v_quest_img">
@@ -752,8 +752,8 @@
     </task>
      <task name="task18">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767762</latitude>
+             <longitude>14.4421933</longitude>
          </location>
         <questionslide name="task18a" title="stola" layout="v_quest_img">
             <header></header>
@@ -785,8 +785,8 @@
     </task>
      <task name="task19">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767772</latitude>
+             <longitude>14.4431933</longitude>
          </location>
         <questionslide name="task19a" title="" layout="v_quest_img">
             <header></header>
@@ -804,8 +804,8 @@
     </task>
      <task name="task20">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767782</latitude>
+             <longitude>14.4441933</longitude>
          </location>
         <questionslide name="task20a" title="" layout="v_quest_img">
             <header></header>
@@ -824,8 +824,8 @@
     </task>
      <task name="task21">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767792</latitude>
+             <longitude>14.4451933</longitude>
          </location>
         <questionslide name="task21a" title="" layout="v_quest_img">
             <header></header>
@@ -852,8 +852,8 @@
     </task>
      <task name="task22">
          <location>
-             <latitude>50.0767542</latitude>
-             <longitude>14.4201933</longitude>
+             <latitude>50.0767802</latitude>
+             <longitude>14.4461933</longitude>
          </location>
         <questionslide name="task22a" title="" layout="v_quest_img">
             <header></header>

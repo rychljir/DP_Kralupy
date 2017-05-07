@@ -143,6 +143,7 @@
 		949ADEDD1EBC98890061354E /* vyhodnotit_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 949ADE651EBC98890061354E /* vyhodnotit_pressed.png */; };
 		949ADEDF1EBC989C0061354E /* questions2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 949ADEDE1EBC989C0061354E /* questions2.xml */; };
 		949ADEE11EBC9A690061354E /* QuestionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949ADEE01EBC9A690061354E /* QuestionParser.swift */; };
+		94A3E46A1EBFA8EB00A32819 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */; };
 		94C6F2AF1EA8E0DF00406459 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C6F2AE1EA8E0DF00406459 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -341,6 +342,7 @@
 		949ADE651EBC98890061354E /* vyhodnotit_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vyhodnotit_pressed.png; path = "drawable-xhdpi-2/vyhodnotit_pressed.png"; sourceTree = "<group>"; };
 		949ADEDE1EBC989C0061354E /* questions2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions2.xml; sourceTree = "<group>"; };
 		949ADEE01EBC9A690061354E /* QuestionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionParser.swift; sourceTree = "<group>"; };
+		94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
 		94C6F2AE1EA8E0DF00406459 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		94CC2FD31E27AE9200E14DB1 /* Task1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -421,6 +423,7 @@
 				946623491E2C0AD300CCEFC6 /* Task2ViewController.swift */,
 				94355A8B1EA7713B0003171F /* Podfile */,
 				949ADEE01EBC9A690061354E /* QuestionParser.swift */,
+				94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */,
 			);
 			path = SVPMap;
 			sourceTree = "<group>";
@@ -931,6 +934,7 @@
 			files = (
 				9466234A1E2C0AD300CCEFC6 /* Task2ViewController.swift in Sources */,
 				9472B5B11E23AF9400C9CA2C /* ViewController.swift in Sources */,
+				94A3E46A1EBFA8EB00A32819 /* ChapterViewController.swift in Sources */,
 				9472B5AF1E23AF9400C9CA2C /* AppDelegate.swift in Sources */,
 				949ADEE11EBC9A690061354E /* QuestionParser.swift in Sources */,
 				940358FB1E31387000CB59EA /* Task1ViewController.swift in Sources */,

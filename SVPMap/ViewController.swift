@@ -13,12 +13,10 @@ import AEXML
 
 class ViewController: UIViewController {
     var locationManager:CLLocationManager!
-    var myLocations: [CLLocation] = []
-    
     
     var locations = [[Double]]()
     var tasks = [Task]()
-    
+    var maxTries = 0
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var debugLabel: UILabel!
@@ -31,7 +29,13 @@ class ViewController: UIViewController {
         //set accuracy of location
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         //show permission dialog
-        locationManager.requestAlwaysAuthorization()
+        if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse{
+            //start getting location
+            locationManager.startUpdatingLocation()
+        }else{
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
         
         
         //Setup our Map View
@@ -40,12 +44,11 @@ class ViewController: UIViewController {
         
         addPins()
         
-        let homeLocation = CLLocation(latitude: 37.6213, longitude: -122.3790)
-        let regionRadius: CLLocationDistance = 200
+        let homeLocation = CLLocation(latitude: 50.0767712, longitude: 14.4371933)
+        let regionRadius: CLLocationDistance = 500
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(homeLocation.coordinate,regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
-        //start getting location
-        locationManager.startUpdatingLocation()
+        
     }
     
     func addPins(){
@@ -56,17 +59,23 @@ class ViewController: UIViewController {
             let xmlDoc = try AEXMLDocument(xml: data!, options: opt)
             let parser = QuestionParser(xmlDocument: xmlDoc)
             tasks = parser.getTasks()
-            
-            var loc = [Double(50.0767542),Double(14.4201933)]
-            locations.append(loc)
-            loc = [Double(50.0745853),Double(14.4195711)]
-            locations.append(loc)
+            maxTries = parser.getTries()
+            for task in tasks {
+                if task.location.count>0{
+                    locations.append(task.location)
+                }else{
+                    locations.append([0,0])
+                }
+            }
             
             for i in 1 ... locations.count{
-                let myAnnotation: MKPointAnnotation = MKPointAnnotation()
-                myAnnotation.coordinate = CLLocationCoordinate2DMake(locations[i-1][0], locations[i-1][1])
-                myAnnotation.title = "Task\(i)"
-                mapView.addAnnotation(myAnnotation)
+                if locations[i-1][0] != 0 && locations[i-1][1] != 0 {
+                    let myAnnotation: MKPointAnnotation = MKPointAnnotation()
+                    myAnnotation.coordinate = CLLocationCoordinate2DMake(locations[i-1][0], locations[i-1][1])
+                    myAnnotation.title = "Task\(i-1)"
+                  //  print("Task\(i-1): \(locations[i-1][0]) ; \(locations[i-1][1]) ")
+                    mapView.addAnnotation(myAnnotation)
+                }
             }
         } catch {
             print("\(error)")
@@ -91,44 +100,27 @@ class ViewController: UIViewController {
 extension ViewController: CLLocationManagerDelegate{
     func locationManager(_ locationManager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         //debugLabel.text = "\(locations[0])"
-        myLocations.append(locations[0])
         
         let spanX = 0.010
         let spanY = 0.010
         let setupRegion = MKCoordinateRegion(center: mapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
-        mapView.setRegion(setupRegion, animated: true)
-        
-        if (myLocations.count > 1){
-            let sourceIndex = myLocations.count - 1
-            let destinationIndex = myLocations.count - 2
-            
-            let c1 = myLocations[sourceIndex].coordinate
-            let c2 = myLocations[destinationIndex].coordinate
-            var a = [c1, c2]
-            let polyline = MKPolyline(coordinates: &a, count: a.count)
-            mapView.add(polyline)
+        print("UserCoords: \(mapView.userLocation.coordinate.latitude) ; \(mapView.userLocation.coordinate.longitude)")
+      //  mapView.setRegion(setupRegion, animated: true)
+
+    }
+    
+   func locationManager(_ locationManager:CLLocationManager, didChangeAuthorization status:CLAuthorizationStatus) {
+        if status == CLAuthorizationStatus.authorizedWhenInUse || status == CLAuthorizationStatus.authorizedAlways{
+            locationManager.startUpdatingLocation()
         }
     }
 }
 
 extension ViewController: MKMapViewDelegate{
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        
-        if overlay is MKPolyline {
-            let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = UIColor.blue
-            polylineRenderer.lineWidth = 4
-            return polylineRenderer
-        }
-        return MKOverlayRenderer()
-    }
-    
     func mapView(_ mapView: MKMapView, didSelect view:MKAnnotationView){
-        print("Annotation: \(view.annotation?.title!)")
-        if view.annotation?.title! == "Task1"{
-            performSegue(withIdentifier: "Task1", sender: nil)        }
-        if view.annotation?.title! == "Task2"{
-            performSegue(withIdentifier: "Task2", sender: nil)         }
+        print("Annotation: \(String(describing: view.annotation?.title!))")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "baseChapter") as! ChapterViewController
+        self.present(vc, animated: true, completion:nil)
     }
     
 }
