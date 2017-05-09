@@ -102,7 +102,7 @@ class ChapterViewController: UIViewController, UIScrollViewDelegate{
         case (-1): break
             
         default:
-            slides = factory.prepareSlides(questionSet: tasks[index].slides)
+            slides = factory.prepareSlides(questionSet: tasks[index].slides, callingViewController: self)
         }
     }
 

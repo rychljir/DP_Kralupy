@@ -11,7 +11,7 @@ import PureLayout
 
 class SlideFactory: UIViewController {
 
-    public func prepareSlides(questionSet: [QuestionSlide]) -> [UIView]{
+    public func prepareSlides(questionSet: [QuestionSlide], callingViewController: UIViewController) -> [UIView]{
         var result = [UIView]()
         for q in questionSet{
             if(q.type == "custom"){
@@ -20,7 +20,7 @@ class SlideFactory: UIViewController {
             }
             if(q.layout == "v_quest_img"){
                 let questView: v_quest_img = Bundle.main.loadNibNamed("v_quest_img", owner: self, options: nil)?.first as! v_quest_img
-                questView.initSlide(question: q)
+                questView.initSlide(question: q, callingViewController: callingViewController)
                 result.append(questView)
             }
         }

@@ -7,4 +7,5 @@ platform :ios, '9.3'
 target 'SVPMap' do
     pod 'AEXML'
     pod 'PureLayout'
+    pod 'DLRadioButton'
 end
