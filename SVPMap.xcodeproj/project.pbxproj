@@ -8,9 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		214A614D264280FB488FE62E /* Pods_SVPMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCFBA430A1910CCD8F41DBE /* Pods_SVPMap.framework */; };
-		940358FB1E31387000CB59EA /* Task1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CC2FD31E27AE9200E14DB1 /* Task1ViewController.swift */; };
+		9414E1511EC04149006624FB /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E1501EC04149006624FB /* IntroViewController.swift */; };
+		9414E1561EC0494E006624FB /* IntroSlide_01.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9414E1551EC0494E006624FB /* IntroSlide_01.xib */; };
+		9414E1581EC05121006624FB /* IntroSlide_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E1571EC05121006624FB /* IntroSlide_01.swift */; };
+		9414E15A1EC0538A006624FB /* IntroSlide_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E1591EC0538A006624FB /* IntroSlide_02.swift */; };
+		9414E15C1EC05394006624FB /* IntroSlide_02.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9414E15B1EC05394006624FB /* IntroSlide_02.xib */; };
+		9414E15E1EC05A61006624FB /* IntroSlide_03.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9414E15D1EC05A61006624FB /* IntroSlide_03.xib */; };
+		9414E1601EC05A6B006624FB /* IntroSlide_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E15F1EC05A6B006624FB /* IntroSlide_03.swift */; };
+		9414E1621EC06AA3006624FB /* IntroSlide_04.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9414E1611EC06AA3006624FB /* IntroSlide_04.xib */; };
+		9414E1641EC06AB3006624FB /* IntroSlide_04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E1631EC06AB3006624FB /* IntroSlide_04.swift */; };
+		9414E1681EC07F33006624FB /* SlideFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E1671EC07F33006624FB /* SlideFactory.swift */; };
 		94355A8C1EA7713B0003171F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 94355A8B1EA7713B0003171F /* Podfile */; };
-		9466234A1E2C0AD300CCEFC6 /* Task2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946623491E2C0AD300CCEFC6 /* Task2ViewController.swift */; };
+		943A7BEF1EC081F800004498 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A7BEE1EC081F800004498 /* QuestionView.swift */; };
 		9466234C1E2C0D7000CCEFC6 /* questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 9466234B1E2C0D7000CCEFC6 /* questions.xml */; };
 		9472B5AF1E23AF9400C9CA2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5AE1E23AF9400C9CA2C /* AppDelegate.swift */; };
 		9472B5B11E23AF9400C9CA2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5B01E23AF9400C9CA2C /* ViewController.swift */; };
@@ -19,6 +28,9 @@
 		9472B5B91E23AF9400C9CA2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9472B5B71E23AF9400C9CA2C /* LaunchScreen.storyboard */; };
 		9472B5C41E23AF9400C9CA2C /* SVPMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5C31E23AF9400C9CA2C /* SVPMapTests.swift */; };
 		9472B5CF1E23AF9400C9CA2C /* SVPMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5CE1E23AF9400C9CA2C /* SVPMapUITests.swift */; };
+		94868C471EC0B25700196C83 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94868C461EC0B25700196C83 /* CustomView.swift */; };
+		94868C491EC0D1AB00196C83 /* v_quest_img.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94868C481EC0D1AA00196C83 /* v_quest_img.xib */; };
+		94868C4B1EC0D25200196C83 /* v_quest_img.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94868C4A1EC0D25200196C83 /* v_quest_img.swift */; };
 		949ADC9E1EBC75B80061354E /* ios_core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949ADC9B1EBC75AB0061354E /* ios_core.framework */; };
 		949ADC9F1EBC75B80061354E /* ios_core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 949ADC9B1EBC75AB0061354E /* ios_core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		949ADE661EBC98890061354E /* b_home_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 949ADDEE1EBC98890061354E /* b_home_pressed.png */; };
@@ -203,8 +215,18 @@
 		5BCFBA430A1910CCD8F41DBE /* Pods_SVPMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SVPMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E59BD19CC0DA9B23A38EEA8 /* Pods-SVPMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVPMap.release.xcconfig"; path = "SVPMap/Pods/Target Support Files/Pods-SVPMap/Pods-SVPMap.release.xcconfig"; sourceTree = "<group>"; };
 		73D5D4C7A9FC198FD98F9105 /* Pods-SVPMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVPMap.debug.xcconfig"; path = "SVPMap/Pods/Target Support Files/Pods-SVPMap/Pods-SVPMap.debug.xcconfig"; sourceTree = "<group>"; };
+		9414E1501EC04149006624FB /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		9414E1551EC0494E006624FB /* IntroSlide_01.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroSlide_01.xib; sourceTree = "<group>"; };
+		9414E1571EC05121006624FB /* IntroSlide_01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroSlide_01.swift; sourceTree = "<group>"; };
+		9414E1591EC0538A006624FB /* IntroSlide_02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroSlide_02.swift; sourceTree = "<group>"; };
+		9414E15B1EC05394006624FB /* IntroSlide_02.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroSlide_02.xib; sourceTree = "<group>"; };
+		9414E15D1EC05A61006624FB /* IntroSlide_03.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroSlide_03.xib; sourceTree = "<group>"; };
+		9414E15F1EC05A6B006624FB /* IntroSlide_03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroSlide_03.swift; sourceTree = "<group>"; };
+		9414E1611EC06AA3006624FB /* IntroSlide_04.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroSlide_04.xib; sourceTree = "<group>"; };
+		9414E1631EC06AB3006624FB /* IntroSlide_04.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroSlide_04.swift; sourceTree = "<group>"; };
+		9414E1671EC07F33006624FB /* SlideFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideFactory.swift; sourceTree = "<group>"; };
 		94355A8B1EA7713B0003171F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		946623491E2C0AD300CCEFC6 /* Task2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task2ViewController.swift; sourceTree = "<group>"; };
+		943A7BEE1EC081F800004498 /* QuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		9466234B1E2C0D7000CCEFC6 /* questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions.xml; sourceTree = "<group>"; };
 		9472B5AB1E23AF9300C9CA2C /* SVPMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVPMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9472B5AE1E23AF9400C9CA2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +241,9 @@
 		9472B5CA1E23AF9400C9CA2C /* SVPMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVPMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9472B5CE1E23AF9400C9CA2C /* SVPMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVPMapUITests.swift; sourceTree = "<group>"; };
 		9472B5D01E23AF9400C9CA2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94868C461EC0B25700196C83 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		94868C481EC0D1AA00196C83 /* v_quest_img.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = v_quest_img.xib; sourceTree = "<group>"; };
+		94868C4A1EC0D25200196C83 /* v_quest_img.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = v_quest_img.swift; sourceTree = "<group>"; };
 		949ADC951EBC75AB0061354E /* ios_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ios_core.xcodeproj; path = ../ios_core/ios_core.xcodeproj; sourceTree = "<group>"; };
 		949ADDEE1EBC98890061354E /* b_home_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b_home_pressed.png; path = "drawable-xhdpi-2/b_home_pressed.png"; sourceTree = "<group>"; };
 		949ADDEF1EBC98890061354E /* b_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b_home.png; path = "drawable-xhdpi-2/b_home.png"; sourceTree = "<group>"; };
@@ -344,7 +369,6 @@
 		949ADEE01EBC9A690061354E /* QuestionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionParser.swift; sourceTree = "<group>"; };
 		94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
 		94C6F2AE1EA8E0DF00406459 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		94CC2FD31E27AE9200E14DB1 /* Task1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +408,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9414E1521EC0491F006624FB /* views */ = {
+			isa = PBXGroup;
+			children = (
+				9414E1551EC0494E006624FB /* IntroSlide_01.xib */,
+				9414E1571EC05121006624FB /* IntroSlide_01.swift */,
+				9414E15B1EC05394006624FB /* IntroSlide_02.xib */,
+				9414E1591EC0538A006624FB /* IntroSlide_02.swift */,
+				9414E15D1EC05A61006624FB /* IntroSlide_03.xib */,
+				9414E15F1EC05A6B006624FB /* IntroSlide_03.swift */,
+				9414E1611EC06AA3006624FB /* IntroSlide_04.xib */,
+				9414E1631EC06AB3006624FB /* IntroSlide_04.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		9472B5A21E23AF9300C9CA2C = {
 			isa = PBXGroup;
 			children = (
@@ -410,19 +449,24 @@
 		9472B5AD1E23AF9400C9CA2C /* SVPMap */ = {
 			isa = PBXGroup;
 			children = (
+				9414E1521EC0491F006624FB /* views */,
 				949ADDE71EBC98700061354E /* res */,
 				9472B5AE1E23AF9400C9CA2C /* AppDelegate.swift */,
-				9472B5B01E23AF9400C9CA2C /* ViewController.swift */,
 				9466234B1E2C0D7000CCEFC6 /* questions.xml */,
 				949ADEDE1EBC989C0061354E /* questions2.xml */,
 				9472B5B21E23AF9400C9CA2C /* Main.storyboard */,
 				9472B5B51E23AF9400C9CA2C /* Assets.xcassets */,
 				9472B5B71E23AF9400C9CA2C /* LaunchScreen.storyboard */,
 				9472B5BA1E23AF9400C9CA2C /* Info.plist */,
-				94CC2FD31E27AE9200E14DB1 /* Task1ViewController.swift */,
-				946623491E2C0AD300CCEFC6 /* Task2ViewController.swift */,
 				94355A8B1EA7713B0003171F /* Podfile */,
 				949ADEE01EBC9A690061354E /* QuestionParser.swift */,
+				943A7BEE1EC081F800004498 /* QuestionView.swift */,
+				94868C4A1EC0D25200196C83 /* v_quest_img.swift */,
+				94868C481EC0D1AA00196C83 /* v_quest_img.xib */,
+				94868C461EC0B25700196C83 /* CustomView.swift */,
+				9414E1671EC07F33006624FB /* SlideFactory.swift */,
+				9414E1501EC04149006624FB /* IntroViewController.swift */,
+				9472B5B01E23AF9400C9CA2C /* ViewController.swift */,
 				94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */,
 			);
 			path = SVPMap;
@@ -767,6 +811,7 @@
 				949ADEAA1EBC98890061354E /* task04_exterier.jpg in Resources */,
 				949ADE6F1EBC98890061354E /* bg_task05.jpg in Resources */,
 				949ADE6A1EBC98890061354E /* bg_task00b.jpg in Resources */,
+				9414E15E1EC05A61006624FB /* IntroSlide_03.xib in Resources */,
 				949ADECC1EBC98890061354E /* task13_dvorak.png in Resources */,
 				949ADE901EBC98890061354E /* map_poi_inactive.png in Resources */,
 				949ADE6E1EBC98890061354E /* bg_task04.jpg in Resources */,
@@ -798,6 +843,8 @@
 				949ADEB31EBC98890061354E /* task06_symbol09.png in Resources */,
 				949ADE921EBC98890061354E /* map_poi_user_lock.png in Resources */,
 				949ADEB01EBC98890061354E /* task06_symbol06.png in Resources */,
+				94868C491EC0D1AB00196C83 /* v_quest_img.xib in Resources */,
+				9414E15C1EC05394006624FB /* IntroSlide_02.xib in Resources */,
 				949ADED01EBC98890061354E /* task17_ropa.jpg in Resources */,
 				949ADED81EBC98890061354E /* vyhodnoceni_spravne.9.png in Resources */,
 				949ADE671EBC98890061354E /* b_home.png in Resources */,
@@ -805,6 +852,7 @@
 				949ADE881EBC98890061354E /* intro_gymnazium.png in Resources */,
 				949ADED31EBC98890061354E /* vyhodnoceni_bronz.png in Resources */,
 				949ADE731EBC98890061354E /* bg_task09.jpg in Resources */,
+				9414E1561EC0494E006624FB /* IntroSlide_01.xib in Resources */,
 				949ADEBD1EBC98890061354E /* task09_kralupy_07.jpg in Resources */,
 				949ADEBF1EBC98890061354E /* task09_kralupy_09.jpg in Resources */,
 				949ADECD1EBC98890061354E /* task14_1841.jpg in Resources */,
@@ -853,6 +901,7 @@
 				949ADE8D1EBC98890061354E /* map_poi_custom1.png in Resources */,
 				949ADEBC1EBC98890061354E /* task09_kralupy_06.jpg in Resources */,
 				949ADE681EBC98890061354E /* bg_edittext.9.png in Resources */,
+				9414E1621EC06AA3006624FB /* IntroSlide_04.xib in Resources */,
 				949ADEA01EBC98890061354E /* radio_normal.png in Resources */,
 				949ADEDF1EBC989C0061354E /* questions2.xml in Resources */,
 				949ADE911EBC98890061354E /* map_poi_rest.png in Resources */,
@@ -932,12 +981,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9466234A1E2C0AD300CCEFC6 /* Task2ViewController.swift in Sources */,
+				9414E1511EC04149006624FB /* IntroViewController.swift in Sources */,
+				943A7BEF1EC081F800004498 /* QuestionView.swift in Sources */,
+				94868C4B1EC0D25200196C83 /* v_quest_img.swift in Sources */,
+				9414E1641EC06AB3006624FB /* IntroSlide_04.swift in Sources */,
+				9414E1581EC05121006624FB /* IntroSlide_01.swift in Sources */,
 				9472B5B11E23AF9400C9CA2C /* ViewController.swift in Sources */,
 				94A3E46A1EBFA8EB00A32819 /* ChapterViewController.swift in Sources */,
+				9414E1681EC07F33006624FB /* SlideFactory.swift in Sources */,
+				9414E15A1EC0538A006624FB /* IntroSlide_02.swift in Sources */,
+				9414E1601EC05A6B006624FB /* IntroSlide_03.swift in Sources */,
+				94868C471EC0B25700196C83 /* CustomView.swift in Sources */,
 				9472B5AF1E23AF9400C9CA2C /* AppDelegate.swift in Sources */,
 				949ADEE11EBC9A690061354E /* QuestionParser.swift in Sources */,
-				940358FB1E31387000CB59EA /* Task1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

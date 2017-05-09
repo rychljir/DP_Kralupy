@@ -1,39 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <questionset maxTries="1">
-    <task name="intro">
-        <questionslide name="intro_01" layout="v_quest_img">
-            <description><![CDATA[
-                <p>Tato mobilní naučná stezka byla realizována jako vítězný návrh v soutěži středoškolských studentů „Poznávejme Středočeský kraj“.</p>
-                <p>Návrh stezky zpracovali studenti <b>Dvořákova gymnázia a SOŠE</b> v Kralupech nad Vltavou.<br /><img src="intro_gymnazium"/></p>
-                <p>Zhotovení aplikace zajistila <b>Scientica Agency s.r.o.</b><br /><img src="intro_scientica"/></p>
-                <p>Aplikace byla financována z finančních prostředků <b>Středočeského kraje</b>.<br /><img src="intro_stredocesky_kraj"/></p><p>Na následující stranu se dostanete přetažením <strong>zprava-doleva</strong>.</p>]]></description>
-        </questionslide>
-        <questionslide name="intro_02" layout="v_quest_img">
-            <description><![CDATA[
-                <h2>Vítejte...</h2>
-                <p>... na začátku mobilní stezky „Z Kralup za Antonínem Dvořákem“. Aplikace Vás bude provázet nejzajímavějšími místy v Kralupech, a zavede Vás do rodiště nejslavnějšího českého skladatele Antonína Dvořáka v Nelahozevsi. Delší varianta měří asi 9 km, kratší 6 km. Pokud Vám to bude málo, můžete odsud po projití naší trasy již sami pokračovat do barokního areálu Veltrusy.</p>
-                <p>Co vše vám zpříjemní cestu?</p>
-                <ul>
-                <li>offline mapa s vyznačením vaší polohy, plánovanou trasou a zastaveními</li>
-                <li>informace i fotografie k zajímavým místům</li>
-                <li>otázky a úkoly ke každému stanovišti, úspěšnost bude na konci vyhodnocena</li>
-                <li>panáček znázorňující výšku vody na daném místě při povodních roku 2002</li>
-                <li>informační menu s mnoha funkcemi: např. zobrazení restaurací při cestě, jízdního řádu vlaků v cíli</li>
-                <li>statistiky o ušlé trase, včetně odhadu, jak dlouho ještě projití stezky potrvá (zohledňuje čas zastavení) při kratší a delší variantě</li>                
-                </ul>
-                <p>A k tomu několik překvapení, která objevíte během cesty...</p>
-                ]]></description>
-        </questionslide>
-        <questionslide name="intro_03" layout="v_quest_img">
-            <description><![CDATA[<h2>O Kralupech obecně</h2>
-                <p>"Kralupy nejsou krásné město<br />a nikdy nebyly..."</p>
-                <p>...tvrdil jeden z našich největších básníků Jaroslav Seifert. Toto město sice nepatří mezi turisty vyhledávaná místa, ale i přesto tu lze najít mnohé zajímavosti. Obrovský rozvoj průmyslu změnil kdysi malou vesničku v pulsující okresní město. Osud se s ním však nemazlil: Ze všech českých měst zažily Kralupy během druhé světové války nejničivější bombardování. Rafinerie sice dává lidem práci, ale daní za to je nepříliš hezký pohled na obří průmyslový komplex. A v nedávné minulosti bylo město postiženo katastrofálními povodněmi. Zdálo by se, že Seifert, i když Kralupy velice miloval a rád se sem vracel, měl pravdu. My Vám ale chceme dokázat, že ne tak docela. V blízkém okolí totiž najdeme i řadu přírodních zajímavostí. Pojďte se s námi projít, ukážeme Vám, že Kralupy mají i svá pěkná místa. A putování po nich nás dovede do nedaleké Nelahozevsi, kde se narodil další významný Čech, Antonín Dvořák. Tak tedy vzhůru na cestu plnou poznání!</p>]]></description>
-        </questionslide>
-        <questionslide name="StartFragment" type="custom" />
-    </task>
-    <task name="help">
-        <questionslide name="StartFragment" type="custom" />
-    </task>
     <task name="task01">
         <location>
             <latitude>50.0767542</latitude>
@@ -44,7 +10,10 @@
             <header>Kralupské nádraží</header>
             <description><![CDATA[Ještě v roce 1850 byly Kralupy malou osadou s 27 domky. Obrovský rozvoj města přinesla železnice, v té době hlavní dopravní prostředek.  Nejprve došlo k propojení s Prahou, poté i s Kladnem, díky čemuž se z Kladna do Kralup začalo vozit uhlí. To se zde překládalo na lodě plující po Vltavě a Kralupy se staly dopravním uzlem. Záhy tu vznikla loděnice i první chemická továrna a počet obyvatel rychle rostl. Z malé vesničky je dnes středně velké město s 18 tisíci obyvateli a železnice je pro něj stále velmi důležitá. Zastavují tu rychlíky spojující Prahu s Ústí nad Labem, mezinárodní vlaky směřující do Německa tudy jen projíždí.]]></description>
         </questionslide>
-        <questionslide name="task01b_map" type="custom"/>
+        <questionslide name="task01b_map" title="" layout="v_quest_img">
+               <description>Prohlédněte si starou mapu Kralup z roku 1850.</description>
+               <images>task01_3_map</images>
+        </questionslide>
         <questionslide name="LockBeforeTaskFragment" type="custom" />
         <questionslide name="task01c" layout="custom1">
 	        <questions>
@@ -747,9 +716,6 @@
         </questionslide>
         <questionslide name="Task17StartStatFragment" type="custom" />
     </task>
-     <task name="vyhodnoceniPreview">
-        <questionslide name="vyhodnoceniPreviewStartStatFragment" type="custom" />
-    </task>
      <task name="task18">
          <location>
              <latitude>50.0767762</latitude>
@@ -882,60 +848,7 @@
 	        </questions>
         </questionslide>
     </task>
-     <task name="task23">
-        <questionslide name="task23a" title="" layout="v_quest_img">
-            <header></header>
-	        <questions>
-	            <question type="singlechoice" shuffle="true" validate="true">
-	                <description><![CDATA[Jazykový test - nerozumím]]></description>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	            </question>
-	        </questions>
-        </questionslide>
-        <questionslide name="task23b" title="" layout="v_quest_img">
-            <header></header>
-	        <questions>
-	            <question type="singlechoice" shuffle="true" validate="true">
-	                <description><![CDATA[Jazykový test - nerozumím]]></description>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	            </question>
-	        </questions>
-        </questionslide>
-    </task>
-     <task name="task0x">
-        <questionslide name="task0xa" title="" layout="v_quest_img">
-            <header></header>
-	        <questions>
-	            <question type="singlechoice" shuffle="true" validate="true">
-	                <description><![CDATA[]]></description>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	            </question>
-	        </questions>
-        </questionslide>
-        <questionslide name="task0xb" layout="v_quest_img">
-            <header></header>
-	        <questions>
-	            <question type="singlechoice" shuffle="true" validate="true">
-	                <description><![CDATA[]]></description>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	                <variant valid="false"></variant>
-	            </question>
-	        </questions>
-        </questionslide>
+    <task name="vyhodnoceniPreview">
+        <questionslide name="vyhodnoceniPreviewStartStatFragment" type="custom" />
     </task>
 </questionset>

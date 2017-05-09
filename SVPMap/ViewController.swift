@@ -12,11 +12,14 @@ import MapKit
 import AEXML
 
 class ViewController: UIViewController {
-    var locationManager:CLLocationManager!
     
+    var locationManager:CLLocationManager!
+    var chapterVC: ChapterViewController?
     var locations = [[Double]]()
     var tasks = [Task]()
     var maxTries = 0
+    
+    var indexForTaskDictionary: [String:Int] = [:]
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var debugLabel: UILabel!
@@ -36,13 +39,15 @@ class ViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
         }
         
-        
-        
         //Setup our Map View
         mapView.delegate = self
         mapView.showsUserLocation = true
         
+        parseXML()
         addPins()
+        chapterVC = self.storyboard?.instantiateViewController(withIdentifier: "baseChapter") as? ChapterViewController
+        chapterVC?.setMaxTries(max: maxTries)
+        chapterVC?.setTasks(tasks: tasks)
         
         let homeLocation = CLLocation(latitude: 50.0767712, longitude: 14.4371933)
         let regionRadius: CLLocationDistance = 500
@@ -51,7 +56,7 @@ class ViewController: UIViewController {
         
     }
     
-    func addPins(){
+    func parseXML(){
         do{
             let xmlPath = Bundle.main.path(forResource: "questions2", ofType: "xml")
             let data = try? Data(contentsOf: URL(fileURLWithPath: xmlPath!))
@@ -67,45 +72,36 @@ class ViewController: UIViewController {
                     locations.append([0,0])
                 }
             }
-            
+        } catch {
+            print("\(error)")
+        }
+    }
+    
+    func addPins(){
             for i in 1 ... locations.count{
                 if locations[i-1][0] != 0 && locations[i-1][1] != 0 {
                     let myAnnotation: MKPointAnnotation = MKPointAnnotation()
                     myAnnotation.coordinate = CLLocationCoordinate2DMake(locations[i-1][0], locations[i-1][1])
                     myAnnotation.title = "Task\(i-1)"
+                    indexForTaskDictionary["Task\(i-1)"] = i-1
                   //  print("Task\(i-1): \(locations[i-1][0]) ; \(locations[i-1][1]) ")
                     mapView.addAnnotation(myAnnotation)
                 }
             }
-        } catch {
-            print("\(error)")
-        }
-        
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Task1"{
-            let pinViewCont = segue.destination as! Task1ViewController
-            pinViewCont.title = "Task1"
-        }
-        if segue.identifier == "Task2"{
-            let taskViewCont = segue.destination as! Task2ViewController
-            taskViewCont.title = "Task2"
-        }
-    }
-    
-    
 }
 
 extension ViewController: CLLocationManagerDelegate{
     func locationManager(_ locationManager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
+        print("UserCoords: \(mapView.userLocation.coordinate.latitude) ; \(mapView.userLocation.coordinate.longitude)")
+        
         //debugLabel.text = "\(locations[0])"
         
-        let spanX = 0.010
+       /* let spanX = 0.010
         let spanY = 0.010
         let setupRegion = MKCoordinateRegion(center: mapView.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
-        print("UserCoords: \(mapView.userLocation.coordinate.latitude) ; \(mapView.userLocation.coordinate.longitude)")
-      //  mapView.setRegion(setupRegion, animated: true)
+        
+        mapView.setRegion(setupRegion, animated: true)*/
 
     }
     
@@ -119,8 +115,10 @@ extension ViewController: CLLocationManagerDelegate{
 extension ViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didSelect view:MKAnnotationView){
         print("Annotation: \(String(describing: view.annotation?.title!))")
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "baseChapter") as! ChapterViewController
-        self.present(vc, animated: true, completion:nil)
+        chapterVC?.setIndex(index: indexForTaskDictionary[((view.annotation?.title)!)!]!)
+        chapterVC?.prepareSlides()
+        chapterVC?.setupChapter()
+        self.present(chapterVC!, animated: true, completion:nil)
     }
     
 }

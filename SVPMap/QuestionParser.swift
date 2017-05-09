@@ -48,6 +48,9 @@ public class QuestionParser{
                         if let name = qSlideXML.attributes["name"]{
                             qSlide.name = name
                         }
+                        if let type = qSlideXML.attributes["type"]{
+                            qSlide.type = type
+                        }
                         if let layout = qSlideXML.attributes["layout"]{
                             qSlide.layout = layout
                         }
@@ -58,7 +61,7 @@ public class QuestionParser{
                             qSlide.timelimit = timelimit
                         }
                         if let header = qSlideXML["header"].value{
-                            qSlide.header = header
+                            taskXML.header = header
                         }
                         if let video = qSlideXML["video"].value{
                             qSlide.video = video
@@ -122,13 +125,14 @@ public class Task{
     var location = [Double]()
     var slides = [QuestionSlide]()
     var name: String?
+    var header: String?
 }
 
 public class QuestionSlide{
-    var header: String?
     var title: String?
     var description: String?
     var name: String?
+    var type: String?
     var layout: String?
     var timelimit: String?
     var answers = [String]()

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IntroSlide_02" customModule="SVPMap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vítejte..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJG-rG-7gH">
+                    <rect key="frame" x="40" y="20" width="115" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euk-Gr-G0b">
+                    <rect key="frame" x="40" y="76" width="295" height="571"/>
+                    <mutableString key="text">... na začátku mobilní stezky „Z Kralup za Antonínem Dvořákem“. Aplikace Vás bude provázet nejzajímavějšími místy v Kralupech, a zavede Vás do rodiště nejslavnějšího českého skladatele Antonína Dvořáka v Nelahozevsi. Delší varianta měří asi 9 km, kratší 6 km. Pokud Vám to bude málo, můžete odsud po projití naší trasy již sami pokračovat do barokního areálu Veltrusy.  Co vše vám zpříjemní cestu?  • offline mapa s vyznačením vaší polohy, plánovanou trasou a zastaveními • informace i fotografie k zajímavým místům • otázky a úkoly ke každému stanovišti, úspěšnost bude na konci vyhodnocena • panáček znázorňující výšku vody na daném místě při povodních roku 2002 • informační menu s mnoha funkcemi: např. zobrazení restaurací při cestě, jízdního řádu vlaků v cíli • statistiky o ušlé trase, včetně odhadu, jak dlouho ještě projití stezky potrvá (zohledňuje čas zastavení) při kratší a delší variantě
+ A k tomu několik překvapení, která objevíte během cesty...</mutableString>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="euk-Gr-G0b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="J4c-cQ-EgA"/>
+                <constraint firstAttribute="trailing" secondItem="euk-Gr-G0b" secondAttribute="trailing" constant="40" id="XF5-dt-0eO"/>
+                <constraint firstItem="euk-Gr-G0b" firstAttribute="top" secondItem="xJG-rG-7gH" secondAttribute="bottom" constant="20" id="Z3G-dP-ial"/>
+                <constraint firstAttribute="bottom" secondItem="euk-Gr-G0b" secondAttribute="bottom" constant="20" id="dqC-uZ-Apm"/>
+                <constraint firstItem="xJG-rG-7gH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="epD-z7-Jul"/>
+                <constraint firstItem="xJG-rG-7gH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="rRV-7L-Yz3"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

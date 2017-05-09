@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IntroSlide_01" customModule="SVPMap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIi-x2-cRH">
+                    <rect key="frame" x="40" y="40" width="334" height="676"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMi-u9-tBi">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="676"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-bm-vTD">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="89.666666666666657"/>
+                                    <string key="text">Tato mobilní naučná stezka byla realizována jako vítězný návrh v soutěži středoškolských studentů „Poznávejme Středočeský kraj“.  Návrh stezky zpracovali studenti Dvořákova gymnázia a SOŠE v Kralupech nad Vltavou.</string>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <string key="userLabel">Tato mobilní naučná stezka byla realizována jako vítězný návrh v soutěži středoškolských studentů „Poznávejme Středočeský kraj“.  Návrh stezky zpracovali studenti Dvořákova gymnázia a SOŠE v Kralupech nad Vltavou.</string>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_gymnazium" translatesAutoresizingMaskIntoConstraints="NO" id="cc3-As-FHU">
+                                    <rect key="frame" x="0.0" y="109.66666666666667" width="109" height="129"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zhotovení aplikace zajistila Scientica Agency s.r.o." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3n-Bm-aRt">
+                                    <rect key="frame" x="0.0" y="258.66666666666669" width="334" height="60"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplikace byla financována z finančních prostředků Středočeského kraje." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-W9-Drt">
+                                    <rect key="frame" x="0.0" y="401.66666666666663" width="334" height="89.666666666666686"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_stredocesky_kraj" translatesAutoresizingMaskIntoConstraints="NO" id="sSM-vB-648">
+                                    <rect key="frame" x="0.0" y="511.33333333333337" width="258" height="68"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Na následující stranu se dostanete přetažením zprava-doleva." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olZ-Ws-FIu">
+                                    <rect key="frame" x="0.0" y="599.33333333333337" width="334" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_scientica" translatesAutoresizingMaskIntoConstraints="NO" id="3B4-Xx-ZmD">
+                                    <rect key="frame" x="0.0" y="338.66666666666669" width="137" height="43"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="y3n-Bm-aRt" firstAttribute="leading" secondItem="wMi-u9-tBi" secondAttribute="leading" id="1ED-Qm-hlC"/>
+                                <constraint firstItem="y3n-Bm-aRt" firstAttribute="top" secondItem="cc3-As-FHU" secondAttribute="bottom" constant="20" id="1tj-E5-0Fd"/>
+                                <constraint firstItem="3B4-Xx-ZmD" firstAttribute="top" secondItem="y3n-Bm-aRt" secondAttribute="bottom" constant="20" id="23A-cc-mE2"/>
+                                <constraint firstAttribute="trailing" secondItem="DeY-bm-vTD" secondAttribute="trailing" id="2ck-B7-NG9"/>
+                                <constraint firstItem="cc3-As-FHU" firstAttribute="top" secondItem="DeY-bm-vTD" secondAttribute="bottom" constant="20" id="300-55-y9s"/>
+                                <constraint firstAttribute="trailing" secondItem="y3n-Bm-aRt" secondAttribute="trailing" id="4mY-RV-9Nn"/>
+                                <constraint firstItem="DeY-bm-vTD" firstAttribute="top" secondItem="wMi-u9-tBi" secondAttribute="top" id="6g5-6W-6Vc"/>
+                                <constraint firstAttribute="trailing" secondItem="olZ-Ws-FIu" secondAttribute="trailing" id="Doj-IY-lEB"/>
+                                <constraint firstItem="olZ-Ws-FIu" firstAttribute="leading" secondItem="wMi-u9-tBi" secondAttribute="leading" id="FGC-jq-zaM"/>
+                                <constraint firstItem="8Yx-W9-Drt" firstAttribute="leading" secondItem="wMi-u9-tBi" secondAttribute="leading" id="aGu-av-Zr3"/>
+                                <constraint firstItem="sSM-vB-648" firstAttribute="leading" secondItem="wMi-u9-tBi" secondAttribute="leading" id="afg-8a-B8O"/>
+                                <constraint firstItem="3B4-Xx-ZmD" firstAttribute="leading" secondItem="wMi-u9-tBi" secondAttribute="leading" id="ccu-nI-eRF"/>
+                                <constraint firstItem="DeY-bm-vTD" firstAttribute="leading" secondItem="wMi-u9-tBi" secondAttribute="leading" id="edJ-X1-UBY"/>
+                                <constraint firstItem="sSM-vB-648" firstAttribute="top" secondItem="8Yx-W9-Drt" secondAttribute="bottom" constant="20" id="hNx-vN-TYP"/>
+                                <constraint firstItem="8Yx-W9-Drt" firstAttribute="top" secondItem="3B4-Xx-ZmD" secondAttribute="bottom" constant="20" id="mhe-Lg-tw6"/>
+                                <constraint firstItem="cc3-As-FHU" firstAttribute="leading" secondItem="wMi-u9-tBi" secondAttribute="leading" id="qSi-Pk-gW8"/>
+                                <constraint firstAttribute="trailing" secondItem="8Yx-W9-Drt" secondAttribute="trailing" id="sDb-ru-hVh"/>
+                                <constraint firstItem="olZ-Ws-FIu" firstAttribute="top" secondItem="sSM-vB-648" secondAttribute="bottom" constant="20" id="wSH-9V-xtj"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="wMi-u9-tBi" firstAttribute="leading" secondItem="lIi-x2-cRH" secondAttribute="leading" id="HEX-wM-Mcf"/>
+                        <constraint firstItem="wMi-u9-tBi" firstAttribute="top" secondItem="lIi-x2-cRH" secondAttribute="top" id="Zqs-OA-NlL"/>
+                        <constraint firstItem="wMi-u9-tBi" firstAttribute="centerY" secondItem="lIi-x2-cRH" secondAttribute="centerY" id="fjs-zE-gH3"/>
+                        <constraint firstAttribute="bottom" secondItem="wMi-u9-tBi" secondAttribute="bottom" id="gG9-jZ-kL3"/>
+                        <constraint firstItem="wMi-u9-tBi" firstAttribute="centerX" secondItem="lIi-x2-cRH" secondAttribute="centerX" id="hhd-ft-stt"/>
+                        <constraint firstAttribute="trailing" secondItem="wMi-u9-tBi" secondAttribute="trailing" id="toN-aI-I6O"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lIi-x2-cRH" secondAttribute="trailing" constant="40" id="4QT-Zz-BLr"/>
+                <constraint firstItem="lIi-x2-cRH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="GhT-yn-Q4c"/>
+                <constraint firstItem="lIi-x2-cRH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="QPh-hx-va7"/>
+                <constraint firstAttribute="bottom" secondItem="lIi-x2-cRH" secondAttribute="bottom" constant="20" id="aoy-Mo-RWp"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="intro_gymnazium" width="109" height="129"/>
+        <image name="intro_scientica" width="137" height="43"/>
+        <image name="intro_stredocesky_kraj" width="258" height="68"/>
+    </resources>
+</document>
