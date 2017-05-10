@@ -49,8 +49,8 @@ class ViewController: UIViewController {
         chapterVC?.setMaxTries(max: maxTries)
         chapterVC?.setTasks(tasks: tasks)
         
-        let homeLocation = CLLocation(latitude: 50.0767712, longitude: 14.4371933)
-        let regionRadius: CLLocationDistance = 500
+        let homeLocation = CLLocation(latitude: 50.0767712, longitude: 14.4368033)
+        let regionRadius: CLLocationDistance = 600
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(homeLocation.coordinate,regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
         

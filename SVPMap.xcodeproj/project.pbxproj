@@ -157,6 +157,8 @@
 		949ADEE11EBC9A690061354E /* QuestionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949ADEE01EBC9A690061354E /* QuestionParser.swift */; };
 		94A3E46A1EBFA8EB00A32819 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */; };
 		94C6F2AF1EA8E0DF00406459 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C6F2AE1EA8E0DF00406459 /* MapKit.framework */; };
+		94F25F151EC3336C00014005 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F25F141EC3336C00014005 /* Checkbox.swift */; };
+		94F25F181EC3337C00014005 /* Checkbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F25F171EC3337C00014005 /* Checkbox.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -369,6 +371,8 @@
 		949ADEE01EBC9A690061354E /* QuestionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionParser.swift; sourceTree = "<group>"; };
 		94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
 		94C6F2AE1EA8E0DF00406459 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		94F25F141EC3336C00014005 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		94F25F171EC3337C00014005 /* Checkbox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Checkbox.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,6 +472,8 @@
 				9414E1501EC04149006624FB /* IntroViewController.swift */,
 				9472B5B01E23AF9400C9CA2C /* ViewController.swift */,
 				94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */,
+				94F25F141EC3336C00014005 /* Checkbox.swift */,
+				94F25F171EC3337C00014005 /* Checkbox.xib */,
 			);
 			path = SVPMap;
 			sourceTree = "<group>";
@@ -874,6 +880,7 @@
 				949ADEA71EBC98890061354E /* task03_jodl.png in Resources */,
 				949ADE761EBC98890061354E /* bg_task12.jpg in Resources */,
 				949ADEB81EBC98890061354E /* task09_kralupy_02.jpg in Resources */,
+				94F25F181EC3337C00014005 /* Checkbox.xib in Resources */,
 				949ADE8F1EBC98890061354E /* map_poi_distance.png in Resources */,
 				949ADECF1EBC98890061354E /* task16_veltrusy.jpg in Resources */,
 				949ADE871EBC98890061354E /* ic_launcher.png in Resources */,
@@ -985,6 +992,7 @@
 				943A7BEF1EC081F800004498 /* QuestionView.swift in Sources */,
 				94868C4B1EC0D25200196C83 /* v_quest_img.swift in Sources */,
 				9414E1641EC06AB3006624FB /* IntroSlide_04.swift in Sources */,
+				94F25F151EC3336C00014005 /* Checkbox.swift in Sources */,
 				9414E1581EC05121006624FB /* IntroSlide_01.swift in Sources */,
 				9472B5B11E23AF9400C9CA2C /* ViewController.swift in Sources */,
 				94A3E46A1EBFA8EB00A32819 /* ChapterViewController.swift in Sources */,

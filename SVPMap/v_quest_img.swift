@@ -24,7 +24,7 @@ class v_quest_img: UIView {
     var qTitle: UILabel!
     var qType: String?
     
-    var checkboxes = [CheckBox]()
+    var checkboxes = [Checkbox]()
     var radios = [DLRadioButton]()
     var evalBtn: UIButton?
     
@@ -74,8 +74,10 @@ class v_quest_img: UIView {
                     break
                 case "multichoice":
                     for choice in qVariants {
-                        let checkbox = CheckBox(frame: CGRect.zero)
-                        checkbox.titleLabel?.text = choice
+                        let checkbox = Checkbox(frame: CGRect.zero)
+                        checkbox.setTitle(choice, for: .normal)
+                        checkbox.titleLabel!.font = UIFont.systemFont(ofSize: CGFloat(25))
+                        checkbox.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
                         qContainer.addSubview(checkbox)
                         checkboxes.append(checkbox)
                         checkbox.isUserInteractionEnabled = true
@@ -135,7 +137,12 @@ class v_quest_img: UIView {
             
             if radios.count>0{
                 radios[0].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
-                radios[0].autoPinEdge(.top, to: .bottom, of: qTitle, withOffset: CGFloat(30))
+                if let tw = qTitle{
+                    radios[0].autoPinEdge(.top, to: .bottom, of: tw, withOffset: CGFloat(30))
+                }else{
+                    radios[0].autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(30))
+                }
+
                 radios[0].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
                 //radios[0].autoPinEdge(toSuperviewEdge: .bottom, withInset: CGFloat(20))
                 
@@ -144,22 +151,35 @@ class v_quest_img: UIView {
                     radios[i].autoPinEdge(.top, to: .bottom, of: radios[i-1], withOffset: CGFloat(30))
                     radios[i].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
                 }
-                qContainer.autoPinEdge(.top, to: .top, of: qTitle)
+                if let tw = qTitle{
+                    qContainer.autoPinEdge(.top, to: .top, of: tw)
+                }else{
+                    qContainer.autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(0))
+                }
                 qContainer.autoPinEdge(.bottom, to: .bottom, of: radios[radios.count-1])
             }
             
             if checkboxes.count>0{
                 checkboxes[0].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
-                checkboxes[0].autoPinEdge(.top, to: .bottom, of: qTitle, withOffset: CGFloat(30))
-                //checkboxes[0].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
+                if let tw = qTitle{
+                    checkboxes[0].autoPinEdge(.top, to: .bottom, of: tw, withOffset: CGFloat(30))
+                }else{
+                    checkboxes[0].autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(30))
+                }
+                
+                checkboxes[0].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
                 
                 for i in 1 ..< checkboxes.count{
                     checkboxes[i].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
                     checkboxes[i].autoPinEdge(.top, to: .bottom, of: checkboxes[i-1], withOffset: CGFloat(30))
-                   // checkboxes[i].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
+                    checkboxes[i].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
                 }
-                qContainer.autoPinEdge(.top, to: .top, of: qTitle)
-                qContainer.autoPinEdge(.bottom, to: .bottom, of: checkboxes[checkboxes.count-1])
+                if let tw = qTitle{
+                    qContainer.autoPinEdge(.top, to: .top, of: tw)
+                }else{
+                    qContainer.autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(0))
+                }
+                qContainer.autoPinEdge(.bottom, to: .bottom, of: radios[checkboxes.count-1])
             }
             
             if let eval = evalBtn{
@@ -180,6 +200,14 @@ class v_quest_img: UIView {
                 radios[i].isSelected = true
             }else{
                 radios[i].isSelected = false
+            }
+        }
+        for i in 0 ..< checkboxes.count{
+            checkboxes[i].isUserInteractionEnabled = false
+            if(Bool(qAnswers[i]))!{
+                checkboxes[i].isChecked = true
+            }else{
+                checkboxes[i].isChecked = false
             }
         }
     }
@@ -208,19 +236,39 @@ class v_quest_img: UIView {
     }
     
     @IBAction private func evaluateTask(eval : UIButton) {
-        var correct = true
-        for i in 0 ..< qAnswers.count{
-            let filledAnswer = radios[i].isSelected
-            if Bool(qAnswers[i]) != filledAnswer{
-                correct = false
+        switch qType! {
+        case "singlechoice":
+            var correct = true
+            for i in 0 ..< qAnswers.count{
+                let filledAnswer = radios[i].isSelected
+                if Bool(qAnswers[i]) != filledAnswer{
+                    correct = false
+                }
             }
+            if !correct{
+                parentVC?.showToast(message: "Ups, tak to se úplnē nepovedlo.")
+            }else{
+                parentVC?.showToast(message: "Správnē!")
+                taskDone()
+            }
+        case "multichoice":
+            var correct = true
+            for i in 0 ..< qAnswers.count{
+                let filledAnswer = checkboxes[i].isChecked
+                if Bool(qAnswers[i]) != filledAnswer{
+                    correct = false
+                }
+            }
+            if !correct{
+                parentVC?.showToast(message: "Ups, tak to se úplnē nepovedlo.")
+            }else{
+                parentVC?.showToast(message: "Správnē!")
+                taskDone()
+            }
+        default:
+            break
         }
-        if !correct{
-            parentVC?.showToast(message: "Ups, tak to se úplnē nepovedlo.")
-        }else{
-            parentVC?.showToast(message: "Správnē!")
-            taskDone()
-        }
+
         
     }
 }
@@ -235,39 +283,4 @@ extension Array {
     }
 }
 
-class CheckBox: UIButton {
-    // Images
-    let checkedImage = UIImage(named: "checkbox_checked")! as UIImage
-    let uncheckedImage = UIImage(named: "checkbox")! as UIImage
-    
-    // Bool property
-    var isChecked: Bool = false {
-        didSet{
-            if isChecked == true {
-                self.setImage(checkedImage, for: .normal)
-                
-            } else {
-                self.setImage(uncheckedImage, for: .normal)
-            }
-        }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func awakeFromNib() {
-        self.addTarget(self, action: #selector(CheckBox.buttonClicked(sender:)), for: UIControlEvents.touchUpInside)
-        self.isChecked = false
-    }
-    
-    func buttonClicked(sender: UIButton) {
-        if sender == self {
-            isChecked = !isChecked
-        }
-    }
-}
+
