@@ -296,27 +296,27 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsJ-lo-7d6">
-                                        <rect key="frame" x="193.66666666666663" y="0.0" width="220.33333333333337" height="120"/>
+                                        <rect key="frame" x="183.66666666666663" y="0.0" width="230.33333333333337" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Z Kralup za Antonínem Dvořákem" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB4-iT-43y" userLabel="Z Kralup za Antonínem Dvořákem">
                                                 <rect key="frame" x="10" y="10" width="121.00000000000003" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="1sq-EZ-Shb"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="160" id="1sq-EZ-Shb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="| 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oML-9O-N2n">
-                                                <rect key="frame" x="176.00000000000003" y="76" width="24.333333333333314" height="24"/>
+                                                <rect key="frame" x="186.00000000000003" y="76" width="24.333333333333314" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TU9-pt-32Q">
-                                                <rect key="frame" x="151.00000000000003" y="76" width="15" height="24"/>
+                                                <rect key="frame" x="151.00000000000003" y="76" width="25" height="24"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="15" id="Deh-OX-oIv"/>
+                                                    <constraint firstAttribute="width" constant="25" id="Deh-OX-oIv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

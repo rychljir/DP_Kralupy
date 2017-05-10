@@ -51,6 +51,8 @@ class v_quest_img: UIView {
                 qTitle.text = desc
                 qTitle.textColor = UIColor.white
                 qTitle.font = UIFont.systemFont(ofSize: CGFloat(25))
+                qTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
+                qTitle.numberOfLines = 0
                 qContainer.addSubview(qTitle)
             }
             if let shuffle = q.shuffle{
@@ -179,7 +181,7 @@ class v_quest_img: UIView {
                 }else{
                     qContainer.autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(0))
                 }
-                qContainer.autoPinEdge(.bottom, to: .bottom, of: radios[checkboxes.count-1])
+                qContainer.autoPinEdge(.bottom, to: .bottom, of: checkboxes[checkboxes.count-1])
             }
             
             if let eval = evalBtn{

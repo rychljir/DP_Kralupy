@@ -344,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "v_quest_img.swift"
-            timestampString = "516114672.390723"
+            timestampString = "516116479.828751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "evaluateTask(eval:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -356,27 +356,27 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "v_quest_img.swift"
-            timestampString = "516114785.903006"
+            timestampString = "516116479.828751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "updateConstraints()"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SVPMap.v_quest_img.updateConstraints () -&gt; ()"
                   moduleName = "SVPMap"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/scientica/Documents/rychljir/DP_Kralupy/SVPMap/v_quest_img.swift"
-                  timestampString = "516114817.999107"
+                  timestampString = "516116115.642423"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "131"
@@ -384,14 +384,14 @@
                   offsetFromSymbolStart = "64">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SVPMap.v_quest_img.updateConstraints () -&gt; ()"
                   moduleName = "SVPMap"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/scientica/Documents/rychljir/DP_Kralupy/SVPMap/v_quest_img.swift"
-                  timestampString = "516114818.000914"
+                  timestampString = "516116115.644342"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "131"
@@ -399,6 +399,22 @@
                   offsetFromSymbolStart = "112">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "v_quest_img.swift"
+            timestampString = "516116479.828751"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "updateConstraints()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
