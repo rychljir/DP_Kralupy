@@ -1,0 +1,98 @@
+<resources>
+    <string name="bug_report_name">bug</string>
+    <string name="app_name">Z Kralup za Antonínem Dvořákem</string>
+    <string name="title_activity_main">Z Kralup za Antonínem Dvořákem</string>
+    
+    <string name="intro_text1">Na následující stránce uvidíte mapu naznačující vaši pozici.</string>
+    <string name="intro_text2">Informativní okno můžete schovat a znovu zobrazit pomocí modré ikony.</string>
+    <string name="intro_text3">Dosažené úkoly můžete otevřít kliknutím na jejich symbol v mapě.</string>
+    <string name="intro_text4">Rozšířené možnosti aplikace jsou dostupné přes tlačítko nabídky telefonu.</string>
+    <string name="intro_text5">Z úkolu se dostanete do mapy pomocí tlačítka telefonu zpět.</string>
+    <string name="zacit">Začít</string>
+    
+    <string name="walk_mode_t1">půjdu vlastní cestou</string>
+    <string name="walk_mode_t2">nechám se vést</string>
+    
+    <string name="delete_data_title">vymaž data</string>
+    <string name="delete_data_description">Tímto vymažete všechny odpovědi a odemčené úkoly. Chcete data opravdu vymazat?</string>
+    <string name="delete_data_yes">Ano, vymaž data.</string>
+    <string name="delete_data_no">NE!</string>
+    
+    <string name="end_game_title">vyhodnocení není dostupné</string>
+    <string name="end_game_description">K vyhodnocení se můžete dostat nejdříve až po dosažení Nelahozevského zámku.</string>
+    <string name="end_game_ok">OK</string>
+    
+    <string name="skip_task_title">přeskočit úkol</string>
+    <string name="skip_task_description">Toto tlačítko použijte pouze v případě, že nemůžete dosáhnout přesné pozice s úkolem. Aktuální úkol bude přeskočen, ale nedostanete za něj body! Chcete přeskočit na další úkol?</string>
+    <string name="skip_task_yes">Ano, ukaž mi další bod.</string>
+    <string name="skip_task_no">NE!</string>
+    
+    <string name="exit_task_title">opustit úkol</string>
+    <string name="exit_task_description">Nemáte splněny všechny úkoly na tomto stanovišti. Chcete opravdu zpět do mapy?</string>
+    <string name="exit_task_yes">Ano, nechci dál odpovídat.</string>
+    <string name="exit_task_no">NE!</string>
+    
+    <string name="exit_map_title">opustit aplikaci</string>
+    <string name="exit_map_description">Opravdu chcete opustit aplikaci? Nebude se sledovat vaše pozice a tím pádem se neotevřou úkoly, kolem kterých projdete. Váš dosavadní postup bude uložen. Pokud chcete pouze schovat aplikaci, použijte tlačítko DOMŮ - na většině telefonů prostřední tlačítko.</string>
+    <string name="exit_map_yes">Ano, nechci pokračovat.</string>
+    <string name="exit_map_vyhodnoceni">Vyhodnocení</string>
+    <string name="exit_map_no">NE!</string>
+    
+    <string name="task_next_page_blocked">Další strana bude dostupná až po odpovědi.</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="action_encyklopedy">Encyklopedie</string>
+    <string name="map_version">version:</string>
+    <string name="map_panic_text">nePROPADEJTE PANICE !!</string>
+    <string name="map_gps_disabled">GPS je vypnuta - zapněte si ji prosím v nastavení telefonu.</string>
+      
+    <string name="menu_vyhodnoceni_th">vyhodnocení</string>
+    <string name="vyhodnoceni_text_OK"><![CDATA[Vedli jste si celkem dobře, získali jste medaily.]]></string>
+    <string name="vyhodnoceni_text_NE"><![CDATA[Nevedli jste si moc dobře, nemáte tedy nárok na medaily.]]></string>
+    <string name="vyhodnoceni_text_vypocet"><![CDATA[% úspěšnost]]></string>
+    
+    <string name="menu_snap_to_location">přichytávat pozici</string>
+    <string name="menu_show_trace">ukaž prošlou cestu</string>
+    <string name="menu_show_info_rest">ukaž restaurace</string>
+    <string name="menu_help">nápověda</string>
+    <string name="menu_skip_task">přeskočit úkol</string>
+    <string name="menu_delete">vymaž data</string>
+    <string name="menu_train_schedule">jízdní řád vlaků</string>
+    <string name="menu_stat">statistika cesty</string>
+    <string name="menu_vyhodnoceni">končím cestu</string>
+    
+    <string name="map_stat_nalezeno_ukolu">nalezeno úkolů: </string>
+    <string name="map_stat_score">úspěšnost v úkolech: </string>
+    <string name="map_stat_complete_score">celková úspěšnost: </string>
+    <string name="map_stat_gps_altitude">nadmořská výška: </string>
+    <string name="map_stat_gps_direction">směr: </string>
+    <string name="map_stat_gps_speed">rychlost: </string>
+    <string name="map_stat_gps_trip_distance">ušlá vzdálenost: </string>
+    <string name="map_stat_distance">čas do cíle: </string>
+    <string name="map_close_info_dialog">zavřít</string>
+    
+    <string name="schedule_header">jízdní řády</string>
+    <string name="schedule_text"><![CDATA[Zde je seznam tří nejbližších vlaků jedoucích z <b>Nelahozevsi</b> v každém směru:]]></string>
+	<string name="schedule_aktual_date"><![CDATA[Právě je:]]></string>
+	<string name="schedule_date_vikend"><![CDATA[víkend]]></string>
+	<string name="schedule_date_vsedniden"><![CDATA[všední den]]></string>
+    <string name="schedule_to_praha"><![CDATA[Nelahozeves – směr <b>Praha</b>:]]></string>
+    <string name="schedule_to_usti"><![CDATA[Nelahozeves – směr <b>Ústí nad Labem</b>:]]></string>
+    
+    <string name="stat_header">statistika trasy</string>
+    <string name="stat_text">Základní údaje o prošlé trase:</string>
+    <string name="stat_trip_distance">ušlá vzdálenost:</string>
+    <string name="stat_start_time">začátek trasy:</string>
+    <string name="stat_elapsade_time">ušlá doba:</string>
+    <string name="stat_avg_speed">průměrná rychlost:</string>
+    <string name="stat_alt_profile">výškový profil:</string>
+    
+    <string-array name="validation_result_interval">
+        <item>dobrý odhad</item>
+        <item>skoro dobrý odhad</item>
+        <item>špatný odhad</item>
+        <item>špatný odhad</item>
+        <item>špatný odhad, zkus to znova</item>
+        <item>odpověď byla uložena</item>
+    </string-array>
+</resources>

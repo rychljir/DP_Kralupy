@@ -33,8 +33,9 @@ class ChapterViewController: UIViewController, UIScrollViewDelegate{
     
     
     @IBAction func backToMap(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! ViewController
-        self.present(vc, animated: true, completion:nil)
+       // let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! ViewController
+        self.dismiss(animated: true, completion: nil)
+       // self.present(vc, animated: true, completion:nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +45,7 @@ class ChapterViewController: UIViewController, UIScrollViewDelegate{
     }
 
     func setupSlideScrollView(slides:[UIView]){
+        slideScrollView.subviews.forEach({ $0.removeFromSuperview() })
         slideScrollView.frame = CGRect(x: slideScrollView.frame.minX, y: slideScrollView.frame.minY, width: self.view.frame.width, height: slideScrollView.frame.height)
         slideScrollView.contentSize = CGSize(width: slideScrollView.frame.width*CGFloat(slides.count), height: slideScrollView.frame.height)
         slideScrollView.isPagingEnabled = true
@@ -54,11 +56,19 @@ class ChapterViewController: UIViewController, UIScrollViewDelegate{
             slides[i].frame = CGRect(x: slideScrollView.frame.width*CGFloat(i), y: 0, width: slideScrollView.frame.width, height: slideScrollView.frame.height)
             slideScrollView.addSubview(slides[i])
         }
+        scrollToPage(page: 0, animated: false)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
         pagerIndex.text = String(Int(pageIndex+1))
+    }
+    
+    func scrollToPage(page: Int, animated: Bool) {
+        var frame: CGRect = self.slideScrollView.frame
+        frame.origin.x = frame.size.width * CGFloat(page);
+        frame.origin.y = 0;
+        self.slideScrollView.scrollRectToVisible(frame, animated: animated)
     }
     
     func setIndex(index: Int){

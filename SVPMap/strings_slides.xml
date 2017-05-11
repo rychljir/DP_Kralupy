@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="task_completed_msg">Úkol splněn</string>
+    <string name="btn_validate">vyhodnotit</string>
+
+    <string name="loreipsum_header">Lorem ipsum dolor sit amet!</string>
+    <string name="loreipsum_paragraph">Lorem ipsum dolor sit amet consectetuer Duis rhoncus laoreet malesuada sed. Quis eros venenatis egestas consequat nibh nulla feugiat aliquet ac tempus. Montes tellus tellus a non consectetuer consequat orci semper venenatis Lorem. Montes mattis laoreet platea Suspendisse et Pellentesque in Nulla vitae pede. Porttitor in dolor ut Nam neque Suspendisse Curabitur Pellentesque sed sapien. Velit malesuada vel cursus Phasellus eros at elit vitae Vestibulum.</string>
+    
+    <string name="lock_before_test_description">Na následující stránce začínají úkoly. Pokud je teď nechcete plnit, můžete se vrátit na mapu a zkusit je odpovědět později.</string>
+    <string name="lock_before_test_anobutton">ANO, chci pokračovat.</string>
+    
+    <string name="action_example">Example action</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="task01_map_description">Prohlédněte si starou mapu Kralup z roku 1850.</string>
+    
+    <string name="task04_AR_description">Chcete se podívat dovnitř kostela, a on je zavřený? Tak použijte naše „kouzelné oko“. To umí vidět skrz dveře! Postavte se naproti kostelu kolmo ke dveřím, zmáčkněte kouzelné oko a poté jeho pohled nasměrujete na portál okolo dveří.... Oko však funguje jen při dobrém světle... budete mít dnes štěstí?</string>
+    <string name="task04_AR_start">spusť</string>
+    
+    <string name="task09_goal1_description">Nyní najděte protáhlou pískovcovou skálu.</string>
+    <string name="task09_goal2_description">Nyní najděte altánek s výhledem...</string>
+    <string name="task09_goal3_description">Nyní najděte válečný bunkr...</string>
+    <string name="task09_goal4_description">Nyní najděte památník padlým, nacházející se travnatém plácku...</string>
+    <string name="task09_goal_found">NAŠEL JSEM</string>
+    <string name="task09c_gal_description">Prohlédněte si obrázky z bombardování města v roce 1945.</string>
+    <string name="task09_open_gal">otevřít galerii</string>
+    
+    <string name="task13_play_description">Poslechněte si ukázku Dvořákovy nejslavnější skladby - Novosvětské...</string>
+    <string name="task13_play_start">přehrát</string>
+    <string name="task13_play_stop">zastavit</string>
+    
+    <string name="task17_stat_description">Gratulujeme k absolvování stezky! Nyní se podívejte na pár statistik o vaší trase:</string>
+    <string name="task17_stat_start">statistika</string>
+    <string name="task17_results_description">Plnili jste poctivě všechny úkoly? Teď můžete zjistit, jak jste byli úspěšní...</string>
+    <string name="task17_results_start">NECHAT SE OHODNOTIT</string>
+
+</resources>

@@ -11,7 +11,7 @@ import PureLayout
 import DLRadioButton
 
 
-class v_quest_img: UIView {
+class v_quest_img: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     var shouldSetupConstraints = true
     var parentVC: UIViewController?
     
@@ -24,8 +24,11 @@ class v_quest_img: UIView {
     @IBOutlet weak var evalBtn: UIButton!
     var checkboxes = [Checkbox]()
     var radios = [DLRadioButton]()
+    var picker: UIPickerView!
+    var pickerData = [String]()
+    var pickerAnswer: IntervalQuestionAnswer?
+    var textfield: UITextField!
 
-    
     public func initSlide(question: QuestionSlide, callingViewController: UIViewController){
         parentVC = callingViewController
         
@@ -86,6 +89,74 @@ class v_quest_img: UIView {
                     qContainer.bringSubview(toFront: self)
                     qContainer.isUserInteractionEnabled = true
                     break
+                case "intervalquestion":
+                    picker = UIPickerView(frame: CGRect.zero)
+                    picker.dataSource = self
+                    picker.delegate = self
+                    picker.isUserInteractionEnabled = true
+                    picker.bringSubview(toFront: self)
+                    
+                    pickerData = getVariantsForPicker(unformattedString: q.variants[0])
+                    
+                    qContainer.addSubview(picker)
+                    qContainer.bringSubview(toFront: self)
+                    qContainer.isUserInteractionEnabled = true
+                    break
+                case "fillText":
+                    textfield = UITextField(frame: CGRect.zero)
+                    textfield.placeholder = "Vložte odpovēd"
+                    textfield.font = UIFont.systemFont(ofSize: 25)
+                    textfield.borderStyle = UITextBorderStyle.roundedRect
+                    textfield.autocorrectionType = UITextAutocorrectionType.no
+                    textfield.keyboardType = UIKeyboardType.default
+                    textfield.returnKeyType = UIReturnKeyType.continue
+                    textfield.clearButtonMode = UITextFieldViewMode.whileEditing
+                    textfield.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+                    textfield.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+                    textfield.isUserInteractionEnabled = true
+                    textfield.delegate = self
+                    textfield.bringSubview(toFront: self)
+                    qContainer.addSubview(textfield)
+                    qContainer.bringSubview(toFront: self)
+                    qContainer.isUserInteractionEnabled = true
+                    break
+                case "numberquestion":
+                    textfield = UITextField(frame: CGRect.zero)
+                    textfield.placeholder = "Vložte odpovēd"
+                    textfield.font = UIFont.systemFont(ofSize: 25)
+                    textfield.borderStyle = UITextBorderStyle.roundedRect
+                    textfield.autocorrectionType = UITextAutocorrectionType.no
+                    textfield.keyboardType = UIKeyboardType.decimalPad
+                    textfield.returnKeyType = UIReturnKeyType.continue
+                    textfield.clearButtonMode = UITextFieldViewMode.whileEditing
+                    textfield.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+                    textfield.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+                    textfield.isUserInteractionEnabled = true
+                    textfield.delegate = self
+                    textfield.bringSubview(toFront: self)
+                    qContainer.addSubview(textfield)
+                    qContainer.bringSubview(toFront: self)
+                    qContainer.isUserInteractionEnabled = true
+                    break
+                case "togglebuttonsgrid":
+                    qAnswers.removeAll()
+                    for choice in qVariants{
+                        let toggle = SwitchWithText.instanceFromNib()
+                        toggle.bringSubview(toFront: self)
+                        toggle.isUserInteractionEnabled = true
+                        
+                        let answer : [String] = choice.components(separatedBy: ";")
+                        (toggle as! SwitchWithText).setLabel(text: answer[0])
+                        if(Int(answer[1])! == 0){
+                            qAnswers.append("true")
+                        }else{
+                            qAnswers.append("false")
+                        }
+                        qContainer.addSubview(toggle)
+                    }
+                    qContainer.bringSubview(toFront: self)
+                    qContainer.isUserInteractionEnabled = true
+                    break
                 default:
                     break
                 }
@@ -106,7 +177,74 @@ class v_quest_img: UIView {
             imageView.contentMode = UIViewContentMode.scaleAspectFit
             qContainer.addSubview(imageView)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func numberOfComponents(in: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
+        var label = view as! UILabel!
+        if label == nil {
+            label = UILabel()
+        }
+        
+        let data = pickerData[row]
+        let title = NSAttributedString(string: data, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 35.0, weight: UIFontWeightRegular)])
+        label?.attributedText = title
+        label?.textAlignment = .center
+        label?.textColor = UIColor.white
+        return label!
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 40.0
+    }
+    
+    func getVariantsForPicker(unformattedString: String) -> [String]{
+            let elements : [String] = unformattedString.components(separatedBy: ";")
+        pickerAnswer = IntervalQuestionAnswer()
+        pickerAnswer?.correct = elements[0]
+        pickerAnswer?.correctFrom = elements[1]
+        pickerAnswer?.correctTo = elements[2]
+        pickerAnswer?.from = elements[3]
+        pickerAnswer?.to = elements[4]
+        pickerAnswer?.step = elements[5]
+        
+        let from:Int = Int((pickerAnswer?.from)!)!
+        let to:Int = Int((pickerAnswer?.to)!)!
+        let step:Int = Int((pickerAnswer?.step)!)!
+        
+        var result = [String]()
+        for i in stride(from: from, to: to+1, by: step) {
+                result.append(String(i))
+        }
+        
+        return result
+    }
+    
+    func getAnswerForNumberQuestion(unformattedString: String) -> NumberQuestionAnswer{
+        let nqAns = NumberQuestionAnswer()
+        
+        let elements : [String] = unformattedString.components(separatedBy: ";")
+        nqAns.correct = elements[0]
+        nqAns.from = elements[1]
+        nqAns.to = elements[2]
+        return nqAns
     }
     
     func shuffleVariants(){
@@ -137,9 +275,18 @@ class v_quest_img: UIView {
             }
             
             for i in 1 ..< qContainer.subviews.count{
-                qContainer.subviews[i].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
-                qContainer.subviews[i].autoPinEdge(.top, to: .bottom, of: qContainer.subviews[i-1], withOffset: CGFloat(20))
-                qContainer.subviews[i].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
+                if let subview = qContainer.subviews[i] as? SwitchWithText {
+                    subview.autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
+                    subview.autoPinEdge(.top, to: .bottom, of: qContainer.subviews[i-1], withOffset: CGFloat(20))
+                    subview.autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
+                    subview.autoSetDimension(.height, toSize: CGFloat(45))
+                }
+                else {
+                    qContainer.subviews[i].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
+                    qContainer.subviews[i].autoPinEdge(.top, to: .bottom, of: qContainer.subviews[i-1], withOffset: CGFloat(20))
+                    qContainer.subviews[i].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
+                }
+
             }
         
             qContainer.autoPinEdge(.bottom, to: .bottom, of: qContainer.subviews[qContainer.subviews.count-1])
@@ -166,6 +313,12 @@ class v_quest_img: UIView {
             }else{
                 checkboxes[i].isChecked = false
             }
+        }
+        if let p = picker{
+            p.isUserInteractionEnabled = false
+        }
+        if let tf = textfield{
+            tf.isUserInteractionEnabled = false
         }
     }
     
@@ -222,12 +375,86 @@ class v_quest_img: UIView {
                 parentVC?.showToast(message: "Správnē!")
                 taskDone()
             }
+        case "intervalquestion":
+            var correct = false
+            if pickerAnswer?.correctFrom == "x" && pickerAnswer?.correctTo == "x"{
+                let selectedValue = pickerData[picker.selectedRow(inComponent: 0)]
+                if selectedValue == pickerAnswer?.correct{
+                    correct = true
+                }else{
+                    correct = false
+                }
+            }else{
+                let selectedValue = Int(pickerData[picker.selectedRow(inComponent: 0)])
+                if selectedValue! >= Int((pickerAnswer?.correctFrom)!)! && selectedValue! <= Int((pickerAnswer?.correctTo)!)!{
+                    correct = true
+                }else{
+                    correct = false
+                }
+            }
+            if !correct{
+                parentVC?.showToast(message: "Ups, tak to se úplnē nepovedlo.")
+            }else{
+                parentVC?.showToast(message: "Správnē!")
+                taskDone()
+            }
+            break
+        case "fillText":
+            if(textfield.text?.lowercased() != qVariants[0].lowercased()){
+                parentVC?.showToast(message: "Ups, tak to se úplnē nepovedlo.")
+            }else{
+                parentVC?.showToast(message: "Správnē!")
+                taskDone()
+            }
+            break
+        case "numberquestion":
+            let possibleRange = getAnswerForNumberQuestion(unformattedString: qVariants[0])
+            var correct = false
+            if possibleRange.from == "x" && possibleRange.to == "x"{
+                let selectedValue = textfield.text
+                if selectedValue == possibleRange.correct{
+                    correct = true
+                }else{
+                    correct = false
+                }
+            }else{
+                let selectedValue = Double(textfield.text!)
+                let from = Double(possibleRange.from!)
+                let to = Double(possibleRange.to!)
+                if selectedValue! >= from! && selectedValue! <= to!{
+                    correct = true
+                }else{
+                    correct = false
+                }
+            }
+            if !correct{
+                parentVC?.showToast(message: "Ups, tak to se úplnē nepovedlo.")
+            }else{
+                parentVC?.showToast(message: "Správnē!")
+                taskDone()
+            }
+            break
         default:
             break
         }
 
         
     }
+}
+
+class IntervalQuestionAnswer{
+    var correct: String?
+    var correctFrom: String?
+    var correctTo: String?
+    var from: String?
+    var to: String?
+    var step: String?
+}
+
+class NumberQuestionAnswer{
+    var correct: String?
+    var from: String?
+    var to: String?
 }
 
 extension Array {

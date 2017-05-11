@@ -21,6 +21,8 @@
 		94355A8C1EA7713B0003171F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 94355A8B1EA7713B0003171F /* Podfile */; };
 		943A7BEF1EC081F800004498 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A7BEE1EC081F800004498 /* QuestionView.swift */; };
 		943B21E21EC4504E00B23BD9 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B21E11EC4504E00B23BD9 /* FirstScreen.swift */; };
+		943B21E61EC49D0900B23BD9 /* SwitchWithText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943B21E51EC49D0900B23BD9 /* SwitchWithText.xib */; };
+		943B21E81EC49D3B00B23BD9 /* SwitchWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B21E71EC49D3B00B23BD9 /* SwitchWithText.swift */; };
 		9466234C1E2C0D7000CCEFC6 /* questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 9466234B1E2C0D7000CCEFC6 /* questions.xml */; };
 		9472B5AF1E23AF9400C9CA2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5AE1E23AF9400C9CA2C /* AppDelegate.swift */; };
 		9472B5B11E23AF9400C9CA2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5B01E23AF9400C9CA2C /* ViewController.swift */; };
@@ -231,6 +233,8 @@
 		94355A8B1EA7713B0003171F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		943A7BEE1EC081F800004498 /* QuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		943B21E11EC4504E00B23BD9 /* FirstScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
+		943B21E51EC49D0900B23BD9 /* SwitchWithText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchWithText.xib; sourceTree = "<group>"; };
+		943B21E71EC49D3B00B23BD9 /* SwitchWithText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchWithText.swift; sourceTree = "<group>"; };
 		9466234B1E2C0D7000CCEFC6 /* questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions.xml; sourceTree = "<group>"; };
 		9472B5AB1E23AF9300C9CA2C /* SVPMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVPMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9472B5AE1E23AF9400C9CA2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -467,8 +471,8 @@
 				94355A8B1EA7713B0003171F /* Podfile */,
 				949ADEE01EBC9A690061354E /* QuestionParser.swift */,
 				943A7BEE1EC081F800004498 /* QuestionView.swift */,
-				94868C4A1EC0D25200196C83 /* v_quest_img.swift */,
 				94868C481EC0D1AA00196C83 /* v_quest_img.xib */,
+				94868C4A1EC0D25200196C83 /* v_quest_img.swift */,
 				94868C461EC0B25700196C83 /* CustomView.swift */,
 				943B21E11EC4504E00B23BD9 /* FirstScreen.swift */,
 				9414E1671EC07F33006624FB /* SlideFactory.swift */,
@@ -477,6 +481,8 @@
 				94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */,
 				94F25F141EC3336C00014005 /* Checkbox.swift */,
 				94F25F171EC3337C00014005 /* Checkbox.xib */,
+				943B21E51EC49D0900B23BD9 /* SwitchWithText.xib */,
+				943B21E71EC49D3B00B23BD9 /* SwitchWithText.swift */,
 			);
 			path = SVPMap;
 			sourceTree = "<group>";
@@ -902,6 +908,7 @@
 				949ADEDD1EBC98890061354E /* vyhodnotit_pressed.png in Resources */,
 				949ADE851EBC98890061354E /* checkbox_pressed.png in Resources */,
 				949ADEA51EBC98890061354E /* task02_time_2010.jpg in Resources */,
+				943B21E61EC49D0900B23BD9 /* SwitchWithText.xib in Resources */,
 				949ADE821EBC98890061354E /* help_options.png in Resources */,
 				949ADE701EBC98890061354E /* bg_task06.jpg in Resources */,
 				949ADE7E1EBC98890061354E /* button_pressed.9.png in Resources */,
@@ -993,6 +1000,7 @@
 			files = (
 				9414E1511EC04149006624FB /* IntroViewController.swift in Sources */,
 				943A7BEF1EC081F800004498 /* QuestionView.swift in Sources */,
+				943B21E81EC49D3B00B23BD9 /* SwitchWithText.swift in Sources */,
 				94868C4B1EC0D25200196C83 /* v_quest_img.swift in Sources */,
 				9414E1641EC06AB3006624FB /* IntroSlide_04.swift in Sources */,
 				94F25F151EC3336C00014005 /* Checkbox.swift in Sources */,
