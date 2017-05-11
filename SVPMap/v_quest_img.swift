@@ -15,30 +15,28 @@ class v_quest_img: UIView {
     var shouldSetupConstraints = true
     var parentVC: UIViewController?
     
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var qContainer: UIView!
     
     var qAnswers = [String]()
     var qVariants = [String]()
-    var qTitle: UILabel!
     var qType: String?
     
+    @IBOutlet weak var evalBtn: UIButton!
     var checkboxes = [Checkbox]()
     var radios = [DLRadioButton]()
-    var evalBtn: UIButton?
+
     
     public func initSlide(question: QuestionSlide, callingViewController: UIViewController){
         parentVC = callingViewController
+        
         if let desc = question.description{
-            textView.text = desc
-        }else{
-            textView.isHidden = true
-        }
-        if question.images.count>0{
-            imageView.image = UIImage(named: question.images[0])
-        }else{
-            imageView.isHidden = true
+            let title = UILabel(frame: CGRect.zero)
+            title.text = desc
+            title.textColor = UIColor.white
+            title.font = UIFont.systemFont(ofSize: CGFloat(25))
+            title.lineBreakMode = NSLineBreakMode.byWordWrapping
+            title.numberOfLines = 0
+            qContainer.addSubview(title)
         }
         
         if question.questions.count>0{
@@ -47,7 +45,7 @@ class v_quest_img: UIView {
             qType = q.type
             qVariants = q.variants
             if let desc = q.description{
-                qTitle = UILabel(frame: CGRect.zero)
+                let qTitle = UILabel(frame: CGRect.zero)
                 qTitle.text = desc
                 qTitle.textColor = UIColor.white
                 qTitle.font = UIFont.systemFont(ofSize: CGFloat(25))
@@ -92,20 +90,23 @@ class v_quest_img: UIView {
                     break
                 }
             }
-            
             if let val = q.validate{
                 if val == "true"{
-                    evalBtn = UIButton(frame: CGRect.zero)
-                    evalBtn!.setImage(UIImage(named: "vyhodnotit_normal"), for: .normal)
-                    evalBtn!.setImage(UIImage(named: "vyhodnotit_pressed"), for: .highlighted)
-                    evalBtn!.setImage(UIImage(named: "vyhodnotit_disabled"), for: .disabled)
-                    qContainer.superview!.addSubview(evalBtn!)
                     evalBtn!.addTarget(self, action: #selector(v_quest_img.evaluateTask), for: UIControlEvents.touchUpInside)
+                }else{
+                    evalBtn!.isHidden = true
                 }
             }
         }else{
-            qContainer.isHidden = true
+            evalBtn!.isHidden = true
         }
+        if question.images.count>0{
+            let imageView = UIImageView(frame: CGRect.zero)
+            imageView.image = UIImage(named: question.images[0])
+            imageView.contentMode = UIViewContentMode.scaleAspectFit
+            qContainer.addSubview(imageView)
+        }
+        
     }
     
     func shuffleVariants(){
@@ -129,65 +130,19 @@ class v_quest_img: UIView {
     
     override public func updateConstraints() {
         if(shouldSetupConstraints) {
-            
-            if let tw = qTitle{
-                tw.autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
-                tw.autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(0))
-                tw.autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
-                //tw.autoPinEdge(toSuperviewEdge: .bottom, withInset: CGFloat(20))
+            if(qContainer.subviews.count>0){
+                qContainer.subviews[0].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
+                qContainer.subviews[0].autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(0))
+                qContainer.subviews[0].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
             }
             
-            if radios.count>0{
-                radios[0].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
-                if let tw = qTitle{
-                    radios[0].autoPinEdge(.top, to: .bottom, of: tw, withOffset: CGFloat(30))
-                }else{
-                    radios[0].autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(30))
-                }
-
-                radios[0].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
-                //radios[0].autoPinEdge(toSuperviewEdge: .bottom, withInset: CGFloat(20))
-                
-                for i in 1 ..< radios.count{
-                    radios[i].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
-                    radios[i].autoPinEdge(.top, to: .bottom, of: radios[i-1], withOffset: CGFloat(30))
-                    radios[i].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
-                }
-                if let tw = qTitle{
-                    qContainer.autoPinEdge(.top, to: .top, of: tw)
-                }else{
-                    qContainer.autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(0))
-                }
-                qContainer.autoPinEdge(.bottom, to: .bottom, of: radios[radios.count-1])
+            for i in 1 ..< qContainer.subviews.count{
+                qContainer.subviews[i].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
+                qContainer.subviews[i].autoPinEdge(.top, to: .bottom, of: qContainer.subviews[i-1], withOffset: CGFloat(20))
+                qContainer.subviews[i].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
             }
-            
-            if checkboxes.count>0{
-                checkboxes[0].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
-                if let tw = qTitle{
-                    checkboxes[0].autoPinEdge(.top, to: .bottom, of: tw, withOffset: CGFloat(30))
-                }else{
-                    checkboxes[0].autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(30))
-                }
-                
-                checkboxes[0].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
-                
-                for i in 1 ..< checkboxes.count{
-                    checkboxes[i].autoPinEdge(toSuperviewEdge: .left, withInset: CGFloat(0))
-                    checkboxes[i].autoPinEdge(.top, to: .bottom, of: checkboxes[i-1], withOffset: CGFloat(30))
-                    checkboxes[i].autoPinEdge(toSuperviewEdge: .right, withInset: CGFloat(0))
-                }
-                if let tw = qTitle{
-                    qContainer.autoPinEdge(.top, to: .top, of: tw)
-                }else{
-                    qContainer.autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(0))
-                }
-                qContainer.autoPinEdge(.bottom, to: .bottom, of: checkboxes[checkboxes.count-1])
-            }
-            
-            if let eval = evalBtn{
-                eval.autoPinEdge(toSuperviewEdge: .bottom, withInset: CGFloat(10))
-                eval.autoAlignAxis(toSuperviewAxis: .vertical)
-            }
+        
+            qContainer.autoPinEdge(.bottom, to: .bottom, of: qContainer.subviews[qContainer.subviews.count-1])
             
             shouldSetupConstraints = false
         }

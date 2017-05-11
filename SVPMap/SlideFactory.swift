@@ -18,6 +18,10 @@ class SlideFactory: UIViewController {
                 let customView = CustomView(question: q)
                 result.append(customView)
             }
+            if q.name == "firstScreen"{
+                let first = FirstScreen(question: q)
+                result.append(first)
+            }
             if(q.layout == "v_quest_img"){
                 let questView: v_quest_img = Bundle.main.loadNibNamed("v_quest_img", owner: self, options: nil)?.first as! v_quest_img
                 questView.initSlide(question: q, callingViewController: callingViewController)

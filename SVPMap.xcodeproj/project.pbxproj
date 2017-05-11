@@ -20,6 +20,7 @@
 		9414E1681EC07F33006624FB /* SlideFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E1671EC07F33006624FB /* SlideFactory.swift */; };
 		94355A8C1EA7713B0003171F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 94355A8B1EA7713B0003171F /* Podfile */; };
 		943A7BEF1EC081F800004498 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A7BEE1EC081F800004498 /* QuestionView.swift */; };
+		943B21E21EC4504E00B23BD9 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B21E11EC4504E00B23BD9 /* FirstScreen.swift */; };
 		9466234C1E2C0D7000CCEFC6 /* questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 9466234B1E2C0D7000CCEFC6 /* questions.xml */; };
 		9472B5AF1E23AF9400C9CA2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5AE1E23AF9400C9CA2C /* AppDelegate.swift */; };
 		9472B5B11E23AF9400C9CA2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5B01E23AF9400C9CA2C /* ViewController.swift */; };
@@ -229,6 +230,7 @@
 		9414E1671EC07F33006624FB /* SlideFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideFactory.swift; sourceTree = "<group>"; };
 		94355A8B1EA7713B0003171F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		943A7BEE1EC081F800004498 /* QuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		943B21E11EC4504E00B23BD9 /* FirstScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		9466234B1E2C0D7000CCEFC6 /* questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions.xml; sourceTree = "<group>"; };
 		9472B5AB1E23AF9300C9CA2C /* SVPMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVPMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9472B5AE1E23AF9400C9CA2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 				94868C4A1EC0D25200196C83 /* v_quest_img.swift */,
 				94868C481EC0D1AA00196C83 /* v_quest_img.xib */,
 				94868C461EC0B25700196C83 /* CustomView.swift */,
+				943B21E11EC4504E00B23BD9 /* FirstScreen.swift */,
 				9414E1671EC07F33006624FB /* SlideFactory.swift */,
 				9414E1501EC04149006624FB /* IntroViewController.swift */,
 				9472B5B01E23AF9400C9CA2C /* ViewController.swift */,
@@ -1002,6 +1005,7 @@
 				94868C471EC0B25700196C83 /* CustomView.swift in Sources */,
 				9472B5AF1E23AF9400C9CA2C /* AppDelegate.swift in Sources */,
 				949ADEE11EBC9A690061354E /* QuestionParser.swift in Sources */,
+				943B21E21EC4504E00B23BD9 /* FirstScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

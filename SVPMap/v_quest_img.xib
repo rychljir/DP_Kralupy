@@ -16,35 +16,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUi-EL-39i">
-                    <rect key="frame" x="40" y="20" width="295" height="627"/>
+                    <rect key="frame" x="40" y="20" width="295" height="582"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01u-K0-GEh">
-                            <rect key="frame" x="0.0" y="0.0" width="295" height="627"/>
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="582"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" scrollEnabled="NO" text="Lore ipsum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-9d-kSb">
-                                    <rect key="frame" x="0.0" y="0.0" width="295" height="46"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
-                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Vkn-nM-sNG">
-                                    <rect key="frame" x="0.0" y="66" width="295" height="140.5"/>
+                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="250" translatesAutoresizingMaskIntoConstraints="NO" id="Vkn-nM-sNG">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="250"/>
                                 </view>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="400" translatesAutoresizingMaskIntoConstraints="NO" id="SBn-XG-ZPN">
-                                    <rect key="frame" x="0.0" y="226.5" width="295" height="400"/>
-                                </imageView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="DDr-9d-kSb" firstAttribute="leading" secondItem="01u-K0-GEh" secondAttribute="leading" id="Hes-Wi-nRU"/>
-                                <constraint firstItem="DDr-9d-kSb" firstAttribute="top" secondItem="01u-K0-GEh" secondAttribute="top" id="IQP-0H-U8Z"/>
-                                <constraint firstAttribute="trailing" secondItem="SBn-XG-ZPN" secondAttribute="trailing" id="Nut-Z8-05U"/>
-                                <constraint firstItem="SBn-XG-ZPN" firstAttribute="leading" secondItem="01u-K0-GEh" secondAttribute="leading" id="UAl-wA-ivH"/>
                                 <constraint firstItem="Vkn-nM-sNG" firstAttribute="leading" secondItem="01u-K0-GEh" secondAttribute="leading" id="Vsl-Xk-riD"/>
-                                <constraint firstAttribute="trailing" secondItem="DDr-9d-kSb" secondAttribute="trailing" id="aDF-bf-BeQ"/>
-                                <constraint firstAttribute="bottom" secondItem="SBn-XG-ZPN" secondAttribute="bottom" id="eqJ-Fh-dwB"/>
+                                <constraint firstItem="Vkn-nM-sNG" firstAttribute="top" secondItem="01u-K0-GEh" secondAttribute="top" id="qxi-9y-G0R"/>
                                 <constraint firstAttribute="trailing" secondItem="Vkn-nM-sNG" secondAttribute="trailing" id="rIC-Gy-Urk"/>
-                                <constraint firstItem="Vkn-nM-sNG" firstAttribute="top" secondItem="DDr-9d-kSb" secondAttribute="bottom" constant="20" id="vCA-iQ-EJb"/>
-                                <constraint firstItem="SBn-XG-ZPN" firstAttribute="top" secondItem="Vkn-nM-sNG" secondAttribute="bottom" constant="20" id="yE0-9G-sjK"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -57,19 +41,31 @@
                         <constraint firstItem="01u-K0-GEh" firstAttribute="centerX" secondItem="YUi-EL-39i" secondAttribute="centerX" id="t8c-re-ehZ"/>
                     </constraints>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62B-hs-Jd1">
+                    <rect key="frame" x="93" y="602" width="188" height="65"/>
+                    <state key="normal" image="vyhodnotit_normal"/>
+                    <state key="disabled" image="vyhodnotit_disabled"/>
+                    <state key="highlighted" image="vyhodnotit_pressed"/>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="62B-hs-Jd1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="B4B-ai-b8g"/>
+                <constraint firstItem="62B-hs-Jd1" firstAttribute="top" secondItem="YUi-EL-39i" secondAttribute="bottom" id="C0O-ju-utk"/>
+                <constraint firstAttribute="bottom" secondItem="62B-hs-Jd1" secondAttribute="bottom" id="J9S-OL-cfz"/>
                 <constraint firstItem="YUi-EL-39i" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="coK-Ne-v9b"/>
                 <constraint firstAttribute="trailing" secondItem="YUi-EL-39i" secondAttribute="trailing" constant="40" id="ewJ-Rz-3lA"/>
                 <constraint firstItem="YUi-EL-39i" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="jag-HQ-coy"/>
-                <constraint firstAttribute="bottom" secondItem="YUi-EL-39i" secondAttribute="bottom" constant="20" id="xqH-48-6bo"/>
             </constraints>
             <connections>
-                <outlet property="imageView" destination="SBn-XG-ZPN" id="2f3-zs-5Z3"/>
+                <outlet property="evalBtn" destination="62B-hs-Jd1" id="HRc-dq-GiH"/>
                 <outlet property="qContainer" destination="Vkn-nM-sNG" id="fLE-mD-gWF"/>
-                <outlet property="textView" destination="DDr-9d-kSb" id="vsK-KR-HWu"/>
             </connections>
             <point key="canvasLocation" x="35.5" y="59.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="vyhodnotit_disabled" width="188" height="65"/>
+        <image name="vyhodnotit_normal" width="188" height="65"/>
+        <image name="vyhodnotit_pressed" width="188" height="65"/>
+    </resources>
 </document>

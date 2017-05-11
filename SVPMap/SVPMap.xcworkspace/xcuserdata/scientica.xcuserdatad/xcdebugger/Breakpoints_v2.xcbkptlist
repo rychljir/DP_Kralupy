@@ -311,22 +311,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChapterViewController.swift"
-            timestampString = "515954249.037736"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "prepareSlides()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SlideFactory.swift"
             timestampString = "515945372.878892"
             startingColumnNumber = "9223372036854775807"
@@ -344,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "v_quest_img.swift"
-            timestampString = "516116479.828751"
+            timestampString = "516179478.451327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "evaluateTask(eval:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -360,45 +344,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "v_quest_img.swift"
-            timestampString = "516116479.828751"
+            timestampString = "516180376.020039"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "updateConstraints()"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "initSlide(question:callingViewController:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SVPMap.v_quest_img.updateConstraints () -&gt; ()"
-                  moduleName = "SVPMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/scientica/Documents/rychljir/DP_Kralupy/SVPMap/v_quest_img.swift"
-                  timestampString = "516116115.642423"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "131"
-                  endingLineNumber = "131"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SVPMap.v_quest_img.updateConstraints () -&gt; ()"
-                  moduleName = "SVPMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/scientica/Documents/rychljir/DP_Kralupy/SVPMap/v_quest_img.swift"
-                  timestampString = "516116115.644342"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "131"
-                  endingLineNumber = "131"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -407,13 +359,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "v_quest_img.swift"
-            timestampString = "516116479.828751"
+            filePath = "ChapterViewController.swift"
+            timestampString = "516182296.187636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "updateConstraints()"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "scrollViewDidScroll(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

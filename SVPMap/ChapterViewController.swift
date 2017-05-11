@@ -16,10 +16,10 @@ class ChapterViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var pagerCounter: UILabel!
     @IBOutlet weak var taskNumber: UILabel!
     
-
-    
     let factory = SlideFactory()
     
+    let chapterBackground = ["bg_task01", "bg_task02", "bg_task03", "bg_task04", "bg_task05", "bg_task06", "bg_task07", "bg_task08", "bg_task09",
+                             "bg_task10", "bg_task11", "bg_task12", "bg_task13", "bg_task14", "bg_task15", "bg_task16", "bg_task17"]
     
     var slides = [UIView]()
     var tasks = [Task]()
@@ -74,11 +74,12 @@ class ChapterViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func setupChapter(){
-        switch index {
-        case (-1): break
-            
-        default:
-            backImage = UIImage(named: "bg_task01")
+        if index >= 0 {
+            if index<chapterBackground.count{
+                backImage = UIImage(named: chapterBackground[index])
+            }else{
+                backImage = UIImage(named: "bg_task00")
+            }
             titleText = tasks[index].header
             slideCounter = "| \(slides.count)"
             taskIndex = String(index+1)
@@ -86,10 +87,7 @@ class ChapterViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func updateChapter(){
-        switch index {
-        case (-1): break
-            
-        default:
+        if index >= 0 {
             backgroundImage.image = backImage
             taskTitle.text = titleText
             pagerCounter.text = slideCounter
@@ -98,10 +96,7 @@ class ChapterViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func prepareSlides(){
-        switch index {
-        case (-1): break
-            
-        default:
+        if index >= 0 {
             slides = factory.prepareSlides(questionSet: tasks[index].slides, callingViewController: self)
         }
     }
