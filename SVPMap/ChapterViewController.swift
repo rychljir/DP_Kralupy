@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ios_core
 
 class ChapterViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var slideScrollView: UIScrollView!
