@@ -28,6 +28,7 @@ class v_quest_img: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextF
     var pickerData = [String]()
     var pickerAnswer: IntervalQuestionAnswer?
     var textfield: UITextField!
+    var toggles = [SwitchWithText]()
 
     public func initSlide(question: QuestionSlide, callingViewController: UIViewController){
         parentVC = callingViewController
@@ -153,6 +154,7 @@ class v_quest_img: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextF
                             qAnswers.append("false")
                         }
                         qContainer.addSubview(toggle)
+                        toggles.append(toggle as! SwitchWithText)
                     }
                     qContainer.bringSubview(toFront: self)
                     qContainer.isUserInteractionEnabled = true
@@ -320,6 +322,9 @@ class v_quest_img: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextF
         if let tf = textfield{
             tf.isUserInteractionEnabled = false
         }
+        for i in 0 ..< toggles.count{
+            toggles[i].setEnabled(isEnabled: false)
+        }
     }
     
     private func createRadioButton(frame : CGRect, title : String, color : UIColor) -> DLRadioButton {
@@ -424,6 +429,21 @@ class v_quest_img: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextF
                 if selectedValue! >= from! && selectedValue! <= to!{
                     correct = true
                 }else{
+                    correct = false
+                }
+            }
+            if !correct{
+                parentVC?.showToast(message: "Ups, tak to se úplnē nepovedlo.")
+            }else{
+                parentVC?.showToast(message: "Správnē!")
+                taskDone()
+            }
+            break
+        case "togglebuttonsgrid":
+            var correct = true
+            for i in 0 ..< qAnswers.count{
+                let filledAnswer = toggles[i].isChecked
+                if Bool(qAnswers[i]) != filledAnswer{
                     correct = false
                 }
             }

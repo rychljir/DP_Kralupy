@@ -56,5 +56,10 @@ class SwitchWithText: UIView {
         label.text = text
     }
     
-    
+    func setEnabled(isEnabled: Bool){
+            yes.isEnabled = isEnabled
+            yes.isUserInteractionEnabled = isEnabled
+            no.isEnabled = isEnabled
+            no.isUserInteractionEnabled = isEnabled
+    }
 }

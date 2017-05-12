@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		214A614D264280FB488FE62E /* Pods_SVPMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCFBA430A1910CCD8F41DBE /* Pods_SVPMap.framework */; };
+		940E092E1EC59D0900C40971 /* RadioButtonsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E092D1EC59D0900C40971 /* RadioButtonsGroup.swift */; };
 		9414E1511EC04149006624FB /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E1501EC04149006624FB /* IntroViewController.swift */; };
 		9414E1561EC0494E006624FB /* IntroSlide_01.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9414E1551EC0494E006624FB /* IntroSlide_01.xib */; };
 		9414E1581EC05121006624FB /* IntroSlide_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E1571EC05121006624FB /* IntroSlide_01.swift */; };
@@ -220,6 +221,7 @@
 		5BCFBA430A1910CCD8F41DBE /* Pods_SVPMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SVPMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E59BD19CC0DA9B23A38EEA8 /* Pods-SVPMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVPMap.release.xcconfig"; path = "SVPMap/Pods/Target Support Files/Pods-SVPMap/Pods-SVPMap.release.xcconfig"; sourceTree = "<group>"; };
 		73D5D4C7A9FC198FD98F9105 /* Pods-SVPMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVPMap.debug.xcconfig"; path = "SVPMap/Pods/Target Support Files/Pods-SVPMap/Pods-SVPMap.debug.xcconfig"; sourceTree = "<group>"; };
+		940E092D1EC59D0900C40971 /* RadioButtonsGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonsGroup.swift; sourceTree = "<group>"; };
 		9414E1501EC04149006624FB /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		9414E1551EC0494E006624FB /* IntroSlide_01.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroSlide_01.xib; sourceTree = "<group>"; };
 		9414E1571EC05121006624FB /* IntroSlide_01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroSlide_01.swift; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 				943A7BEE1EC081F800004498 /* QuestionView.swift */,
 				94868C481EC0D1AA00196C83 /* v_quest_img.xib */,
 				94868C4A1EC0D25200196C83 /* v_quest_img.swift */,
+				940E092D1EC59D0900C40971 /* RadioButtonsGroup.swift */,
 				94868C461EC0B25700196C83 /* CustomView.swift */,
 				943B21E11EC4504E00B23BD9 /* FirstScreen.swift */,
 				9414E1671EC07F33006624FB /* SlideFactory.swift */,
@@ -1009,6 +1012,7 @@
 				94A3E46A1EBFA8EB00A32819 /* ChapterViewController.swift in Sources */,
 				9414E1681EC07F33006624FB /* SlideFactory.swift in Sources */,
 				9414E15A1EC0538A006624FB /* IntroSlide_02.swift in Sources */,
+				940E092E1EC59D0900C40971 /* RadioButtonsGroup.swift in Sources */,
 				9414E1601EC05A6B006624FB /* IntroSlide_03.swift in Sources */,
 				94868C471EC0B25700196C83 /* CustomView.swift in Sources */,
 				9472B5AF1E23AF9400C9CA2C /* AppDelegate.swift in Sources */,
