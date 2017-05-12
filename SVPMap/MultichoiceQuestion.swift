@@ -67,6 +67,7 @@ class MultichoiceQuestion: UIView {
     
     public func completeTask(){
         for i in 0 ..< question.answers.count{
+            checkboxes[i].isUserInteractionEnabled = false
             let filledAnswer = checkboxes[i].isChecked
             if Bool(question.answers[i]) != filledAnswer{
                 let evalImg = UIImageView(frame: CGRect(x: checkboxes[i].frame.maxX-30, y: checkboxes[i].center.y-25, width: CGFloat(50), height: CGFloat(50)))

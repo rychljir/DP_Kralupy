@@ -14,18 +14,18 @@ class ToggleWithLabel: UIView {
     @IBOutlet weak var no: UIButton!
     
     @IBAction func yesClick(_ sender: UIButton) {
-        isChecked = true
+        isChecked = 0
     }
     
     @IBAction func noClick(_ sender: UIButton) {
-        isChecked = false
+        isChecked = 1
     }
     
     
     // Bool property
-    public var isChecked: Bool = false{
+    public var isChecked: Int = -1{
         didSet{
-            if isChecked{
+            if isChecked == 0{
                 yes.backgroundColor = UIColor.white
                 yes.setTitleColor(UIColor.black, for: .normal)
                 no.backgroundColor = UIColor.black

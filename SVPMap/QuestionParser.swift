@@ -45,6 +45,57 @@ public class QuestionParser{
                 if let qSlidesXML = task["questionslide"].all{
                     for qSlideXML in qSlidesXML{
                         let qSlide = QuestionSlide()
+                        let tags = qSlideXML.children
+                            for tag in tags{
+                                if tag.name == "description"{
+                                    let desc = QuestionDescription()
+                                    desc.value = tag.value
+                                    qSlide.components.append(desc)
+                                }
+                                if tag.name == "images"{
+                                    let img = QuestionImage()
+                                    img.name = tag.value
+                                    qSlide.components.append(img)
+                                }
+                                if tag.name == "video"{
+                                    let video = QuestionVideo()
+                                    video.name = tag.value
+                                    qSlide.components.append(video)
+                                }
+                                if tag.name == "questions"{
+                                    let qq = QuestionQuestions()
+                                    if let questions = tag["question"].all{
+                                        for question in questions{
+                                            let q = Question()
+                                            if let type = question.attributes["type"]{
+                                                q.type = type
+                                            }
+                                            if let shuffle = question.attributes["shuffle"]{
+                                                q.shuffle = shuffle
+                                            }
+                                            if let validate = question.attributes["validate"]{
+                                                q.validate = validate
+                                            }
+                                            if let description = question["description"].value{
+                                                q.description = description
+                                            }
+                                            if let variantsXML = question["variant"].all{
+                                                for variantXML in variantsXML{
+                                                    if let variant = variantXML.value{
+                                                        q.variants.append(variant)
+                                                    }
+                                                    if let valid = variantXML.attributes["valid"]{
+                                                        q.answers.append(valid)
+                                                    }
+                                                }
+                                            }
+                                            qq.values.append(q)
+                                        }
+                                    }
+                                    qSlide.components.append(qq)
+                                }
+                            }
+                        
                         if let name = qSlideXML.attributes["name"]{
                             qSlide.name = name
                         }
@@ -62,44 +113,6 @@ public class QuestionParser{
                         }
                         if let header = qSlideXML["header"].value{
                             taskXML.header = header
-                        }
-                        if let video = qSlideXML["video"].value{
-                            qSlide.video = video
-                        }
-                        if let image = qSlideXML["images"].value{
-                            qSlide.images.append(image)
-                        }
-                        if let desc = qSlideXML["description"].value{
-                            qSlide.description = desc
-                        }
-                        //  if let questions = task["questionslide"]["questions"]["question"].all{
-                        if let questions = qSlideXML["questions"]["question"].all{
-                            for question in questions{
-                                let q = Question()
-                                if let type = question.attributes["type"]{
-                                    q.type = type
-                                }
-                                if let shuffle = question.attributes["shuffle"]{
-                                    q.shuffle = shuffle
-                                }
-                                if let validate = question.attributes["validate"]{
-                                    q.validate = validate
-                                }
-                                if let description = question["description"].value{
-                                    q.description = description
-                                }
-                                if let variantsXML = question["variant"].all{
-                                    for variantXML in variantsXML{
-                                        if let variant = variantXML.value{
-                                            q.variants.append(variant)
-                                        }
-                                        if let valid = variantXML.attributes["valid"]{
-                                            q.answers.append(valid)
-                                        }
-                                    }
-                                }
-                                qSlide.questions.append(q)
-                            }
                         }
                         
                         taskXML.slides.append(qSlide)

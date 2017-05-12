@@ -9,15 +9,13 @@
 import Foundation
 
 public class QuestionSlide{
+    var components = [QuestionComponent]()
     var title: String?
-    var description: String?
     var name: String?
     var type: String?
     var layout: String?
     var timelimit: String?
     var answers = [String]()
     var texts = [String]()
-    var questions = [Question]()
-    var images = [String]()
     var video: String?
 }

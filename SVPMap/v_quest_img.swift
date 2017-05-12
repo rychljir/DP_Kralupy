@@ -30,92 +30,104 @@ class v_quest_img: UIView{
 
     public func initSlide(question: QuestionSlide, maximumTries: Int,  callingViewController: UIViewController){
         parentVC = callingViewController
-        if let desc = question.description{
-            let title = UILabel(frame: CGRect.zero)
-            title.text = desc
-            title.textColor = UIColor.white
-            title.font = UIFont.systemFont(ofSize: CGFloat(25))
-            title.lineBreakMode = NSLineBreakMode.byWordWrapping
-            title.numberOfLines = 0
-            qContainer.addSubview(title)
-        }
         
-        if question.questions.count>0{
-            let q = question.questions[0]
-            qType = q.type
-            if let desc = q.description{
-                let qTitle = UILabel(frame: CGRect.zero)
-                qTitle.text = desc
-                qTitle.textColor = UIColor.white
-                qTitle.font = UIFont.systemFont(ofSize: CGFloat(25))
-                qTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
-                qTitle.numberOfLines = 0
-                qContainer.addSubview(qTitle)
-            }
-            if let shuffle = q.shuffle{
-                if shuffle == "true"{
-                    shuffleVariants(question: q)
-                }
+        for element in question.components{
+            if let descElement = element as? QuestionDescription{
+                let title = UILabel(frame: CGRect.zero)
+                title.text = descElement.value
+                title.textColor = UIColor.white
+                title.font = UIFont.systemFont(ofSize: CGFloat(25))
+                title.lineBreakMode = NSLineBreakMode.byWordWrapping
+                title.numberOfLines = 0
+                qContainer.addSubview(title)
             }
             
-            if let type = qType{
-                switch type {
-                case "singlechoice":
-                    singleChoice = SingleChoiceQuestion(question: q)
-                    qContainer.addSubview(singleChoice!)
-                    qContainer.bringSubview(toFront: self)
-                    qContainer.isUserInteractionEnabled = true
-                    break
-                case "multichoice":
-                    multiChoice = MultichoiceQuestion(question: q)
-                    qContainer.addSubview(multiChoice!)
-                    qContainer.bringSubview(toFront: self)
-                    qContainer.isUserInteractionEnabled = true
-                    break
-                case "intervalquestion":
-                    interval = IntervalQuestion(question: q)
-                    qContainer.addSubview(interval!)
-                    qContainer.bringSubview(toFront: self)
-                    qContainer.isUserInteractionEnabled = true
-                    break
-                case "fillText":
-                    filltext = FilltextQuestion(question: q)
-                    qContainer.addSubview(filltext!)
-                    qContainer.bringSubview(toFront: self)
-                    qContainer.isUserInteractionEnabled = true
-                    break
-                case "numberquestion":
-                    number = NumberQuestion(question: q)
-                    qContainer.addSubview(number!)
-                    qContainer.bringSubview(toFront: self)
-                    qContainer.isUserInteractionEnabled = true
-                    break
-                case "togglebuttonsgrid":
-                    toggle = ToggleButtonsQuestion(question: q)
-                    qContainer.addSubview(toggle!)
-                    qContainer.bringSubview(toFront: self)
-                    qContainer.isUserInteractionEnabled = true
-                    break
-                default:
-                    break
+            if let questionsElement = element as? QuestionQuestions{
+                if questionsElement.values.count>0{
+                    let q = questionsElement.values[0]
+                    
+                    qType = q.type
+                    if let desc = q.description{
+                        let qTitle = UILabel(frame: CGRect.zero)
+                        qTitle.text = desc
+                        qTitle.textColor = UIColor.white
+                        qTitle.font = UIFont.systemFont(ofSize: CGFloat(25))
+                        qTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
+                        qTitle.numberOfLines = 0
+                        qContainer.addSubview(qTitle)
+                    }
+                    if let shuffle = q.shuffle{
+                        if shuffle == "true"{
+                            shuffleVariants(question: q)
+                        }
+                    }
+                    
+                    if let type = qType{
+                        switch type {
+                        case "singlechoice":
+                            singleChoice = SingleChoiceQuestion(question: q)
+                            qContainer.addSubview(singleChoice!)
+                            qContainer.bringSubview(toFront: self)
+                            qContainer.isUserInteractionEnabled = true
+                            break
+                        case "multichoice":
+                            multiChoice = MultichoiceQuestion(question: q)
+                            qContainer.addSubview(multiChoice!)
+                            qContainer.bringSubview(toFront: self)
+                            qContainer.isUserInteractionEnabled = true
+                            break
+                        case "intervalquestion":
+                            interval = IntervalQuestion(question: q)
+                            qContainer.addSubview(interval!)
+                            qContainer.bringSubview(toFront: self)
+                            qContainer.isUserInteractionEnabled = true
+                            break
+                        case "fillText":
+                            filltext = FilltextQuestion(question: q)
+                            qContainer.addSubview(filltext!)
+                            qContainer.bringSubview(toFront: self)
+                            qContainer.isUserInteractionEnabled = true
+                            break
+                        case "numberquestion":
+                            number = NumberQuestion(question: q)
+                            qContainer.addSubview(number!)
+                            qContainer.bringSubview(toFront: self)
+                            qContainer.isUserInteractionEnabled = true
+                            break
+                        case "togglebuttonsgrid":
+                            toggle = ToggleButtonsQuestion(question: q)
+                            qContainer.addSubview(toggle!)
+                            qContainer.bringSubview(toFront: self)
+                            qContainer.isUserInteractionEnabled = true
+                            break
+                        default:
+                            break
+                        }
+                    }
+                    if let val = q.validate{
+                        if val == "true"{
+                            evalBtn!.addTarget(self, action: #selector(v_quest_img.evaluateTask), for: UIControlEvents.touchUpInside)
+                        }else{
+                            evalBtn!.isHidden = true
+                        }
+                    }
                 }
             }
-            if let val = q.validate{
-                if val == "true"{
-                    evalBtn!.addTarget(self, action: #selector(v_quest_img.evaluateTask), for: UIControlEvents.touchUpInside)
-                }else{
-                    evalBtn!.isHidden = true
-                }
+            if let imgElement = element as? QuestionImage{
+                    let imageView = UIImageView(frame: CGRect.zero)
+                    imageView.image = UIImage(named: imgElement.name)
+                    imageView.contentMode = UIViewContentMode.scaleAspectFit
+                    qContainer.addSubview(imageView)
             }
-        }else{
-            evalBtn!.isHidden = true
         }
-        if question.images.count>0{
-            let imageView = UIImageView(frame: CGRect.zero)
-            imageView.image = UIImage(named: question.images[0])
-            imageView.contentMode = UIViewContentMode.scaleAspectFit
-            qContainer.addSubview(imageView)
+        
+        evalBtn!.isHidden = true
+        for element in question.components{
+            if element is QuestionQuestions{
+                evalBtn!.isHidden = false
+            }
         }
+
     }
     
     func shuffleVariants(question q: Question){

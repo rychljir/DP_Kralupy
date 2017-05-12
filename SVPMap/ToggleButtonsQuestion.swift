@@ -73,8 +73,15 @@ class ToggleButtonsQuestion: UIView {
     
     public func completeTask(){
         for i in 0 ..< toggles.count{
+            toggles[i].isUserInteractionEnabled = false
             let filledAnswer = toggles[i].isChecked
-            if Bool(question!.answers[i]) != filledAnswer{
+            let correctAnswer: Int
+            if (question!.answers[i] == "true"){
+                correctAnswer = 0
+            }else{
+                correctAnswer = 1
+            }
+            if correctAnswer != filledAnswer{
                 let evalImg = UIImageView(frame: CGRect(x: toggles[i].frame.maxX-30, y: toggles[i].center.y-25, width: CGFloat(50), height: CGFloat(50)))
                 evalImg.contentMode = UIViewContentMode.scaleAspectFit
                 evalImg.image = UIImage(named: "vyhodnoceni_spatne")
@@ -92,7 +99,13 @@ class ToggleButtonsQuestion: UIView {
         var correct = true
         for i in 0 ..< question!.answers.count{
             let filledAnswer = toggles[i].isChecked
-            if Bool(question!.answers[i]) != filledAnswer{
+            let correctAnswer: Int
+            if (question!.answers[i] == "true"){
+                correctAnswer = 0
+            }else{
+                correctAnswer = 1
+            }
+            if correctAnswer != filledAnswer{
                 correct = false
             }
         }

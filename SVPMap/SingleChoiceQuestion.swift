@@ -84,14 +84,20 @@ class SingleChoiceQuestion: UIView {
             evalImg.image = UIImage(named: "vyhodnoceni_spravne")
             self.addSubview(evalImg)
         }else{
-            var evalImg = UIImageView(frame: CGRect(x: radios[answeredIndex].frame.maxX-30, y: radios[answeredIndex].center.y-25, width: CGFloat(50), height: CGFloat(50)))
-            evalImg.contentMode = UIViewContentMode.scaleAspectFit
-            evalImg.image = UIImage(named: "vyhodnoceni_spatne")
-            self.addSubview(evalImg)
-            evalImg = UIImageView(frame: CGRect(x: radios[correctIndex].frame.maxX-30, y: radios[correctIndex].center.y-25, width: CGFloat(70), height: CGFloat(70)))
+            if(answeredIndex >= 0){
+                let evalImg = UIImageView(frame: CGRect(x: radios[answeredIndex].frame.maxX-30, y: radios[answeredIndex].center.y-25, width: CGFloat(50), height: CGFloat(50)))
+                evalImg.contentMode = UIViewContentMode.scaleAspectFit
+                evalImg.image = UIImage(named: "vyhodnoceni_spatne")
+                self.addSubview(evalImg)
+            }
+            let evalImg = UIImageView(frame: CGRect(x: radios[correctIndex].frame.maxX-30, y: radios[correctIndex].center.y-25, width: CGFloat(70), height: CGFloat(70)))
             evalImg.contentMode = UIViewContentMode.scaleAspectFit
             evalImg.image = UIImage(named: "vyhodnoceni_shouldbe")
             self.addSubview(evalImg)
+        }
+        
+        for radio in radios{
+            radio.isUserInteractionEnabled = false
         }
     }
     
