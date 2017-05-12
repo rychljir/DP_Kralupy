@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwitchWithText: UIView {
+class ToggleWithLabel: UIView {
     @IBOutlet weak var yes: UIButton!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var no: UIButton!
@@ -49,7 +49,7 @@ class SwitchWithText: UIView {
     }
     
     class func instanceFromNib() -> UIView {
-        return UINib(nibName: "SwitchWithText", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+        return UINib(nibName: "ToggleWithLabel", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
     
     func setLabel(text: String){

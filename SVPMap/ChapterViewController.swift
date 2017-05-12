@@ -107,7 +107,7 @@ class ChapterViewController: UIViewController, UIScrollViewDelegate{
     
     func prepareSlides(){
         if index >= 0 {
-            slides = factory.prepareSlides(questionSet: tasks[index].slides, callingViewController: self)
+            slides = factory.prepareSlides(questionSet: tasks[index].slides, maxTries: maxTries, callingViewController: self)
         }
     }
 

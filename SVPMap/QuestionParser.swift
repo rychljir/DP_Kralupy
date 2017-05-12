@@ -121,32 +121,3 @@ public class QuestionParser{
     
 }
 
-public class Task{
-    var location = [Double]()
-    var slides = [QuestionSlide]()
-    var name: String?
-    var header: String?
-}
-
-public class QuestionSlide{
-    var title: String?
-    var description: String?
-    var name: String?
-    var type: String?
-    var layout: String?
-    var timelimit: String?
-    var answers = [String]()
-    var texts = [String]()
-    var questions = [Question]()
-    var images = [String]()
-    var video: String?
-}
-
-public class Question{
-    var type: String?
-    var shuffle: String?
-    var validate: String?
-    var description: String?
-    var variants = [String]()
-    var answers = [String]()
-}
