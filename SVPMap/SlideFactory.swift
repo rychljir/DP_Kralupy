@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PureLayout
 import ios_core
 
 class SlideFactory: UIViewController {
@@ -24,7 +23,7 @@ class SlideFactory: UIViewController {
                 result.append(first)
             }
             if(q.layout == "v_quest_img"){
-                let questView: v_quest_img = Bundle.main.loadNibNamed("v_quest_img", owner: self, options: nil)?.first as! v_quest_img
+                let questView: v_quest_img = Bundle(for: v_quest_img.self).loadNibNamed("v_quest_img", owner: self, options: nil)?.first as! v_quest_img
                 questView.initSlide(question: q, maximumTries: maxTries, callingViewController: callingViewController)
                 result.append(questView)
             }
