@@ -2,7 +2,7 @@
 //  CustomView.swift
 //  SVPMap
 //
-//  Created by Petr Mares on 08.05.17.
+//  Created by Jiri Rychlovsky on 08.05.17.
 //  Copyright © 2017 Science in. All rights reserved.
 //
 
@@ -10,6 +10,11 @@ import UIKit
 import PureLayout
 import ios_core
 
+/*
+ 
+ Class which fills a chapter on places where should be custom task
+ 
+*/
 class CustomView: UIView {
     var shouldSetupConstraints = true
     var label: UILabel!

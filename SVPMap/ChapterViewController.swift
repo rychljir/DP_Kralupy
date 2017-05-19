@@ -2,13 +2,18 @@
 //  ChapterViewController.swift
 //  SVPMap
 //
-//  Created by Petr Mares on 07.05.17.
+//  Created by Jiri Rychlovsky on 07.05.17.
 //  Copyright © 2017 Science in. All rights reserved.
 //
 
 import UIKit
 import ios_core
 
+/*
+ 
+ ViewController, which represents a Chapter
+ 
+ */
 class ChapterViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var slideScrollView: UIScrollView!
     @IBOutlet weak var pagerIndex: UILabel!

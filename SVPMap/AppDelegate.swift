@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SVPMap
 //
-//  Created by Petr Mares on 09.01.17.
+//  Created by Jiri Rychlovsky on 09.01.17.
 //  Copyright © 2017 Science in. All rights reserved.
 //
 

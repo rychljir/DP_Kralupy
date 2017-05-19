@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SVPMap
 //
-//  Created by Petr Mares on 09.01.17.
+//  Created by Jiri Rychlovsky on 09.01.17.
 //  Copyright © 2017 Science in. All rights reserved.
 //
 
@@ -12,6 +12,11 @@ import MapKit
 import AEXML
 import ios_core
 
+/*
+ 
+ MainViewController which shows a map a starts chapters
+ 
+ */
 class ViewController: UIViewController {
     
     var locationManager:CLLocationManager!
@@ -44,12 +49,18 @@ class ViewController: UIViewController {
         mapView.delegate = self
         mapView.showsUserLocation = true
         
+        //parse <questionset> XML file
         parseXML()
+        
+        //add pins to map
         addPins()
+        
+        //start chapter
         chapterVC = self.storyboard?.instantiateViewController(withIdentifier: "baseChapter") as? ChapterViewController
         chapterVC?.setMaxTries(max: maxTries)
         chapterVC?.setTasks(tasks: tasks)
         
+        //show current location
         let homeLocation = CLLocation(latitude: 50.0767712, longitude: 14.434033)
         let regionRadius: CLLocationDistance = 600
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(homeLocation.coordinate,regionRadius * 2.0, regionRadius * 2.0)
@@ -57,6 +68,7 @@ class ViewController: UIViewController {
         
     }
     
+    //uses ios_core library for parsing XML documents, produces [Task]
     func parseXML(){
         do{
             let xmlPath = Bundle.main.path(forResource: "questions2", ofType: "xml")
@@ -78,6 +90,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //creates pins in map
     func addPins(){
             for i in 1 ... locations.count{
                 if locations[i-1][0] != 0 && locations[i-1][1] != 0 {
@@ -113,6 +126,7 @@ extension ViewController: CLLocationManagerDelegate{
     }
 }
 
+//action on click on pin
 extension ViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didSelect view:MKAnnotationView){
         print("Annotation: \(String(describing: view.annotation?.title!))")
@@ -125,6 +139,11 @@ extension ViewController: MKMapViewDelegate{
 }
 
 
+/*
+ 
+ Simulates behaviour of Toast from Android OS
+ 
+ */
 extension UIViewController {
     func showToast(message : String) {
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 200, y: self.view.frame.size.height-150, width: 400, height: 70))

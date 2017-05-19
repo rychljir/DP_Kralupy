@@ -2,12 +2,17 @@
 //  IntroSlide_04.swift
 //  SVPMap
 //
-//  Created by Petr Mares on 08.05.17.
+//  Created by Jiri Rychlovsky on 08.05.17.
 //  Copyright © 2017 Science in. All rights reserved.
 //
 
 import UIKit
 
+/*
+ 
+ Class for xib in the intro of app which starts main ViewController with map
+ 
+ */
 class IntroSlide_04: UIView {
     var parent: UIViewController?
 

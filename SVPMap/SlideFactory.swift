@@ -2,13 +2,18 @@
 //  SlideFactory.swift
 //  SVPMap
 //
-//  Created by Petr Mares on 08.05.17.
+//  Created by Jiri Rychlovsky on 08.05.17.
 //  Copyright © 2017 Science in. All rights reserved.
 //
 
 import UIKit
 import ios_core
 
+/*
+ 
+ Class which creates an array of UIView based on QuestionSlide
+ 
+ */
 class SlideFactory: UIViewController {
 
     public func prepareSlides(questionSet: [QuestionSlide], maxTries: Int, callingViewController: UIViewController) -> [UIView]{

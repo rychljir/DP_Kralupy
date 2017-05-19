@@ -2,13 +2,18 @@
 //  IntroViewController.swift
 //  SVPMap
 //
-//  Created by Petr Mares on 08.05.17.
+//  Created by Jiri Rychlovsky on 08.05.17.
 //  Copyright © 2017 Science in. All rights reserved.
 //
 
 import UIKit
 import ios_core
 
+/*
+ 
+ ViewController for intro part
+ 
+ */
 class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var slideScrollView: UIScrollView!
     @IBOutlet weak var pagerIndex: UILabel!
@@ -20,7 +25,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         slideScrollView.delegate = self
         prepareSlides()
         setupSlideScrollView(slides: slides)
-        scrollToPage(page: 3, animated: false)
+        //scrollToPage(page: 3, animated: false)
     }
 
     func setupSlideScrollView(slides:[UIView]){
@@ -48,6 +53,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         self.slideScrollView.scrollRectToVisible(frame, animated: animated)
     }
     
+    
+    //inserts first 4 slides for intro
     func prepareSlides(){
         let slide1: IntroSlide_01 = Bundle(for: IntroSlide_01.self).loadNibNamed("IntroSlide_01", owner: self, options: nil)?.first as! IntroSlide_01
         
