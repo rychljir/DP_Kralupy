@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DragDropUI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SVPMap.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,20 +29,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ios_core.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1849EE6D10F4BC3C2164174A58BFC9A5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2462B68AF7F5B153B00AE7C8B213EA89</key>
+		<key>6EA5A124ACBE4DCBEE0E2CBFD6E8F42B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88C257C954247EE49E09C66A8B19E56A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>991C445B77F030F02D7F5422E59753F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADF95142A825E60628754FC96371701B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D839BE38441D660BBC1919A9B796FACE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

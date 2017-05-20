@@ -1,0 +1,38 @@
+{
+  "name": "ios_core",
+  "platforms": {
+    "ios": "9.3"
+  },
+  "summary": "Library for creating interactive apps",
+  "requires_arc": true,
+  "version": "0.2.0",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Jiri Rychlovsky": "rychljir@gmail.com"
+  },
+  "homepage": "https://github.com/rychljir/ios_core",
+  "source": {
+    "git": "https://github.com/rychljir/ios_core.git",
+    "tag": "0.2.0"
+  },
+  "frameworks": "UIKit",
+  "dependencies": {
+    "AEXML": [
+
+    ],
+    "PureLayout": [
+
+    ],
+    "DLRadioButton": [
+
+    ],
+    "DragDropUI": [
+
+    ]
+  },
+  "source_files": "ios_core/**/*.{swift}",
+  "resources": "ios_core/**/*.{png,jpeg,jpg,storyboard,xib}"
+}

@@ -1,11 +1,12 @@
 project '/Users/scientica/Documents/rychljir/DP_Kralupy/SVPMap.xcodeproj'
 
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/rychljir/ios_core'
+
 use_frameworks!
 
 platform :ios, '9.3'
 
 target 'SVPMap' do
-    pod 'AEXML'
-    pod 'PureLayout'
-    pod 'DLRadioButton'
+    pod 'ios_core', :path => '~/Documents/rychljir/ios_core'
 end

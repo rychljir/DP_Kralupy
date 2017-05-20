@@ -1,18 +1,28 @@
 PODS:
   - AEXML (4.1.0)
   - DLRadioButton (1.4.9)
+  - DragDropUI (1.0.1)
+  - ios_core (0.2.0):
+    - AEXML
+    - DLRadioButton
+    - DragDropUI
+    - PureLayout
   - PureLayout (3.0.2)
 
 DEPENDENCIES:
-  - AEXML
-  - DLRadioButton
-  - PureLayout
+  - ios_core (from `~/Documents/rychljir/ios_core`)
+
+EXTERNAL SOURCES:
+  ios_core:
+    :path: ~/Documents/rychljir/ios_core
 
 SPEC CHECKSUMS:
   AEXML: 647fbb051280f3fb38a1a7caa62b0344055a851c
   DLRadioButton: 7bb8a6e3768b572469ace553391ab4d2af6f9c19
+  DragDropUI: a830fd319f99e75e393af532222da0a18e0d49aa
+  ios_core: 16935d3af8e94db82a1110a5558150ee9b275d0f
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: 2d2f516ea644576f53b8adee4c6a69196df3bd93
+PODFILE CHECKSUM: 25eafa14dee884d6b8a34360c9ac219f83d913b9
 
 COCOAPODS: 1.2.1

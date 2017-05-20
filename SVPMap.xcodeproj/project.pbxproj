@@ -23,10 +23,6 @@
 		9414E1681EC07F33006624FB /* SlideFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414E1671EC07F33006624FB /* SlideFactory.swift */; };
 		94355A8C1EA7713B0003171F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 94355A8B1EA7713B0003171F /* Podfile */; };
 		943B21E21EC4504E00B23BD9 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943B21E11EC4504E00B23BD9 /* FirstScreen.swift */; };
-		946B72791EC6008200D98A48 /* Pods_ios_core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74755B3401ABE74DEA4D487 /* Pods_ios_core.framework */; };
-		946B727A1EC6008200D98A48 /* Pods_ios_core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F74755B3401ABE74DEA4D487 /* Pods_ios_core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		946B727C1EC6008900D98A48 /* ios_core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946B72761EC6007D00D98A48 /* ios_core.framework */; };
-		946B727D1EC6008900D98A48 /* ios_core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 946B72761EC6007D00D98A48 /* ios_core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9472B5AF1E23AF9400C9CA2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5AE1E23AF9400C9CA2C /* AppDelegate.swift */; };
 		9472B5B11E23AF9400C9CA2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472B5B01E23AF9400C9CA2C /* ViewController.swift */; };
 		9472B5B41E23AF9400C9CA2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9472B5B21E23AF9400C9CA2C /* Main.storyboard */; };
@@ -161,27 +157,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		946B72751EC6007D00D98A48 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 946B72701EC6007D00D98A48 /* ios_core.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9475AC271EBB704700E838D8;
-			remoteInfo = ios_core;
-		};
-		946B72771EC6007D00D98A48 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 946B72701EC6007D00D98A48 /* ios_core.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9475AC301EBB704700E838D8;
-			remoteInfo = ios_coreTests;
-		};
-		946B727E1EC6008900D98A48 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 946B72701EC6007D00D98A48 /* ios_core.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9475AC261EBB704700E838D8;
-			remoteInfo = ios_core;
-		};
 		9472B5C01E23AF9400C9CA2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9472B5A31E23AF9300C9CA2C /* Project object */;
@@ -197,21 +172,6 @@
 			remoteInfo = SVPMap;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		946B727B1EC6008200D98A48 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				946B727A1EC6008200D98A48 /* Pods_ios_core.framework in Embed Frameworks */,
-				946B727D1EC6008900D98A48 /* ios_core.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5BCFBA430A1910CCD8F41DBE /* Pods_SVPMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SVPMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,7 +193,6 @@
 		9414E1671EC07F33006624FB /* SlideFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideFactory.swift; sourceTree = "<group>"; };
 		94355A8B1EA7713B0003171F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		943B21E11EC4504E00B23BD9 /* FirstScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
-		946B72701EC6007D00D98A48 /* ios_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ios_core.xcodeproj; path = ../ios_core/ios_core.xcodeproj; sourceTree = "<group>"; };
 		9472B5AB1E23AF9300C9CA2C /* SVPMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVPMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9472B5AE1E23AF9400C9CA2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9472B5B01E23AF9400C9CA2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -371,7 +330,6 @@
 		949ADEDE1EBC989C0061354E /* questions2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions2.xml; sourceTree = "<group>"; };
 		94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
 		94C6F2AE1EA8E0DF00406459 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		F74755B3401ABE74DEA4D487 /* Pods_ios_core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,8 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				94C6F2AF1EA8E0DF00406459 /* MapKit.framework in Frameworks */,
-				946B727C1EC6008900D98A48 /* ios_core.framework in Frameworks */,
-				946B72791EC6008200D98A48 /* Pods_ios_core.framework in Frameworks */,
 				214A614D264280FB488FE62E /* Pods_SVPMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,19 +383,9 @@
 			name = views;
 			sourceTree = "<group>";
 		};
-		946B72711EC6007D00D98A48 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				946B72761EC6007D00D98A48 /* ios_core.framework */,
-				946B72781EC6007D00D98A48 /* ios_coreTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9472B5A21E23AF9300C9CA2C = {
 			isa = PBXGroup;
 			children = (
-				946B72701EC6007D00D98A48 /* ios_core.xcodeproj */,
 				9472B5AD1E23AF9400C9CA2C /* SVPMap */,
 				9472B5C21E23AF9400C9CA2C /* SVPMapTests */,
 				9472B5CD1E23AF9400C9CA2C /* SVPMapUITests */,
@@ -652,12 +598,10 @@
 				9472B5A91E23AF9300C9CA2C /* Resources */,
 				B7A71D167FB626076F561A5A /* [CP] Embed Pods Frameworks */,
 				F4225F918F8D1684A07CB179 /* [CP] Copy Pods Resources */,
-				946B727B1EC6008200D98A48 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				946B727F1EC6008900D98A48 /* PBXTargetDependency */,
 			);
 			name = SVPMap;
 			productName = SVPMap;
@@ -745,12 +689,6 @@
 			mainGroup = 9472B5A21E23AF9300C9CA2C;
 			productRefGroup = 9472B5AC1E23AF9300C9CA2C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 946B72711EC6007D00D98A48 /* Products */;
-					ProjectRef = 946B72701EC6007D00D98A48 /* ios_core.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				9472B5AA1E23AF9300C9CA2C /* SVPMap */,
@@ -759,23 +697,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		946B72761EC6007D00D98A48 /* ios_core.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ios_core.framework;
-			remoteRef = 946B72751EC6007D00D98A48 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		946B72781EC6007D00D98A48 /* ios_coreTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ios_coreTests.xctest;
-			remoteRef = 946B72771EC6007D00D98A48 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9472B5A91E23AF9300C9CA2C /* Resources */ = {
@@ -1019,11 +940,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		946B727F1EC6008900D98A48 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_core;
-			targetProxy = 946B727E1EC6008900D98A48 /* PBXContainerItemProxy */;
-		};
 		9472B5C11E23AF9400C9CA2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9472B5AA1E23AF9300C9CA2C /* SVPMap */;
@@ -1150,7 +1066,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73D5D4C7A9FC198FD98F9105 /* Pods-SVPMap.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SVPMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1164,7 +1079,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E59BD19CC0DA9B23A38EEA8 /* Pods-SVPMap.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SVPMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
