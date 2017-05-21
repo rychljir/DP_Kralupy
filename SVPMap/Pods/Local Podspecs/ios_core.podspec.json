@@ -34,5 +34,5 @@
     ]
   },
   "source_files": "ios_core/**/*.{swift}",
-  "resources": "ios_core/**/*.{png,jpeg,jpg,storyboard,xib}"
+  "resources": "ios_core/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 }

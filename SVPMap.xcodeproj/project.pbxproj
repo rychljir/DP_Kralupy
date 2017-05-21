@@ -148,9 +148,6 @@
 		949ADED81EBC98890061354E /* vyhodnoceni_spravne.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 949ADE601EBC98890061354E /* vyhodnoceni_spravne.9.png */; };
 		949ADED91EBC98890061354E /* vyhodnoceni_stribro.png in Resources */ = {isa = PBXBuildFile; fileRef = 949ADE611EBC98890061354E /* vyhodnoceni_stribro.png */; };
 		949ADEDA1EBC98890061354E /* vyhodnoceni_zlato.png in Resources */ = {isa = PBXBuildFile; fileRef = 949ADE621EBC98890061354E /* vyhodnoceni_zlato.png */; };
-		949ADEDB1EBC98890061354E /* vyhodnotit_disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 949ADE631EBC98890061354E /* vyhodnotit_disabled.png */; };
-		949ADEDC1EBC98890061354E /* vyhodnotit_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 949ADE641EBC98890061354E /* vyhodnotit_normal.png */; };
-		949ADEDD1EBC98890061354E /* vyhodnotit_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 949ADE651EBC98890061354E /* vyhodnotit_pressed.png */; };
 		949ADEDF1EBC989C0061354E /* questions2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 949ADEDE1EBC989C0061354E /* questions2.xml */; };
 		94A3E46A1EBFA8EB00A32819 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */; };
 		94C6F2AF1EA8E0DF00406459 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C6F2AE1EA8E0DF00406459 /* MapKit.framework */; };
@@ -324,9 +321,6 @@
 		949ADE601EBC98890061354E /* vyhodnoceni_spravne.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vyhodnoceni_spravne.9.png; path = "drawable-xhdpi-2/vyhodnoceni_spravne.9.png"; sourceTree = "<group>"; };
 		949ADE611EBC98890061354E /* vyhodnoceni_stribro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vyhodnoceni_stribro.png; path = "drawable-xhdpi-2/vyhodnoceni_stribro.png"; sourceTree = "<group>"; };
 		949ADE621EBC98890061354E /* vyhodnoceni_zlato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vyhodnoceni_zlato.png; path = "drawable-xhdpi-2/vyhodnoceni_zlato.png"; sourceTree = "<group>"; };
-		949ADE631EBC98890061354E /* vyhodnotit_disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vyhodnotit_disabled.png; path = "drawable-xhdpi-2/vyhodnotit_disabled.png"; sourceTree = "<group>"; };
-		949ADE641EBC98890061354E /* vyhodnotit_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vyhodnotit_normal.png; path = "drawable-xhdpi-2/vyhodnotit_normal.png"; sourceTree = "<group>"; };
-		949ADE651EBC98890061354E /* vyhodnotit_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vyhodnotit_pressed.png; path = "drawable-xhdpi-2/vyhodnotit_pressed.png"; sourceTree = "<group>"; };
 		949ADEDE1EBC989C0061354E /* questions2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = questions2.xml; sourceTree = "<group>"; };
 		94A3E4691EBFA8EA00A32819 /* ChapterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
 		94C6F2AE1EA8E0DF00406459 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -568,9 +562,6 @@
 				949ADE601EBC98890061354E /* vyhodnoceni_spravne.9.png */,
 				949ADE611EBC98890061354E /* vyhodnoceni_stribro.png */,
 				949ADE621EBC98890061354E /* vyhodnoceni_zlato.png */,
-				949ADE631EBC98890061354E /* vyhodnotit_disabled.png */,
-				949ADE641EBC98890061354E /* vyhodnotit_normal.png */,
-				949ADE651EBC98890061354E /* vyhodnotit_pressed.png */,
 			);
 			name = res;
 			sourceTree = "<group>";
@@ -745,7 +736,6 @@
 				949ADEB61EBC98890061354E /* task08_seifert.png in Resources */,
 				949ADE941EBC98890061354E /* map_poi_watter.png in Resources */,
 				949ADED21EBC98890061354E /* video_play_overlay.png in Resources */,
-				949ADEDC1EBC98890061354E /* vyhodnotit_normal.png in Resources */,
 				949ADEB71EBC98890061354E /* task09_kralupy_01.jpg in Resources */,
 				949ADE931EBC98890061354E /* map_poi_user.png in Resources */,
 				949ADEC21EBC98890061354E /* task09_kralupy_12.jpg in Resources */,
@@ -787,7 +777,6 @@
 				949ADEA61EBC98890061354E /* task02_time_2015.jpg in Resources */,
 				949ADE711EBC98890061354E /* bg_task07.jpg in Resources */,
 				949ADEBE1EBC98890061354E /* task09_kralupy_08.jpg in Resources */,
-				949ADEDB1EBC98890061354E /* vyhodnotit_disabled.png in Resources */,
 				949ADEC11EBC98890061354E /* task09_kralupy_11.jpg in Resources */,
 				949ADEC81EBC98890061354E /* task10_cukrovar_1972.jpg in Resources */,
 				9472B5B61E23AF9400C9CA2C /* Assets.xcassets in Resources */,
@@ -816,7 +805,6 @@
 				949ADEB11EBC98890061354E /* task06_symbol07.png in Resources */,
 				949ADED71EBC98890061354E /* vyhodnoceni_spatne.9.png in Resources */,
 				949ADEBA1EBC98890061354E /* task09_kralupy_04.jpg in Resources */,
-				949ADEDD1EBC98890061354E /* vyhodnotit_pressed.png in Resources */,
 				949ADE851EBC98890061354E /* checkbox_pressed.png in Resources */,
 				949ADEA51EBC98890061354E /* task02_time_2010.jpg in Resources */,
 				949ADE821EBC98890061354E /* help_options.png in Resources */,
